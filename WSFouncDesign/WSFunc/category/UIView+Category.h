@@ -76,8 +76,10 @@
 - (UIView *)ws_superview_withSuperClassType:(Class)aClass;
 #pragma mark - 便利子控件
 - (NSString *)ws_digView;
+
 typedef void(^Block)(void);
 #pragma 加载过程
 - (void)ws_loadAnimation:(Block)block;
-+ (void)ws_loadAnimation:(Block)block inView:(UIView *)inView;
+- (void)ws_loadAnimation_MBProgressHUD:(Block)block;
++ (void)ws_loadAnimation_MBProgressHUD:(Block)block inView:(UIView *)inView;
 @end

@@ -15,7 +15,7 @@
 #import "NGAudioPlayer.h"
 #import "UIView+Category.h"
 #import "UIApplication+Category.h"
-
+#import "UIView+Category.h"
 #import "Teacher.h"
 
 @interface ViewController ()
@@ -41,7 +41,6 @@
         WSLogE(@"%@",@"abc");
     }];
     
-    
     Teacher *tea = [[Teacher alloc] init];
     tea.pname = @"pname";
     tea.tname = @"tname";
@@ -56,6 +55,9 @@
 //模型模型数组《＝》字典模型数组
 - (IBAction)数据模型转换:(UIButton *)sender {
     //[self WSTransObj_test];
+    [self.view ws_loadAnimation:^{
+        NSLog(@"abc");
+    }];
 }
 
 - (IBAction)录音View:(UIButton *)sender {

@@ -685,12 +685,26 @@ CGRect rectSetSize(CGRect rect, CGSize size) {
     return xml;
 }
 
-
 - (void)ws_loadAnimation:(Block)block
 {
-    [UIView ws_loadAnimation:block inView:self];
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    if (activityIndicator) {
+        [self addSubview:activityIndicator];
+        activityIndicator.center = self.center;
+        [activityIndicator startAnimating];
+        __block UIActivityIndicatorView *weakActivityIndicatorView = activityIndicator;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            block();
+            [weakActivityIndicatorView removeFromSuperview];
+            weakActivityIndicatorView = nil;
+        });
+    }
 }
-+ (void)ws_loadAnimation:(Block)block inView:(UIView *)inView
+- (void)ws_loadAnimation_MBProgressHUD:(Block)block
+{
+    [UIView ws_loadAnimation_MBProgressHUD:block inView:self];
+}
++ (void)ws_loadAnimation_MBProgressHUD:(Block)block inView:(UIView *)inView
 {
     //初始化进度框，置于当前的View当中
     HUD = [[MBProgressHUD alloc] initWithView:inView];
