@@ -10,7 +10,6 @@
 
 @interface NSNull (Category)
 -(BOOL) ws_isNotNilString;
--(BOOL) ws_isNilString;
 @end
 /***
  *  ///////////////
@@ -34,7 +33,6 @@
 
 #pragma mark - 判断字符串是否不为空(' ',nil,null)
 -(BOOL) ws_isNotNilString;
--(BOOL) ws_isNilString;
 
 #pragma mark - 获取字符串尺寸
 - (CGSize)ws_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;

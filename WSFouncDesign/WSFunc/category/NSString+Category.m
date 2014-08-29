@@ -13,10 +13,6 @@
 {
     return NO;
 }
--(BOOL) ws_isNilString
-{
-    return YES;
-}
 @end
 /**
  *  /////////////////////
@@ -107,14 +103,6 @@
 -(BOOL) ws_isNotNilString
 {
     if(self != nil && ![self isEqual:[NSNull null]] && self.length != 0 && ![[self lowercaseString] isEqualToString:@"(null)"])
-    {
-        return YES;
-    }
-    return NO;
-}
--(BOOL) ws_isNilString
-{
-    if(self == nil || [self isEqual:[NSNull null]] || self.length == 0 || [[self lowercaseString] isEqualToString:@"(null)"])
     {
         return YES;
     }

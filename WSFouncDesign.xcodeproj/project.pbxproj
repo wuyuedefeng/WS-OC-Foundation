@@ -33,6 +33,9 @@
 		4B248F031980974900AA10FD /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B248F021980974900AA10FD /* UIButton+Category.m */; };
 		4B248F061980998900AA10FD /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B248F051980998900AA10FD /* UIView+Category.m */; };
 		4B37415E1982243500CA570D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B37415D1982243500CA570D /* AddressBook.framework */; };
+		4B3B8B3419AEDD1300FEC1E1 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8B3319AEDD1300FEC1E1 /* Person.m */; };
+		4B3B8B3719AEDD3600FEC1E1 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8B3619AEDD3600FEC1E1 /* Teacher.m */; };
+		4B3B8B3A19AEDD7000FEC1E1 /* Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8B3919AEDD7000FEC1E1 /* Name.m */; };
 		4B50AB6219A1E69B006129D2 /* NGAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B50AB5B19A1E69B006129D2 /* NGAudioPlayer.m */; };
 		4B50AB6319A1E69B006129D2 /* NGAudioPlayerPlaybackState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B50AB5E19A1E69B006129D2 /* NGAudioPlayerPlaybackState.m */; };
 		4B50AB6419A1E69B006129D2 /* NSURL+NGAudioPlayerNowPlayingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B50AB6119A1E69B006129D2 /* NSURL+NGAudioPlayerNowPlayingInfo.m */; };
@@ -131,6 +134,12 @@
 		4B248F041980998900AA10FD /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
 		4B248F051980998900AA10FD /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		4B37415D1982243500CA570D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		4B3B8B3219AEDD1300FEC1E1 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		4B3B8B3319AEDD1300FEC1E1 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		4B3B8B3519AEDD3600FEC1E1 /* Teacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
+		4B3B8B3619AEDD3600FEC1E1 /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
+		4B3B8B3819AEDD7000FEC1E1 /* Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Name.h; sourceTree = "<group>"; };
+		4B3B8B3919AEDD7000FEC1E1 /* Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Name.m; sourceTree = "<group>"; };
 		4B50AB5919A1E69B006129D2 /* NGAudioPlayer-Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NGAudioPlayer-Prefix.h"; sourceTree = "<group>"; };
 		4B50AB5A19A1E69B006129D2 /* NGAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGAudioPlayer.h; sourceTree = "<group>"; };
 		4B50AB5B19A1E69B006129D2 /* NGAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGAudioPlayer.m; sourceTree = "<group>"; };
@@ -300,6 +309,12 @@
 				4B1603CF1976587000921B93 /* Supporting Files */,
 				4B0D4C1219890AEF0022ADD4 /* WSNavigationController.h */,
 				4B0D4C1319890AEF0022ADD4 /* WSNavigationController.m */,
+				4B3B8B3219AEDD1300FEC1E1 /* Person.h */,
+				4B3B8B3319AEDD1300FEC1E1 /* Person.m */,
+				4B3B8B3519AEDD3600FEC1E1 /* Teacher.h */,
+				4B3B8B3619AEDD3600FEC1E1 /* Teacher.m */,
+				4B3B8B3819AEDD7000FEC1E1 /* Name.h */,
+				4B3B8B3919AEDD7000FEC1E1 /* Name.m */,
 			);
 			path = WSFouncDesign;
 			sourceTree = "<group>";
@@ -688,7 +703,9 @@
 				4BC7E4EA1990807F00DD174E /* DKKeyboardManager.m in Sources */,
 				4BD0562419889DF600FBC824 /* NSObject+Category.m in Sources */,
 				4BD4F89C19863A71005C61CD /* RecordView.m in Sources */,
+				4B3B8B3719AEDD3600FEC1E1 /* Teacher.m in Sources */,
 				4BA1AFE0198A22F500A99CD5 /* UIColor+Category.m in Sources */,
+				4B3B8B3419AEDD1300FEC1E1 /* Person.m in Sources */,
 				4BC7E4E31990777600DD174E /* UIApplication+Category.m in Sources */,
 				4BC7E4E61990784D00DD174E /* UIImage+Category.m in Sources */,
 				4BA1AFE5198A244E00A99CD5 /* ViewController.m in Sources */,
@@ -717,6 +734,7 @@
 				4BD4F87B1986385D005C61CD /* UIViewController+Category.m in Sources */,
 				4B1603D51976587000921B93 /* main.m in Sources */,
 				4B248F031980974900AA10FD /* UIButton+Category.m in Sources */,
+				4B3B8B3A19AEDD7000FEC1E1 /* Name.m in Sources */,
 				4B50AB6419A1E69B006129D2 /* NSURL+NGAudioPlayerNowPlayingInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

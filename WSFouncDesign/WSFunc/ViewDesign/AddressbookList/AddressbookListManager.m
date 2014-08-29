@@ -66,6 +66,10 @@
         {
             name = tmpLastName;
         }
+        if (![name ws_isNotNilString]) {
+            continue ;
+        }
+        
         [dic setObject:name forKey:kName_Addressbook];
         [dic setObject:[ChineseToPinyin pinyinFromChiniseString:name] forKey:kNameSpell_Addressbook];
         //获取的联系人单一属性:Generic phone number

@@ -15,6 +15,9 @@
 #import "NGAudioPlayer.h"
 #import "UIView+Category.h"
 #import "UIApplication+Category.h"
+
+#import "Teacher.h"
+
 @interface ViewController ()
 {
     WSAudioRecordManager *manager;
@@ -39,12 +42,20 @@
     }];
     
     
+    Teacher *tea = [[Teacher alloc] init];
+    tea.pname = @"pname";
+    tea.tname = @"tname";
+    Name *nam = [[Name alloc] init];
+    nam.wname = @"wname";
+    tea.name = nam;
     
-    
+    NSArray *arr = [NSArray arrayWithObjects:tea, nil];
+    NSArray *dicArr = [WSTransObjManager dictionaryArray_from_modalArray:arr];
+    NSLog(@"%@",[WSTransObjManager valueGetterOfModal:dicArr[0][@"_name"] withKey:@"_wname"]);
 }
 //模型模型数组《＝》字典模型数组
 - (IBAction)数据模型转换:(UIButton *)sender {
-    [self WSTransObj_test];
+    //[self WSTransObj_test];
 }
 
 - (IBAction)录音View:(UIButton *)sender {
@@ -88,31 +99,31 @@
 
 }
 #pragma mark - 数据模型转换test
-- (void)WSTransObj_test
-{
-    NSDictionary *dict1 = [NSDictionary dictionaryWithObjectsAndKeys:@"zhangsan",@"name",@"nv",@"sex",@10,@"age" ,nil];
-    NSDictionary *dict2 = [NSDictionary dictionaryWithObjectsAndKeys:@"wangsen",@"name",@"nan",@"sex" ,@11,@"age" ,nil];
-    NSArray *arr = [NSArray arrayWithObjects:dict1,dict2, nil];
-    //WSTransObj *wsTrans = [[WSTransObj alloc] init];
-    //字典转模型
-    NSArray *arr2 = [WSTransObjManager modalArray_from_dictionaryArr:arr];
-    for (id abc in arr2) {
-        // NSString *ss = [wsTrans nameGetterOfModal:abc withKey:@"age"];
-        Class class = [abc class];
-        
-        NSString *strClass = NSStringFromClass(class);
-        NSLog(@"ws= %@",strClass);
-        NSLog(@"%@----%@--- ",[[WSTransObjManager valueGetterOfModal:abc withKey:@"name"] class],[WSTransObjManager valueGetterOfModal:abc withKey:@"sex"]);
-    }
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name contains [c] 'an'"];
-    NSArray *tmpArr=[arr2 filteredArrayUsingPredicate:predicate];
-
-        
-    for (id abc in tmpArr) {
-        // NSString *ss = [wsTrans nameGetterOfModal:abc withKey:@"age"];
-        NSLog(@"搜索结果 %@----%@ --- ",[[WSTransObjManager valueGetterOfModal:abc withKey:@"name"] class],[WSTransObjManager valueGetterOfModal:abc withKey:@"name"]);
-    }
-}
+//- (void)WSTransObj_test
+//{
+//    NSDictionary *dict1 = [NSDictionary dictionaryWithObjectsAndKeys:@"zhangsan",@"name",@"nv",@"sex",@10,@"age" ,nil];
+//    NSDictionary *dict2 = [NSDictionary dictionaryWithObjectsAndKeys:@"wangsen",@"name",@"nan",@"sex" ,@11,@"age" ,nil];
+//    NSArray *arr = [NSArray arrayWithObjects:dict1,dict2, nil];
+//    //WSTransObj *wsTrans = [[WSTransObj alloc] init];
+//    //字典转模型
+//    NSArray *arr2 = [WSTransObjManager modalArray_from_dictionaryArr:arr];
+//    for (id abc in arr2) {
+//        // NSString *ss = [wsTrans nameGetterOfModal:abc withKey:@"age"];
+//        Class class = [abc class];
+//        
+//        NSString *strClass = NSStringFromClass(class);
+//        NSLog(@"ws= %@",strClass);
+//        NSLog(@"%@----%@--- ",[[WSTransObjManager valueGetterOfModal:abc withKey:@"name"] class],[WSTransObjManager valueGetterOfModal:abc withKey:@"sex"]);
+//    }
+//    
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name contains [c] 'an'"];
+//    NSArray *tmpArr=[arr2 filteredArrayUsingPredicate:predicate];
+//
+//        
+//    for (id abc in tmpArr) {
+//        // NSString *ss = [wsTrans nameGetterOfModal:abc withKey:@"age"];
+//        NSLog(@"搜索结果 %@----%@ --- ",[[WSTransObjManager valueGetterOfModal:abc withKey:@"name"] class],[WSTransObjManager valueGetterOfModal:abc withKey:@"name"]);
+//    }
+//}
 
 @end

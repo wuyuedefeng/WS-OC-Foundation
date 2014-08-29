@@ -184,11 +184,14 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     NSMutableArray *mutableArr = [NSMutableArray array];
     unsigned int count = 0;
     // 获得modal类中的所有成员变量
+    NSLog(@"==%@",NSStringFromClass([modal class]));
     Ivar *ivars = class_copyIvarList([modal class], &count);
     // 遍历所有的成员变量
     for (int i = 0; i < count; i++) {
         Ivar ivar = ivars[i];
+        NSLog(@"＝%@",[NSString stringWithFormat:@"%s",ivar_getName(ivar)]);
         [mutableArr addObject:[NSString stringWithFormat:@"%s",ivar_getName(ivar)]];
+        
     }
     return mutableArr;
 }
