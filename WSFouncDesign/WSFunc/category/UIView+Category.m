@@ -681,7 +681,7 @@ CGRect rectSetSize(CGRect rect, CGSize size) {
     
     // 5. 标签结尾
     [xml appendFormat:@"</%@>", self.class];
-    WSLogE(@"%@",xml);
+    WSLogS(@"%@",xml);
     return xml;
 }
 

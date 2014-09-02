@@ -38,7 +38,7 @@
     [ws ws_documentsPath];
     
     [self WS_GCD_back:^{
-        WSLogE(@"%@",@"abc");
+        WSLogA(@"%@",@"abc");
     }];
     
     Teacher *tea = [[Teacher alloc] init];

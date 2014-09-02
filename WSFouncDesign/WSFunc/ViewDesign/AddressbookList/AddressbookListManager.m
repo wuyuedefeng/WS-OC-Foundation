@@ -127,7 +127,7 @@
     }
     NSMutableArray *lastMutableArr = [NSMutableArray array];
     NSMutableArray *mutableArr = [NSMutableArray array];
-    int index;
+    int index = 0;
     //是a－z
     if ([[arr[0][kNameSpell_Addressbook] lowercaseString] characterAtIndex:0] >= 'a' && [[arr[0][kNameSpell_Addressbook] lowercaseString] characterAtIndex:0] <= 'z') {
         [mutableArr addObject:arr[0]];

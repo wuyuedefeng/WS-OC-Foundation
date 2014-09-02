@@ -135,4 +135,17 @@
 	CGSize size = self.size;
 	return [self compressImageToSpecifiedCGSize:CGSizeMake(size.width / scale, size.height / scale) withMode:compressMode];
 }
+
++ (UIImage*)createImageWithColor:(UIColor*)color size:(CGSize)imageSize
+{
+    CGRect rect=CGRectMake(0.0f, 0.0f, imageSize.width, imageSize.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return theImage;
+}
 @end

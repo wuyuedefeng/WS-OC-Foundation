@@ -51,4 +51,13 @@ typedef NS_ENUM(NSInteger, UIImageDKCompressMode) {
  *  @return 压缩后的图片
  */
 - (UIImage *)compressImageToSpecifiedKB:(CGFloat)specifiedKB withMode:(UIImageDKCompressMode)compressMode;
+/**
+ *  通过颜色转换成image
+ *
+ *  @param color     <#color description#>
+ *  @param imageSize <#imageSize description#>
+ *
+ *  @return <#return value description#>
+ */
++ (UIImage*)createImageWithColor:(UIColor*)color size:(CGSize)imageSize;
 @end

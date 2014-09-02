@@ -17,14 +17,15 @@
 
 # define NSLog(...) NSLog(__VA_ARGS__)
 # define WSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
-# define WSLogE(fmt, ...) { dispatch_async(dispatch_get_main_queue(), ^{ UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show]; });}
+# define WSLogA(fmt, ...) { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show];}
+# define WSLogS(fmt, ...) { dispatch_async(dispatch_get_main_queue(), ^{ UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show]; });}
 
 #else
 
 # define NSLog(...) {}
 # define WSLog(...) {}
-# define WSLogE(...) {}
-
+# define WSLogA(...) {}
+# define WSLogS(...) {}
 #endif
 /**
  *  userDefault单利
