@@ -4,7 +4,7 @@
 //
 //  Created by jiajun on 7/25/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
+// https://github.com/dactiv/base-framework.git
 
 #import "Kache.h"
 #import "KQueue.h"
