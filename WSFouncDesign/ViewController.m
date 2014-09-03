@@ -33,24 +33,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    ws = [[NGAudioPlayer alloc] init ];
-    [ws playURL:[NSURL URLWithString:@"http://112.126.64.124//tongxinfile/files/bab25ea781661675361034eebfa83b72.amr"]];
-    [ws ws_documentsPath];
-    
-    [self WS_GCD_back:^{
-        WSLogA(@"%@",@"abc");
-    }];
-    
+//    ws = [[NGAudioPlayer alloc] init ];
+//    [ws playURL:[NSURL URLWithString:@"http://112.126.64.124//tongxinfile/files/bab25ea781661675361034eebfa83b72.amr"]];
+//    [ws ws_documentsPath];
+//    
+//    [self WS_GCD_back:^{
+//        WSLogA(@"%@",@"abc");
+//    }];
+//    
     Teacher *tea = [[Teacher alloc] init];
     tea.pname = @"pname";
     tea.tname = @"tname";
     Name *nam = [[Name alloc] init];
     nam.wname = @"wname";
     tea.name = nam;
+//
+//    NSArray *arr = [NSArray arrayWithObjects:tea, nil];
+//    NSArray *dicArr = [WSTransObjManager dictionaryArray_from_modalArray:arr];
     
-    NSArray *arr = [NSArray arrayWithObjects:tea, nil];
-    NSArray *dicArr = [WSTransObjManager dictionaryArray_from_modalArray:arr];
-    NSLog(@"%@",[WSTransObjManager valueGetterOfModal:dicArr[0][@"_name"] withKey:@"_wname"]);
+    [WSTransObjManager dictionary_from_modal:tea];
+    NSLog(@"%@",[WSTransObjManager valueGetterOfModal:[WSTransObjManager dictionary_from_modal:tea][@"_name"] withKey:@"_wname"]);
 }
 //模型模型数组《＝》字典模型数组
 - (IBAction)数据模型转换:(UIButton *)sender {

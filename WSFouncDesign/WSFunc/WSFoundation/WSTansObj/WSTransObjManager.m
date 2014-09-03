@@ -66,6 +66,14 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     Class wsclass = [WSTransObjManager createWSObjectClassWithOneDic:dictionaryArr[0]];
     return [WSTransObjManager modalArrWithDictionarys:dictionaryArr andModalClass:wsclass];
 }
++ (id)modal_from_dictionary:(NSDictionary *)dic
+{
+    if (dic) {
+        NSArray *arrDic = [NSArray arrayWithObjects:dic, nil];
+        return  [WSTransObjManager modalArray_from_dictionaryArr:arrDic][0];
+    }
+    return nil;
+}
 #pragma mark -私有调用方法
 #pragma mark -create class WSObject
 + (Class)createWSObjectClassWithOneDic:(NSDictionary *)oneDic
@@ -177,6 +185,14 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
         [mutableArr addObject:dic];
     }
     return mutableArr;
+}
++ (id)dictionary_from_modal:(id)modol
+{
+    if (modol) {
+        NSArray *modalArr = [NSArray arrayWithObjects:modol, nil];
+        return [WSTransObjManager dictionaryArray_from_modalArray:modalArr][0];
+    }
+    return nil;
 }
 #pragma mark -获取模型所有属性名称
 + (NSArray *)typeNamesOfModal:(id)modal

@@ -20,7 +20,9 @@
 #pragma mark - 模型转换
 #pragma mark -字典数组转模型数组
 + (NSArray *)modalArray_from_dictionaryArr:(NSArray *)dictonaryArr;
++ (id)modal_from_dictionary:(NSDictionary *)dic;
 #pragma mark -模型数组转字典数组
 + (NSArray *)dictionaryArray_from_modalArray:(NSArray *)modolArray;
++ (id)dictionary_from_modal:(id)modol;
 
 @end
