@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 wangsen. All rights reserved.
 //
 
-#import "WSTransObjManager.h"
+#import "WSTransObj.h"
 //用于 创建的数据模型属性的Get和Set方法 Get方法在NSPredicate中用到 set方法暂未用到 不知道以后可用到什么场景 暂留
 //get方法
 /**
@@ -21,8 +21,8 @@ id nameGetter(id self, SEL _cmd) {
     //Class wsclass = [self class];
     NSString *name = [NSString stringWithFormat:@"%@",(NSStringFromSelector(_cmd))];
     //Ivar ivar = class_getInstanceVariable([wsclass class], [name UTF8String]);
-    //NSLog(@"==%@",[WSTransObjManager valueGetterOfModal:self withKey:name]);
-    return [WSTransObjManager valueGetterOfModal:self withKey:name];
+    //NSLog(@"==%@",[WSTransObj valueGetterOfModal:self withKey:name]);
+    return [WSTransObj valueGetterOfModal:self withKey:name];
 }
 //set方法
 /**
@@ -34,9 +34,9 @@ id nameGetter(id self, SEL _cmd) {
  */
 void nameSetter(id self, SEL _cmd, NSString *newName) {
     NSString *name = [NSString stringWithFormat:@"%@",self];
-    [WSTransObjManager valueSetterOfModal:self withKey:name withValue:newName];
+    [WSTransObj valueSetterOfModal:self withKey:name withValue:newName];
 }
-@implementation WSTransObjManager
+@implementation WSTransObj
 #pragma mark - 获取模型的值
 + (id)valueGetterOfModal:(id)modal withKey:(NSString *)key
 {
@@ -63,14 +63,14 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     if (dictionaryArr.count == 0) {
         return nil;
     }
-    Class wsclass = [WSTransObjManager createWSObjectClassWithOneDic:dictionaryArr[0]];
-    return [WSTransObjManager modalArrWithDictionarys:dictionaryArr andModalClass:wsclass];
+    Class wsclass = [WSTransObj createWSObjectClassWithOneDic:dictionaryArr[0]];
+    return [WSTransObj modalArrWithDictionarys:dictionaryArr andModalClass:wsclass];
 }
 + (id)modal_from_dictionary:(NSDictionary *)dic
 {
     if (dic) {
         NSArray *arrDic = [NSArray arrayWithObjects:dic, nil];
-        return  [WSTransObjManager modalArray_from_dictionaryArr:arrDic][0];
+        return  [WSTransObj modalArray_from_dictionaryArr:arrDic][0];
     }
     return nil;
 }
@@ -95,7 +95,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
      NSUInteger count = allKeys.count;
     for (int i = 0; i < count; i++) {
         NSString *classType = NSStringFromClass([allValues[i] class]);
-        wsclass = [WSTransObjManager setClassIvar:classType andIvarName:allKeys[i] andIvarValue:allValues[i] withClass:wsclass];
+        wsclass = [WSTransObj setClassIvar:classType andIvarName:allKeys[i] andIvarValue:allValues[i] withClass:wsclass];
     }
     //4注册到运行时环境
     objc_registerClassPair(wsclass);
@@ -158,7 +158,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
             //[instance setValue:allValues[j] forKey:allKeys[j]];
             //Ivar ivar = class_getInstanceVariable([wsclass class], [allKeys[j] UTF8String]);
             //object_setIvar(instance, ivar, allValues[j]);
-            [WSTransObjManager valueSetterOfModal:instance withKey:allKeys[j] withValue:allValues[j]];
+            [WSTransObj valueSetterOfModal:instance withKey:allKeys[j] withValue:allValues[j]];
         }
         NSLog(@"%@",instance);
         [mutableArr addObject:instance];
@@ -176,11 +176,11 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
         return nil;
     }
     //获取创建字典所需要的key key获取到都是字符串类型（NSString）
-    NSArray *allKeys = [WSTransObjManager typeNamesOfModal:modalArray[0]];
+    NSArray *allKeys = [WSTransObj typeNamesOfModal:modalArray[0]];
     
     NSMutableArray *mutableArr = [NSMutableArray array];//待返回数组
     for (id modal in modalArray) {
-        NSArray *allValues = [WSTransObjManager valuesOfModal:modal andModalKeys:allKeys];
+        NSArray *allValues = [WSTransObj valuesOfModal:modal andModalKeys:allKeys];
         NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObjects:allValues forKeys:allKeys];
         [mutableArr addObject:dic];
     }
@@ -190,7 +190,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
 {
     if (modol) {
         NSArray *modalArr = [NSArray arrayWithObjects:modol, nil];
-        return [WSTransObjManager dictionaryArray_from_modalArray:modalArr][0];
+        return [WSTransObj dictionaryArray_from_modalArray:modalArr][0];
     }
     return nil;
 }
@@ -217,7 +217,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     NSMutableArray *mutableArr = [NSMutableArray array];
     
     for (NSString *key in allKeys) {
-        [mutableArr addObject:[WSTransObjManager valueGetterOfModal:modal withKey:key]];
+        [mutableArr addObject:[WSTransObj valueGetterOfModal:modal withKey:key]];
     }
     
     return mutableArr;

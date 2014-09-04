@@ -150,10 +150,10 @@
 #pragma mark -模型转数组  数组转模型
 /**
  *字典数组转模型数组
- *WSTransObjManager
+ *WSTransObj
  *
  **/
-#import "WSTransObjManager.h"//模型转数组  数组转模型
+#import "WSTransObj.h"//模型转数组  数组转模型
 /////===============================================
 
 #pragma mark -录音功能

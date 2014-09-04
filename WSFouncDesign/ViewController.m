@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "WSTransObjManager.h"
+#import "WSTransObj.h"
 #import "WSAudioRecordManager.h"
 #import "AddressbookListViewController.h"
 #import "UIViewController+Category.h"
@@ -41,18 +41,25 @@
 //        WSLogA(@"%@",@"abc");
 //    }];
 //    
-    Teacher *tea = [[Teacher alloc] init];
-    tea.pname = @"pname";
-    tea.tname = @"tname";
-    Name *nam = [[Name alloc] init];
-    nam.wname = @"wname";
-    tea.name = nam;
+//    Teacher *tea = [[Teacher alloc] init];
+//    tea.pname = @"pname";
+//    tea.tname = @"tname";
+//    Name *nam = [[Name alloc] init];
+//    nam.wname = @"wname";
+//    tea.name = nam;
 //
 //    NSArray *arr = [NSArray arrayWithObjects:tea, nil];
-//    NSArray *dicArr = [WSTransObjManager dictionaryArray_from_modalArray:arr];
+//    NSArray *dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
     
-    [WSTransObjManager dictionary_from_modal:tea];
-    NSLog(@"%@",[WSTransObjManager valueGetterOfModal:[WSTransObjManager dictionary_from_modal:tea][@"_name"] withKey:@"_wname"]);
+    NSDictionary *dic = [[NSDictionary alloc]initWithObjectsAndKeys:
+                         @"张三",@"name1",
+                         @"21",@"age1",
+                         @"1",@"isMan1",
+                         @[@"语文",@"数学",@"英语"],@"subject1",
+                         @{@"n":@"李四"},@"sub1",
+                         nil];
+    id modal = [WSTransObj modal_from_dictionary:dic];
+    NSLog(@"%@",[[modal description] description]);
 }
 //模型模型数组《＝》字典模型数组
 - (IBAction)数据模型转换:(UIButton *)sender {
@@ -110,14 +117,14 @@
 //    NSArray *arr = [NSArray arrayWithObjects:dict1,dict2, nil];
 //    //WSTransObj *wsTrans = [[WSTransObj alloc] init];
 //    //字典转模型
-//    NSArray *arr2 = [WSTransObjManager modalArray_from_dictionaryArr:arr];
+//    NSArray *arr2 = [WSTransObj modalArray_from_dictionaryArr:arr];
 //    for (id abc in arr2) {
 //        // NSString *ss = [wsTrans nameGetterOfModal:abc withKey:@"age"];
 //        Class class = [abc class];
 //        
 //        NSString *strClass = NSStringFromClass(class);
 //        NSLog(@"ws= %@",strClass);
-//        NSLog(@"%@----%@--- ",[[WSTransObjManager valueGetterOfModal:abc withKey:@"name"] class],[WSTransObjManager valueGetterOfModal:abc withKey:@"sex"]);
+//        NSLog(@"%@----%@--- ",[[WSTransObj valueGetterOfModal:abc withKey:@"name"] class],[WSTransObj valueGetterOfModal:abc withKey:@"sex"]);
 //    }
 //    
 //    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name contains [c] 'an'"];
@@ -126,7 +133,7 @@
 //        
 //    for (id abc in tmpArr) {
 //        // NSString *ss = [wsTrans nameGetterOfModal:abc withKey:@"age"];
-//        NSLog(@"搜索结果 %@----%@ --- ",[[WSTransObjManager valueGetterOfModal:abc withKey:@"name"] class],[WSTransObjManager valueGetterOfModal:abc withKey:@"name"]);
+//        NSLog(@"搜索结果 %@----%@ --- ",[[WSTransObj valueGetterOfModal:abc withKey:@"name"] class],[WSTransObj valueGetterOfModal:abc withKey:@"name"]);
 //    }
 //}
 

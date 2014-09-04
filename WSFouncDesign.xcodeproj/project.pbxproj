@@ -44,7 +44,7 @@
 		4B50ABA519A2059F006129D2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B50ABA419A2059F006129D2 /* MapKit.framework */; };
 		4B5512C5199373DD0045A9C0 /* NSMutableArray+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5512C4199373DD0045A9C0 /* NSMutableArray+Category.m */; };
 		4B55F7671978BD3700421367 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B55F7661978BD3700421367 /* AVFoundation.framework */; };
-		4B55F76C1978BDB000421367 /* WSTransObjManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B55F76B1978BDB000421367 /* WSTransObjManager.m */; };
+		4B55F76C1978BDB000421367 /* WSTransObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B55F76B1978BDB000421367 /* WSTransObj.m */; };
 		4B55F7721978C40E00421367 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B55F7711978C40E00421367 /* CoreAudio.framework */; };
 		4BA1AFD5198A197300A99CD5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA1AFD4198A197300A99CD5 /* MediaPlayer.framework */; };
 		4BA1AFD7198A198000A99CD5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA1AFD6198A198000A99CD5 /* AudioToolbox.framework */; };
@@ -156,8 +156,8 @@
 		4B5512C3199373DD0045A9C0 /* NSMutableArray+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Category.h"; path = "WSFouncDesign/WSFunc/category/NSMutableArray+Category.h"; sourceTree = SOURCE_ROOT; };
 		4B5512C4199373DD0045A9C0 /* NSMutableArray+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Category.m"; path = "WSFouncDesign/WSFunc/category/NSMutableArray+Category.m"; sourceTree = SOURCE_ROOT; };
 		4B55F7661978BD3700421367 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		4B55F76A1978BDB000421367 /* WSTransObjManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTransObjManager.h; sourceTree = "<group>"; };
-		4B55F76B1978BDB000421367 /* WSTransObjManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTransObjManager.m; sourceTree = "<group>"; };
+		4B55F76A1978BDB000421367 /* WSTransObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTransObj.h; sourceTree = "<group>"; };
+		4B55F76B1978BDB000421367 /* WSTransObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTransObj.m; sourceTree = "<group>"; };
 		4B55F7711978C40E00421367 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		4BA1AFD4198A197300A99CD5 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		4BA1AFD6198A198000A99CD5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -473,8 +473,8 @@
 		4B55F7691978BDB000421367 /* WSTansObj－字典数组转模型数组 */ = {
 			isa = PBXGroup;
 			children = (
-				4B55F76A1978BDB000421367 /* WSTransObjManager.h */,
-				4B55F76B1978BDB000421367 /* WSTransObjManager.m */,
+				4B55F76A1978BDB000421367 /* WSTransObj.h */,
+				4B55F76B1978BDB000421367 /* WSTransObj.m */,
 			);
 			name = "WSTansObj－字典数组转模型数组";
 			path = WSTansObj;
@@ -724,7 +724,7 @@
 				4BD4F89119863A71005C61CD /* AddressbookListCell.m in Sources */,
 				4BD056271988F0FE00FBC824 /* Reachability.m in Sources */,
 				4B1603D91976587000921B93 /* AppDelegate.m in Sources */,
-				4B55F76C1978BDB000421367 /* WSTransObjManager.m in Sources */,
+				4B55F76C1978BDB000421367 /* WSTransObj.m in Sources */,
 				4BD4F89219863A71005C61CD /* AddressbookListManager.m in Sources */,
 				4B1604211976848500921B93 /* NSString+Category.m in Sources */,
 				4BC7E4ED1990820100DD174E /* UIScreen+DK.m in Sources */,
