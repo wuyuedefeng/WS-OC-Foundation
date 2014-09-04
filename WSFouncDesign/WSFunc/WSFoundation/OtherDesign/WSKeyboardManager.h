@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DKKeyboardManager : NSObject
+@interface WSKeyboardManager : NSObject
 
 @property (nonatomic, assign) UIScrollView *currentScrollView;
 @property (nonatomic, assign) UITextField *activeTextField;
 
-+ (DKKeyboardManager *)sharedDKKeyboardManager;
++ (WSKeyboardManager *)sharedWSKeyboardManager;
 - (void)registerKeyboardNotifications;
 - (void)removeKeyboardNotifications;
 

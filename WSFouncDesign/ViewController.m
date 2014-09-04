@@ -17,7 +17,7 @@
 #import "UIApplication+Category.h"
 #import "UIView+Category.h"
 #import "Teacher.h"
-
+#import "WSKeyboardManager.h"
 @interface ViewController ()
 {
     WSAudioRecordManager *manager;
@@ -41,6 +41,7 @@
 //        WSLogA(@"%@",@"abc");
 //    }];
 //    
+    
     
     
 

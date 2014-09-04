@@ -56,7 +56,7 @@
 		4BAE34C019AC6E6C0045991E /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE34BF19AC6E6C0045991E /* NSDate+Reporting.m */; };
 		4BC7E4E31990777600DD174E /* UIApplication+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7E4E21990777600DD174E /* UIApplication+Category.m */; };
 		4BC7E4E61990784D00DD174E /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7E4E51990784D00DD174E /* UIImage+Category.m */; };
-		4BC7E4EA1990807F00DD174E /* DKKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7E4E91990807F00DD174E /* DKKeyboardManager.m */; };
+		4BC7E4EA1990807F00DD174E /* WSKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7E4E91990807F00DD174E /* WSKeyboardManager.m */; };
 		4BC7E4ED1990820100DD174E /* UIScreen+DK.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7E4EC1990820100DD174E /* UIScreen+DK.m */; };
 		4BCD167D1993748400DACFF2 /* NSMutableDictionary+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD167C1993748400DACFF2 /* NSMutableDictionary+Category.m */; };
 		4BCD16801993766900DACFF2 /* NSNotificationCenter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD167F1993766900DACFF2 /* NSNotificationCenter+Category.m */; };
@@ -174,8 +174,8 @@
 		4BC7E4E21990777600DD174E /* UIApplication+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+Category.m"; path = "WSFouncDesign/WSFunc/category/UIApplication+Category.m"; sourceTree = SOURCE_ROOT; };
 		4BC7E4E41990784D00DD174E /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Category.h"; path = "WSFouncDesign/WSFunc/category/UIImage+Category.h"; sourceTree = SOURCE_ROOT; };
 		4BC7E4E51990784D00DD174E /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Category.m"; path = "WSFouncDesign/WSFunc/category/UIImage+Category.m"; sourceTree = SOURCE_ROOT; };
-		4BC7E4E81990807F00DD174E /* DKKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKKeyboardManager.h; sourceTree = "<group>"; };
-		4BC7E4E91990807F00DD174E /* DKKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKKeyboardManager.m; sourceTree = "<group>"; };
+		4BC7E4E81990807F00DD174E /* WSKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSKeyboardManager.h; sourceTree = "<group>"; };
+		4BC7E4E91990807F00DD174E /* WSKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSKeyboardManager.m; sourceTree = "<group>"; };
 		4BC7E4EB1990820100DD174E /* UIScreen+DK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+DK.h"; sourceTree = "<group>"; };
 		4BC7E4EC1990820100DD174E /* UIScreen+DK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+DK.m"; sourceTree = "<group>"; };
 		4BCD167B1993748400DACFF2 /* NSMutableDictionary+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Category.h"; path = "WSFouncDesign/WSFunc/category/NSMutableDictionary+Category.h"; sourceTree = SOURCE_ROOT; };
@@ -185,8 +185,8 @@
 		4BCD168619937A5200DACFF2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		4BCD169A1993926D00DACFF2 /* UIView+WhenTappedBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WhenTappedBlocks.h"; sourceTree = "<group>"; };
 		4BCD169B1993926D00DACFF2 /* UIView+WhenTappedBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WhenTappedBlocks.m"; sourceTree = "<group>"; };
-		4BCD169D1993946F00DACFF2 /* UIView+MTUIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MTUIAdditions.h"; sourceTree = "<group>"; };
-		4BCD169E1993946F00DACFF2 /* UIView+MTUIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MTUIAdditions.m"; sourceTree = "<group>"; };
+		4BCD169D1993946F00DACFF2 /* UIView+MTUIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MTUIAdditions.h"; path = "../WSFoundation/OtherDesign/UIView+MTUIAdditions.h"; sourceTree = "<group>"; };
+		4BCD169E1993946F00DACFF2 /* UIView+MTUIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MTUIAdditions.m"; path = "../WSFoundation/OtherDesign/UIView+MTUIAdditions.m"; sourceTree = "<group>"; };
 		4BD0562219889DF600FBC824 /* NSObject+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Category.h"; sourceTree = "<group>"; };
 		4BD0562319889DF600FBC824 /* NSObject+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Category.m"; sourceTree = "<group>"; };
 		4BD056251988F0FE00FBC824 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -394,6 +394,8 @@
 				4BC7E4E51990784D00DD174E /* UIImage+Category.m */,
 				4B248F041980998900AA10FD /* UIView+Category.h */,
 				4B248F051980998900AA10FD /* UIView+Category.m */,
+				4BCD169D1993946F00DACFF2 /* UIView+MTUIAdditions.h */,
+				4BCD169E1993946F00DACFF2 /* UIView+MTUIAdditions.m */,
 				4B248F011980974900AA10FD /* UIButton+Category.h */,
 				4B248F021980974900AA10FD /* UIButton+Category.m */,
 				4BD4F8791986385D005C61CD /* UIViewController+Category.h */,
@@ -494,14 +496,12 @@
 			children = (
 				4BAE34BE19AC6E6C0045991E /* NSDate+Reporting.h */,
 				4BAE34BF19AC6E6C0045991E /* NSDate+Reporting.m */,
-				4BCD169D1993946F00DACFF2 /* UIView+MTUIAdditions.h */,
-				4BCD169E1993946F00DACFF2 /* UIView+MTUIAdditions.m */,
 				4BCD169A1993926D00DACFF2 /* UIView+WhenTappedBlocks.h */,
 				4BCD169B1993926D00DACFF2 /* UIView+WhenTappedBlocks.m */,
 				4BC7E4EB1990820100DD174E /* UIScreen+DK.h */,
 				4BC7E4EC1990820100DD174E /* UIScreen+DK.m */,
-				4BC7E4E81990807F00DD174E /* DKKeyboardManager.h */,
-				4BC7E4E91990807F00DD174E /* DKKeyboardManager.m */,
+				4BC7E4E81990807F00DD174E /* WSKeyboardManager.h */,
+				4BC7E4E91990807F00DD174E /* WSKeyboardManager.m */,
 			);
 			path = OtherDesign;
 			sourceTree = "<group>";
@@ -700,7 +700,7 @@
 				4B50AB6319A1E69B006129D2 /* NGAudioPlayerPlaybackState.m in Sources */,
 				4B5512C5199373DD0045A9C0 /* NSMutableArray+Category.m in Sources */,
 				4B1E04261987B17F00C24425 /* UIDevice+Category.m in Sources */,
-				4BC7E4EA1990807F00DD174E /* DKKeyboardManager.m in Sources */,
+				4BC7E4EA1990807F00DD174E /* WSKeyboardManager.m in Sources */,
 				4BD0562419889DF600FBC824 /* NSObject+Category.m in Sources */,
 				4BD4F89C19863A71005C61CD /* RecordView.m in Sources */,
 				4B3B8B3719AEDD3600FEC1E1 /* Teacher.m in Sources */,

@@ -1,21 +1,21 @@
 //
-//  DKKeyboardManager.m
+//  WSKeyboardManager.m
 //  DaniateKit
 //
 //  Created by Daniate on 14/8/2.
 //  Copyright (c) 2014年 Daniate. All rights reserved.
 //
 
-#import "DKKeyboardManager.h"
+#import "WSKeyboardManager.h"
 
-// 屏幕尺寸
-#define kDKScreenSize   ([UIScreen mainScreen].bounds.size)
-#define kDKScreenWidth  (kScreenSize.width)
-#define kDKScreenHeight (kScreenSize.height)
+//// 屏幕尺寸
+//#define kDKScreenSize   ([UIScreen mainScreen].bounds.size)
+//#define kDKScreenWidth  (kScreenSize.width)
+//#define kDKScreenHeight (kScreenSize.height)
 
 // 严格单例
 #if __has_feature(objc_arc)
-#define kDKStrictSingletonForClass(__CLASS_NAME__) \
+#define kWSStrictSingletonForClass(__CLASS_NAME__) \
 static __CLASS_NAME__ *shared##__CLASS_NAME__ = nil;\
 + (__CLASS_NAME__ *)shared##__CLASS_NAME__ {\
 static dispatch_once_t onceToken;\
@@ -31,7 +31,7 @@ return [__CLASS_NAME__ shared##__CLASS_NAME__];\
 return self;\
 }
 #else
-#define kDKStrictSingletonForClass(__CLASS_NAME__) \
+#define kWSStrictSingletonForClass(__CLASS_NAME__) \
 static __CLASS_NAME__ *shared##__CLASS_NAME__ = nil;\
 + (__CLASS_NAME__ *)shared##__CLASS_NAME__ {\
 static dispatch_once_t onceToken;\
@@ -59,7 +59,7 @@ return self;\
 }
 #endif
 
-@interface DKKeyboardManager ()
+@interface WSKeyboardManager ()
 @property (nonatomic, assign) CGSize originContentSize;
 @property (nonatomic, assign) UIEdgeInsets originContentInset;
 @property (nonatomic, assign) UIEdgeInsets originScrollIndicatorInsets;
@@ -70,7 +70,7 @@ return self;\
 - (void)scrollToAppropriatePosition:(NSNotification *)notification;
 @end
 
-@implementation DKKeyboardManager
+@implementation WSKeyboardManager
 
 @synthesize currentScrollView = _currentScrollView;
 @synthesize activeTextField = _activeTextField;
@@ -78,7 +78,7 @@ return self;\
 @synthesize originContentInset = _originContentInset;
 @synthesize originScrollIndicatorInsets = _originScrollIndicatorInsets;
 
-kDKStrictSingletonForClass(DKKeyboardManager)
+kWSStrictSingletonForClass(WSKeyboardManager)
 
 - (void)setCurrentScrollView:(UIScrollView *)currentScrollView {
 	if (_currentScrollView != currentScrollView) {
