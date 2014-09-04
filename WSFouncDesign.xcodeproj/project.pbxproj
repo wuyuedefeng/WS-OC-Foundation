@@ -174,8 +174,8 @@
 		4BC7E4E21990777600DD174E /* UIApplication+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+Category.m"; path = "WSFouncDesign/WSFunc/category/UIApplication+Category.m"; sourceTree = SOURCE_ROOT; };
 		4BC7E4E41990784D00DD174E /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Category.h"; path = "WSFouncDesign/WSFunc/category/UIImage+Category.h"; sourceTree = SOURCE_ROOT; };
 		4BC7E4E51990784D00DD174E /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Category.m"; path = "WSFouncDesign/WSFunc/category/UIImage+Category.m"; sourceTree = SOURCE_ROOT; };
-		4BC7E4E81990807F00DD174E /* WSKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSKeyboardManager.h; sourceTree = "<group>"; };
-		4BC7E4E91990807F00DD174E /* WSKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSKeyboardManager.m; sourceTree = "<group>"; };
+		4BC7E4E81990807F00DD174E /* WSKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSKeyboardManager.h; path = ../WSFoundation/OtherDesign/WSKeyboardManager.h; sourceTree = "<group>"; };
+		4BC7E4E91990807F00DD174E /* WSKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSKeyboardManager.m; path = ../WSFoundation/OtherDesign/WSKeyboardManager.m; sourceTree = "<group>"; };
 		4BC7E4EB1990820100DD174E /* UIScreen+DK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+DK.h"; sourceTree = "<group>"; };
 		4BC7E4EC1990820100DD174E /* UIScreen+DK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+DK.m"; sourceTree = "<group>"; };
 		4BCD167B1993748400DACFF2 /* NSMutableDictionary+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Category.h"; path = "WSFouncDesign/WSFunc/category/NSMutableDictionary+Category.h"; sourceTree = SOURCE_ROOT; };
@@ -404,6 +404,8 @@
 				4B1E041B1987AC8B00C24425 /* UITableViewCell+Category.m */,
 				4B0C705E19A5DAA700A2A5E6 /* UITabBarController+Category.h */,
 				4B0C705F19A5DAA700A2A5E6 /* UITabBarController+Category.m */,
+				4BC7E4E81990807F00DD174E /* WSKeyboardManager.h */,
+				4BC7E4E91990807F00DD174E /* WSKeyboardManager.m */,
 				4B1E04241987B17F00C24425 /* UIDevice+Category.h */,
 				4B1E04251987B17F00C24425 /* UIDevice+Category.m */,
 				4BC7E4E11990777600DD174E /* UIApplication+Category.h */,
@@ -500,8 +502,6 @@
 				4BCD169B1993926D00DACFF2 /* UIView+WhenTappedBlocks.m */,
 				4BC7E4EB1990820100DD174E /* UIScreen+DK.h */,
 				4BC7E4EC1990820100DD174E /* UIScreen+DK.m */,
-				4BC7E4E81990807F00DD174E /* WSKeyboardManager.h */,
-				4BC7E4E91990807F00DD174E /* WSKeyboardManager.m */,
 			);
 			path = OtherDesign;
 			sourceTree = "<group>";
