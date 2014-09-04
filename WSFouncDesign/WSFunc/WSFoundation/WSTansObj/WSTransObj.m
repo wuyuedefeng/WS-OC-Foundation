@@ -232,13 +232,47 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     NSMutableArray *mutableArr = [NSMutableArray array];
     
     for (NSString *key in allKeys) {
-        [mutableArr addObject:[WSTransObj valueGetterOfModal:modal withKey:key]];
+        id obj = [WSTransObj valueGetterOfModal:modal withKey:key];
+        if ([WSTransObj isBaseObject:obj]) {
+            [mutableArr addObject:[WSTransObj valueGetterOfModal:modal withKey:key]];
+        }
+        else
+        {
+            [mutableArr addObject:[WSTransObj dictionary_from_modal:obj]];
+        }
+        
+//        [mutableArr addObject:[WSTransObj valueGetterOfModal:modal withKey:key]];
     }
     
     return mutableArr;
 }
 
-
++ (BOOL)isBaseObject:(id)obj
+{
+    if ([obj isKindOfClass:[NSDictionary class]]) {
+        return YES;
+    }
+    if ([obj isKindOfClass:[NSArray class]]) {
+        return YES;
+    }
+    if ([obj isKindOfClass:[NSString class]]) {
+        return YES;
+    }
+    if ([obj isKindOfClass:[NSNumber class]]) {
+        return YES;
+    }
+    if ([obj isKindOfClass:[NSData class]]) {
+        return YES;
+    }
+    if ([obj isKindOfClass:[NSDate class]]) {
+        return YES;
+    }
+    if ([obj isKindOfClass:[NSSet class]]) {
+        return YES;
+    }
+    
+    return NO;
+}
 
 
 @end

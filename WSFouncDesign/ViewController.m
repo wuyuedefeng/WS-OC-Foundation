@@ -53,6 +53,11 @@
     NSLog(@"%@",dicArr);
     NSLog(@"%@",dicArr[0][@"_teacherAge"]);
     
+    NSMutableDictionary *wdic = [NSMutableDictionary dictionary];
+    if ([wdic isKindOfClass:[NSDictionary class]]) {
+        NSLog(@"yes");
+    }
+    
 
 }
 //模型模型数组《＝》字典模型数组
