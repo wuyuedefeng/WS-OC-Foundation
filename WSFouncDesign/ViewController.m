@@ -53,10 +53,13 @@
     NSLog(@"%@",dicArr);
     NSLog(@"%@",dicArr[0][@"_teacherAge"]);
     
-    NSMutableDictionary *wdic = [NSMutableDictionary dictionary];
-    if ([wdic isKindOfClass:[NSDictionary class]]) {
-        NSLog(@"yes");
-    }
+    NSLog(@"=============");
+    NSDictionary *dic = dicArr[0];
+    id modal = [WSTransObj modal_from_dictionary:dic];
+    NSLog(@"%@",modal);
+    NSLog(@"-------------");
+    dic = [WSTransObj dictionary_from_modal:modal];
+    NSLog(@"%@",dic);
     
 
 }

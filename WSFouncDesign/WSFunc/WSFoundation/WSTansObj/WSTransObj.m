@@ -44,13 +44,13 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     return object_getIvar(modal, ivar);
 }
 #pragma mark - 设置模型的值
-+ (void)valueSetterOfModal:(id)modal withKey:(NSString *)key withValue:(NSString *)value
++ (void)valueSetterOfModal:(id)modal withKey:(NSString *)key withValue:(id)value
 {
     Ivar ivar = class_getInstanceVariable([modal class], [key UTF8String]);
     id oldValue = object_getIvar(modal, ivar);
     if (oldValue != value)
     {
-        object_setIvar(modal, ivar, [value copy]);
+        object_setIvar(modal, ivar, value);
     }
 }
 #pragma mark - 字典数组转模型数组
@@ -81,7 +81,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     //[WSTransObj createClass];
     //创建WSTransModol类
     //const char * className = "WSTransModal";
-    const char * className = [[[[NSDate ws_current_DateTime] ws_md5_encrypt] stringByAppendingString:@"_WSCLASS"] UTF8String];
+    const char * className = [[[[[NSDate ws_current_DateTime] ws_md5_encrypt] stringByAppendingString:[NSString stringWithFormat:@"%d",arc4random()]] stringByAppendingString:@"_WSCLASS"] UTF8String];
     Class wsclass = objc_getClass(className);
     if (!wsclass)
     {
@@ -142,7 +142,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     
     return wsclass;
 }
-#pragma mark -模型转换成字典具体实现
+#pragma mark -字典数组转换成模型数组的具体实现
 + (NSArray *)modalArrWithDictionarys:(NSArray *)dicArr andModalClass:(Class)wsclass
 {
     
@@ -158,7 +158,18 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
             //[instance setValue:allValues[j] forKey:allKeys[j]];
             //Ivar ivar = class_getInstanceVariable([wsclass class], [allKeys[j] UTF8String]);
             //object_setIvar(instance, ivar, allValues[j]);
-            [WSTransObj valueSetterOfModal:instance withKey:allKeys[j] withValue:allValues[j]];
+            NSLog(@"%@",allKeys[j]);
+            if ([allValues[j] isKindOfClass:[NSDictionary class]]) {
+                Class wsclass = [WSTransObj createWSObjectClassWithOneDic:allValues[j]];
+                id subModal = [WSTransObj modalArrWithDictionarys:@[allValues[j]] andModalClass:wsclass][0];
+                [WSTransObj valueSetterOfModal:instance withKey:allKeys[j] withValue:subModal];
+                
+            }
+            else
+            {
+                [WSTransObj valueSetterOfModal:instance withKey:allKeys[j] withValue:allValues[j]];
+            }
+//            [WSTransObj valueSetterOfModal:instance withKey:allKeys[j] withValue:allValues[j]];
         }
         NSLog(@"%@",instance);
         [mutableArr addObject:instance];
