@@ -40,12 +40,14 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
 #pragma mark - 获取模型的值
 + (id)valueGetterOfModal:(id)modal withKey:(NSString *)key
 {
+    key = [@"_" stringByAppendingString:key];
     Ivar ivar = class_getInstanceVariable([modal class], [key UTF8String]);
     return object_getIvar(modal, ivar);
 }
 #pragma mark - 设置模型的值
 + (void)valueSetterOfModal:(id)modal withKey:(NSString *)key withValue:(id)value
 {
+    key = [@"_" stringByAppendingString:key];
     Ivar ivar = class_getInstanceVariable([modal class], [key UTF8String]);
     id oldValue = object_getIvar(modal, ivar);
     if (oldValue != value)
@@ -95,7 +97,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
      NSUInteger count = allKeys.count;
     for (int i = 0; i < count; i++) {
         NSString *classType = NSStringFromClass([allValues[i] class]);
-        wsclass = [WSTransObj setClassIvar:classType andIvarName:allKeys[i] andIvarValue:allValues[i] withClass:wsclass];
+        wsclass = [WSTransObj setClassIvar:classType andIvarName:[@"_" stringByAppendingString:allKeys[i]] andIvarValue:allValues[i] withClass:wsclass];
     }
     //4注册到运行时环境
     objc_registerClassPair(wsclass);
@@ -189,10 +191,15 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     //获取创建字典所需要的key key获取到都是字符串类型（NSString）
     NSArray *allKeys = [WSTransObj typeNamesOfModal:modalArray[0]];
     
+    NSMutableArray *customAllKeys = [NSMutableArray array];
+    for (NSString *key in allKeys) {
+        [customAllKeys addObject:[key substringFromIndex:1]];
+    }
+    
     NSMutableArray *mutableArr = [NSMutableArray array];//待返回数组
     for (id modal in modalArray) {
-        NSArray *allValues = [WSTransObj valuesOfModal:modal andModalKeys:allKeys];
-        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObjects:allValues forKeys:allKeys];
+        NSArray *allValues = [WSTransObj valuesOfModal:modal andModalKeys:customAllKeys];
+        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObjects:allValues forKeys:customAllKeys];
         [mutableArr addObject:dic];
     }
     return mutableArr;
