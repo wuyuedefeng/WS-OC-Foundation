@@ -9,7 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (Category)
-#pragma mark -输出：2014-07-28 16:46:54
+/**
+ *  输出：2014-07-28 16:46:54
+ *
+ *  @return 2014-07-28 16:46:54
+ */
 + (NSString *)ws_current_DateTime;
+/**
+ *  输出：2014-07-28
+ *
+ *  @return 2014-07-28
+ */
 + (NSString *)ws_current_Date;
 @end
