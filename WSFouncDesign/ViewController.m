@@ -41,13 +41,20 @@
 //        WSLogA(@"%@",@"abc");
 //    }];
 //    
+    
+    
+
+}
+//模型模型数组《＝》字典模型数组
+- (IBAction)数据模型转换:(UIButton *)sender {
+    //[self WSTransObj_test];
     Teacher *tea = [[Teacher alloc] init];
     tea.teacherAge = @"20";
     tea.teacherAge = @"18";
     Name *nam = [[Name alloc] init];
     nam.nameCStr = @"namename";
     tea.nameModal = nam;
-
+    
     NSArray *arr = [NSArray arrayWithObjects:tea, nil];
     NSArray *dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
     NSLog(@"%@",dicArr);
@@ -60,15 +67,6 @@
     NSLog(@"-------------");
     dic = [WSTransObj dictionary_from_modal:modal];
     NSLog(@"%@",dic);
-    
-
-}
-//模型模型数组《＝》字典模型数组
-- (IBAction)数据模型转换:(UIButton *)sender {
-    //[self WSTransObj_test];
-    [self.view ws_loadAnimation:^{
-        NSLog(@"abc");
-    }];
 }
 
 - (IBAction)录音View:(UIButton *)sender {
