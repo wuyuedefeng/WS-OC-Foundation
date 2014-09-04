@@ -59,7 +59,7 @@
                          @{@"n":@"李四"},@"sub1",
                          nil];
     id modal = [WSTransObj modal_from_dictionary:dic];
-    NSLog(@"%@",[[modal description] description]);
+    NSLog(@"%@",[WSTransObj valueGetterOfModal:modal withKey:@"name2"]);
 }
 //模型模型数组《＝》字典模型数组
 - (IBAction)数据模型转换:(UIButton *)sender {
@@ -104,7 +104,7 @@
 //         \  \ `-.   \_ __\ /__ _/   .-` /  /
 //    ======`-.____`-.___\_____/___.-`____.-'======
 //                       `=---='
-//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//   ^^^^^^^^^^^^^^^^^^^^wangsen^^^^^^^^^^^^^^^^^^^^^^
 
 - (IBAction)ttt:(id)sender {
 
