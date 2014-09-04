@@ -51,12 +51,12 @@
     NSArray *arr = [NSArray arrayWithObjects:tea, nil];
     NSArray *dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
     NSLog(@"%@",dicArr);
-    NSLog(@"%@",dicArr[0][@"_teacherAge"]);
+    NSLog(@"%@",dicArr[0][@"teacherAge"]);
     
     NSLog(@"=============");
     NSDictionary *dic = dicArr[0];
     id modal = [WSTransObj modal_from_dictionary:dic];
-    NSLog(@"%@",modal);
+    NSLog(@"%@",[WSTransObj valueGetterOfModal:[WSTransObj valueGetterOfModal:modal withKey:@"nameModal"] withKey:@"nameCStr"]);
     NSLog(@"-------------");
     dic = [WSTransObj dictionary_from_modal:modal];
     NSLog(@"%@",dic);
