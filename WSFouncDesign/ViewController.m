@@ -41,25 +41,19 @@
 //        WSLogA(@"%@",@"abc");
 //    }];
 //    
-//    Teacher *tea = [[Teacher alloc] init];
-//    tea.pname = @"pname";
-//    tea.tname = @"tname";
-//    Name *nam = [[Name alloc] init];
-//    nam.wname = @"wname";
-//    tea.name = nam;
-//
-//    NSArray *arr = [NSArray arrayWithObjects:tea, nil];
-//    NSArray *dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
+    Teacher *tea = [[Teacher alloc] init];
+    tea.teacherAge = @"20";
+    tea.teacherAge = @"18";
+    Name *nam = [[Name alloc] init];
+    nam.nameCStr = @"namename";
+    tea.nameModal = nam;
+
+    NSArray *arr = [NSArray arrayWithObjects:tea, nil];
+    NSArray *dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
+    NSLog(@"%@",dicArr);
+    NSLog(@"%@",dicArr[0][@"_teacherAge"]);
     
-    NSDictionary *dic = [[NSDictionary alloc]initWithObjectsAndKeys:
-                         @"张三",@"name1",
-                         @"21",@"age1",
-                         @"1",@"isMan1",
-                         @[@"语文",@"数学",@"英语"],@"subject1",
-                         @{@"n":@"李四"},@"sub1",
-                         nil];
-    id modal = [WSTransObj modal_from_dictionary:dic];
-    NSLog(@"%@",[WSTransObj valueGetterOfModal:modal withKey:@"name2"]);
+
 }
 //模型模型数组《＝》字典模型数组
 - (IBAction)数据模型转换:(UIButton *)sender {

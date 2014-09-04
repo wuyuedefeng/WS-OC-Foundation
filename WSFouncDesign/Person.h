@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface Person : NSObject
-@property (nonatomic,copy)NSString *pname;
+@property (nonatomic,copy)NSString *teacherAge;
 @end

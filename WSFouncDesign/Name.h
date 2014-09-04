@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface Name : NSObject
-@property (nonatomic,copy)NSString *wname;
+@property (nonatomic,copy)NSString *nameCStr;
 @end
