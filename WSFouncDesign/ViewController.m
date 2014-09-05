@@ -56,18 +56,42 @@
     nam.nameCStr = @"namename";
     tea.nameModal = nam;
     
-    NSArray *arr = [NSArray arrayWithObjects:tea, nil];
+    Teacher *tea2 = [[Teacher alloc] init];
+    tea2.teacherAge = @"20";
+    tea2.teacherAge = @"18";
+    Name *nam2 = [[Name alloc] init];
+    nam2.nameCStr = @"namename";
+    tea2.nameModal = nam;
+    
+    NSArray *arr = [NSArray arrayWithObjects:tea,tea2, nil];
     NSArray *dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
     NSLog(@"%@",dicArr);
     NSLog(@"%@",dicArr[0][@"teacherAge"]);
     
-    NSLog(@"=============");
-    NSDictionary *dic = dicArr[0];
-    id modal = [WSTransObj modal_from_dictionary:dic];
-    NSLog(@"%@",[WSTransObj valueGetterOfModal:[WSTransObj valueGetterOfModal:modal withKey:@"nameModal"] withKey:@"nameCStr"]);
-    NSLog(@"-------------");
-    dic = [WSTransObj dictionary_from_modal:modal];
-    NSLog(@"%@",dic);
+    arr = [WSTransObj modalArray_from_dictionaryArr:dicArr token:@"wangsen"];
+    id ins = [arr[0] transObj_valueForKey:@"nameModal"];
+    NSLog(@"%@",[ins transObj_valueForKey:@"nameCStr"]);
+    dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
+    NSLog(@"===%@",dicArr);
+    
+//    NSLog(@"=============");
+//    NSDictionary *dic = dicArr[0];
+    id modal = [WSTransObj modal_from_dictionary:dicArr[0] token:@"wangsen"];
+    
+    
+    id modal2 = [WSTransObj modalFromToken:@"wangsen"];
+    [modal2 transObj_setValue:@"111" forKey:@"teacherAge"];
+    
+    id modal3 = [modal2 transObj_valueForKey:@"nameModal"];
+    [modal3 transObj_setValue:@"abc" forKey:[modal3 transObj_valueForKey:@"nameCStr"]];
+//
+//    
+    WSLogA(@"%@:%@",[modal2 transObj_valueForKey:@"teacherAge"],[modal3 transObj_valueForKey:@"nameCStr"]);
+//    [modal transObj_setValue:@"20" forKey:@"teacherAge"];
+//    NSLog(@"%@",[WSTransObj valueGetterOfModal:[WSTransObj valueGetterOfModal:modal2 withKey:@"nameModal"] withKey:@"nameCStr"]);
+//    NSLog(@"-------------");
+//    dic = [WSTransObj dictionary_from_modal:modal];
+//    NSLog(@"%@",dic);
 }
 
 - (IBAction)录音View:(UIButton *)sender {

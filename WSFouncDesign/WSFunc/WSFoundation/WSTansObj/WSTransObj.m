@@ -58,6 +58,11 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
 #pragma mark - 字典数组转模型数组
 + (NSArray *)modalArray_from_dictionaryArr:(NSArray *)dictionaryArr
 {
+    NSString *className = [[[[NSDate ws_current_DateTime] ws_md5_encrypt] stringByAppendingString:[NSString stringWithFormat:@"%d",arc4random()]] stringByAppendingString:@"_WSCLASS"];
+    return [WSTransObj modalArray_from_dictionaryArr:dictionaryArr token:className];
+}
++ (NSArray *)modalArray_from_dictionaryArr:(NSArray *)dictionaryArr token:(NSString*)token
+{
     if (![dictionaryArr isKindOfClass:[NSArray class]]) {
         NSLog(@"传递参数不是数组");
         return nil;
@@ -65,7 +70,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     if (dictionaryArr.count == 0) {
         return nil;
     }
-    Class wsclass = [WSTransObj createWSObjectClassWithOneDic:dictionaryArr[0]];
+    Class wsclass = [WSTransObj createWSObjectClassWithOneDic:dictionaryArr[0] token:token];
     return [WSTransObj modalArrWithDictionarys:dictionaryArr andModalClass:wsclass];
 }
 + (id)modal_from_dictionary:(NSDictionary *)dic
@@ -76,6 +81,14 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     }
     return nil;
 }
++ (id)modal_from_dictionary:(NSDictionary *)dic token:(NSString*)token
+{
+    if (dic) {
+        NSArray *arrDic = [NSArray arrayWithObjects:dic, nil];
+        return  [WSTransObj modalArray_from_dictionaryArr:arrDic token:token][0];
+    }
+    return nil;
+}
 #pragma mark -私有调用方法
 #pragma mark -create class WSObject
 + (Class)createWSObjectClassWithOneDic:(NSDictionary *)oneDic
@@ -83,7 +96,12 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     //[WSTransObj createClass];
     //创建WSTransModol类
     //const char * className = "WSTransModal";
-    const char * className = [[[[[NSDate ws_current_DateTime] ws_md5_encrypt] stringByAppendingString:[NSString stringWithFormat:@"%d",arc4random()]] stringByAppendingString:@"_WSCLASS"] UTF8String];
+    NSString *className = [[[[NSDate ws_current_DateTime] ws_md5_encrypt] stringByAppendingString:[NSString stringWithFormat:@"%d",arc4random()]] stringByAppendingString:@"_WSCLASS"];
+    return [WSTransObj createWSObjectClassWithOneDic:oneDic token:className];
+}
++ (Class)createWSObjectClassWithOneDic:(NSDictionary *)oneDic token:(NSString *)token
+{
+    const char * className = [token UTF8String];
     Class wsclass = objc_getClass(className);
     if (!wsclass)
     {
@@ -94,7 +112,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     NSArray *allKeys = [oneDic allKeys];
     NSArray *allValues = [oneDic allValues];
     
-     NSUInteger count = allKeys.count;
+    NSUInteger count = allKeys.count;
     for (int i = 0; i < count; i++) {
         NSString *classType = NSStringFromClass([allValues[i] class]);
         wsclass = [WSTransObj setClassIvar:classType andIvarName:[@"_" stringByAppendingString:allKeys[i]] andIvarValue:allValues[i] withClass:wsclass];
@@ -162,8 +180,14 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
             //object_setIvar(instance, ivar, allValues[j]);
             NSLog(@"%@",allKeys[j]);
             if ([allValues[j] isKindOfClass:[NSDictionary class]]) {
-                Class wsclass = [WSTransObj createWSObjectClassWithOneDic:allValues[j]];
-                id subModal = [WSTransObj modalArrWithDictionarys:@[allValues[j]] andModalClass:wsclass][0];
+                NSString *subToken = [NSStringFromClass(wsclass) stringByAppendingString:allKeys[j]];
+                id subModal = [WSTransObj modalFromToken:subToken];
+                const char * subclassName = [subToken UTF8String];
+                Class wssubclass = objc_getClass(subclassName);
+                if (subModal == nil) {
+                    wssubclass = [WSTransObj createWSObjectClassWithOneDic:allValues[j] token:subToken];
+                }
+                subModal = [WSTransObj modalArrWithDictionarys:@[allValues[j]] andModalClass:wssubclass][0];
                 [WSTransObj valueSetterOfModal:instance withKey:allKeys[j] withValue:subModal];
                 
             }
@@ -293,4 +317,28 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
 }
 
 
++ (id)modalFromToken:(NSString *)token;
+{
+    //获取创建字典所需要的key key获取到都是字符串类型（NSString）
+    id instance = [[objc_getClass([token UTF8String]) alloc] init];
+    
+    unsigned int count = 0;
+    // 获得Person类中的所有成员变量
+    Ivar *ivars = class_copyIvarList([objc_getClass([token UTF8String]) class], &count);
+    // 遍历所有的成员变量
+    for (int i = 0; i < count; i++) {
+        Ivar ivar = ivars[i];
+        
+        const char *name = ivar_getName(ivar);
+        const char *type = ivar_getTypeEncoding(ivar);
+        
+        NSString *typeStr = [NSString stringWithFormat:@"%s",type];
+        if (![typeStr hasPrefix:@"__NSCF"]) {
+            NSString *subToken = [NSStringFromClass([instance class]) stringByAppendingString:[[NSString stringWithFormat:@"%s",name] substringFromIndex:1]];
+//            object_setIvar(instance, ivar, [WSTransObj modalFromToken:subToken]);
+            [instance transObj_setValue:[WSTransObj modalFromToken:subToken] forKey:[[NSString stringWithFormat:@"%s",name] substringFromIndex:1]];
+        }
+    }
+    return instance;
+}
 @end

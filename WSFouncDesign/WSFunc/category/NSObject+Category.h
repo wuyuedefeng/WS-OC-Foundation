@@ -12,6 +12,11 @@
 
 #pragma mark - 获得documents路径
 
+
+#pragma mark - 获取模型的值
+- (id)transObj_valueForKey:(NSString *)key;
+#pragma mark - 设置模型的值
+- (void)transObj_setValue:(id)value forKey:(NSString *)key;
 /**
  *  获得documents路径
  *
