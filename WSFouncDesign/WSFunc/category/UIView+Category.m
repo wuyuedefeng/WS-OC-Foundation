@@ -294,6 +294,156 @@ CGRect rectSetSize(CGRect rect, CGSize size) {
 {
     return self.frame.size;
 }
+
+//===========================================================
+#pragma mark -
+#pragma mark Position Views
+//===========================================================
+//===========================================================
+#pragma mark -
+#pragma mark Properties for retreiving/changing of Frame Coordinates
+//===========================================================
+
+- (void)setFrameWidth:(CGFloat)width {
+	[self setWidth:width];
+}
+
+- (void)setFrameHeight:(CGFloat)height {
+	[self setHeight:height];
+}
+
+- (void)setFrameTop:(CGFloat)top {
+	[self setY:top];
+}
+
+- (void)setFrameLeft:(CGFloat)left {
+	[self setX:left];
+}
+
+- (void)setFrameBottom:(CGFloat)bottom {
+//	self.frame = CGRectMake(self.frame.origin.x,bottom - self.frame.size.height, self.frame.size.width, self.frame.size.height);
+    [self setY:bottom - self.height];
+}
+
+- (void)setFrameRight:(CGFloat)right {
+//	self.frame = CGRectMake(right - self.frame.size.width,self.frame.origin.y, self.frame.size.width, self.frame.size.height);
+    [self setX:right - self.width];
+}
+
+- (CGFloat)frameHeight {
+	return self.frame.size.height;
+}
+
+- (CGFloat)frameWidth {
+	return self.frame.size.width;
+}
+
+- (CGFloat)frameTop {
+	return self.frame.origin.y;
+}
+
+- (CGFloat)frameLeft {
+	return self.frame.origin.x;
+}
+
+- (CGFloat)frameBottom {
+	return self.frame.origin.y + self.frame.size.height;
+}
+
+- (CGFloat)frameRight {
+	return self.frame.origin.x + self.frame.size.width;
+}
+
+- (void)positionUnderView:(UIView *)view {
+	[self positionUnderView:view padding:0];
+}
+
+- (void)positionUnderView:(UIView *)view padding:(CGFloat)padding {
+	[self positionUnderView:view padding:padding alignment:WSUIViewAlignmentUnchanged];
+}
+
+- (void)positionUnderView:(UIView *)view alignment:(WSUIViewAlignment)alignment {
+	[self positionUnderView:view padding:0 alignment:alignment];
+}
+
+- (void)positionUnderView:(UIView *)view padding:(CGFloat)padding alignment:(WSUIViewAlignment)alignment {
+	self.frameTop = view.frameBottom + padding;
+    
+	switch (alignment) {
+		case WSUIViewAlignmentUnchanged:
+			// do nothing
+			break;
+		case WSUIViewAlignmentLeftAligned:
+			self.frameLeft = view.frameLeft;
+			break;
+            
+		case WSUIViewAlignmentRightAligned:
+			self.frameRight = view.frameRight;
+			break;
+            
+		case WSUIViewAlignmentCenter:
+			self.center = CGPointMake(view.center.x, self.center.y);
+			break;
+	}
+}
+
+- (void)addCenteredSubview:(UIView *)subview {
+	subview.frameLeft = (CGFloat)((self.bounds.size.width - subview.frameWidth) / 2);
+	subview.frameTop = (CGFloat)((self.bounds.size.height - subview.frameHeight) / 2);
+    
+	[self addSubview:subview];
+}
+
+- (void)moveToCenterOfSuperview {
+	self.frameLeft = (CGFloat)((self.superview.bounds.size.width - self.frameWidth) / 2);
+	self.frameTop = (CGFloat)((self.superview.bounds.size.height - self.frameHeight) / 2);
+}
+
+
+//===========================================================
+#pragma mark -
+#pragma mark Rounded Corners
+//===========================================================
+
+- (void)setCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor {
+	CALayer *l = [self layer];
+    
+	l.masksToBounds = YES;
+	l.cornerRadius = cornerRadius;
+	l.borderWidth = borderWidth;
+	l.borderColor = [borderColor CGColor];
+}
+
+//===========================================================
+#pragma mark -
+#pragma mark Shadows
+//===========================================================
+
+- (void)setShadowOffset:(CGSize)offset radius:(CGFloat)radius opacity:(CGFloat)opacity {
+	self.layer.masksToBounds = NO;
+	self.layer.shadowOffset = offset;
+	self.layer.shadowRadius = radius;
+	self.layer.shadowOpacity = opacity;
+}
+
+//===========================================================
+#pragma mark -
+#pragma mark Gradient Background
+//===========================================================
+
+- (void)setGradientBackgroundWithStartColor:(UIColor *)startColor endColor:(UIColor *)endColor {
+	CAGradientLayer *gradient = [CAGradientLayer layer];
+    
+	gradient.frame = self.bounds;
+	gradient.colors = [NSArray arrayWithObjects:(id)[startColor CGColor], (id)[endColor CGColor], nil];
+    
+	[self.layer insertSublayer:gradient atIndex:0];
+}
+//===========================================================
+//===========================================================
+//===========================================================
+//===========================================================
+////////==========================================================
 #pragma mark - 圆形视图
 /**
  *  将视图 转换 成 圆形

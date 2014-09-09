@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD.h"
 #import "UIImageView+WebCache.h"
+typedef enum {
+	WSUIViewAlignmentUnchanged,
+	WSUIViewAlignmentLeftAligned,
+	WSUIViewAlignmentRightAligned,
+	WSUIViewAlignmentCenter
+} WSUIViewAlignment;
 @interface UIView (Category)<UIScrollViewDelegate>
 #pragma mark - 设置x y width height 。。。
 - (void) setX:(CGFloat)x;
@@ -64,6 +70,51 @@
 - (CGFloat) height;
 - (CGPoint) origin;
 - (CGSize)  size;
+
+//===========================================================
+#pragma mark -
+#pragma mark Position Views
+//===========================================================
+
+// positions current view directly under the given view
+- (void)positionUnderView:(UIView *)view;
+// positions current view under a given view with a specified y-padding
+- (void)positionUnderView:(UIView *)view padding:(CGFloat)padding;
+
+// positions current view directly under the given view and aligns horizontally
+- (void)positionUnderView:(UIView *)view alignment:(WSUIViewAlignment)alignment;
+// positions current view under a given view with a specified y-padding and aligns horizontally
+- (void)positionUnderView:(UIView *)view padding:(CGFloat)padding alignment:(WSUIViewAlignment)alignment;
+
+// adds the subview as a subview of the current view and centers it
+- (void)addCenteredSubview:(UIView *)subview;
+// moves the current view to the center of it's superview
+- (void)moveToCenterOfSuperview;
+
+//===========================================================
+#pragma mark -
+#pragma mark Rounded Corners
+//===========================================================
+
+- (void)setCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
+
+//===========================================================
+#pragma mark -
+#pragma mark Shadows
+//===========================================================
+
+- (void)setShadowOffset:(CGSize)offset radius:(CGFloat)radius opacity:(CGFloat)opacity;
+
+//===========================================================
+#pragma mark -
+#pragma mark Gradient Background
+//===========================================================
+
+- (void)setGradientBackgroundWithStartColor:(UIColor *)startColor endColor:(UIColor *)endColor;
+//===========================================================
+//===========================================================
+//===========================================================
+//////===========================================================
 
 #pragma mark - 圆形视图
 - (void)ws_becomeCircleView;
