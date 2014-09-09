@@ -10,14 +10,14 @@
 #import "WSTransObj.h"
 #import "WSAudioRecordManager.h"
 #import "AddressbookListViewController.h"
-#import "UIViewController+WSCategory.h"
+//#import "UIViewController+WSCategory.h"
 #import "NGAudioPlayer.h"
-#import "UIView+WSCategory.h"
-#import "UIApplication+WSCategory.h"
+//#import "UIView+WSCategory.h"
+//#import "UIApplication+WSCategory.h"
 #import "UIView+WSCategory.h"
 #import "Teacher.h"
-#import "WSKeyboardManager.h"
-#import "NSObject+WSCategory.h"
+//#import "WSKeyboardManager.h"
+//#import "NSObject+WSCategory.h"
 @interface ViewController ()
 {
     WSAudioRecordManager *manager;
@@ -91,6 +91,7 @@
 //    NSLog(@"-------------");
 //    dic = [WSTransObj dictionary_from_modal:modal];
 //    NSLog(@"%@",dic);
+    
 }
 
 - (IBAction)录音View:(UIButton *)sender {

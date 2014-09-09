@@ -9,6 +9,6 @@
 #ifndef WSFouncDesign_WSFouncDesignCommon_h
 #define WSFouncDesign_WSFouncDesignCommon_h
 
-#import "CommonHeader.h"
+#import "WSCommonHeader.h"
 
 #endif

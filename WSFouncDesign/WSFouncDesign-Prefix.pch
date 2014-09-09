@@ -13,10 +13,9 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-    #import "CommonHeader.h"
 
 //ws
-#import "CommonHeader.h"//数据处理
+#import "WSFouncDesignCommon.h"//数据处理
 
 #endif
 

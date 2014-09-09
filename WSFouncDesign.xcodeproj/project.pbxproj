@@ -114,7 +114,7 @@
 		4B1603F21976587000921B93 /* WSFouncDesignTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WSFouncDesignTests-Info.plist"; sourceTree = "<group>"; };
 		4B1603F41976587000921B93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B1603F61976587000921B93 /* WSFouncDesignTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSFouncDesignTests.m; sourceTree = "<group>"; };
-		4B1604171976807D00921B93 /* CommonHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeader.h; sourceTree = "<group>"; };
+		4B1604171976807D00921B93 /* WSCommonHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCommonHeader.h; sourceTree = "<group>"; };
 		4B16041F1976848500921B93 /* NSString+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WSCategory.h"; sourceTree = "<group>"; };
 		4B1604201976848500921B93 /* NSString+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WSCategory.m"; sourceTree = "<group>"; };
 		4B19B673197E549E00D53E86 /* NSDictionary+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WSCategory.h"; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		4B3B8B3619AEDD3600FEC1E1 /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
 		4B3B8B3819AEDD7000FEC1E1 /* Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Name.h; sourceTree = "<group>"; };
 		4B3B8B3919AEDD7000FEC1E1 /* Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Name.m; sourceTree = "<group>"; };
-		4B50AB5A19A1E69B006129D2 /* NGAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGAudioPlayer.h; sourceTree = "<group>"; };
+		4B50AB5A19A1E69B006129D2 /* NGAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGAudioPlayer.h; path = ../WSFoundation/WSAudioRecord/NGAudioPlayer/NGAudioPlayer.h; sourceTree = "<group>"; };
 		4B50AB5B19A1E69B006129D2 /* NGAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGAudioPlayer.m; sourceTree = "<group>"; };
 		4B50AB5C19A1E69B006129D2 /* NGAudioPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGAudioPlayerDelegate.h; sourceTree = "<group>"; };
 		4B50AB5D19A1E69B006129D2 /* NGAudioPlayerPlaybackState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGAudioPlayerPlaybackState.h; sourceTree = "<group>"; };
@@ -186,8 +186,8 @@
 		4BCD169B1993926D00DACFF2 /* UIView+WhenTappedBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WhenTappedBlocks.m"; sourceTree = "<group>"; };
 		4BD0562219889DF600FBC824 /* NSObject+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WSCategory.h"; sourceTree = "<group>"; };
 		4BD0562319889DF600FBC824 /* NSObject+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WSCategory.m"; sourceTree = "<group>"; };
-		4BD056251988F0FE00FBC824 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		4BD056261988F0FE00FBC824 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		4BD056251988F0FE00FBC824 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../Category/Reachability.h; sourceTree = "<group>"; };
+		4BD056261988F0FE00FBC824 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../Category/Reachability.m; sourceTree = "<group>"; };
 		4BD4F8791986385D005C61CD /* UIViewController+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WSCategory.h"; sourceTree = "<group>"; };
 		4BD4F87A1986385D005C61CD /* UIViewController+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WSCategory.m"; sourceTree = "<group>"; };
 		4BD4F87E19863A71005C61CD /* AddressbookListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressbookListCell.h; sourceTree = "<group>"; };
@@ -361,7 +361,7 @@
 		4B1604161976807D00921B93 /* Common－通用定义 */ = {
 			isa = PBXGroup;
 			children = (
-				4B1604171976807D00921B93 /* CommonHeader.h */,
+				4B1604171976807D00921B93 /* WSCommonHeader.h */,
 			);
 			name = "Common－通用定义";
 			path = Common;
@@ -379,6 +379,7 @@
 				4B5512C3199373DD0045A9C0 /* NSMutableArray+WSCategory.h */,
 				4B5512C4199373DD0045A9C0 /* NSMutableArray+WSCategory.m */,
 				4B19B673197E549E00D53E86 /* NSDictionary+WSCategory.h */,
+				4B50AB5A19A1E69B006129D2 /* NGAudioPlayer.h */,
 				4B19B674197E549E00D53E86 /* NSDictionary+WSCategory.m */,
 				4BCD167B1993748400DACFF2 /* NSMutableDictionary+WSCategory.h */,
 				4BCD167C1993748400DACFF2 /* NSMutableDictionary+WSCategory.m */,
@@ -406,8 +407,6 @@
 				4B1E04251987B17F00C24425 /* UIDevice+WSCategory.m */,
 				4BC7E4E11990777600DD174E /* UIApplication+WSCategory.h */,
 				4BC7E4E21990777600DD174E /* UIApplication+WSCategory.m */,
-				4BD056251988F0FE00FBC824 /* Reachability.h */,
-				4BD056261988F0FE00FBC824 /* Reachability.m */,
 				4BCD167E1993766900DACFF2 /* NSNotificationCenter+WSCategory.h */,
 				4BCD167F1993766900DACFF2 /* NSNotificationCenter+WSCategory.m */,
 			);
@@ -435,7 +434,6 @@
 		4B50AB5819A1E69B006129D2 /* NGAudioPlayer-播放网络路径 */ = {
 			isa = PBXGroup;
 			children = (
-				4B50AB5A19A1E69B006129D2 /* NGAudioPlayer.h */,
 				4B50AB5B19A1E69B006129D2 /* NGAudioPlayer.m */,
 				4B50AB5C19A1E69B006129D2 /* NGAudioPlayerDelegate.h */,
 				4B50AB5D19A1E69B006129D2 /* NGAudioPlayerPlaybackState.h */,
@@ -497,6 +495,8 @@
 				4BCD169B1993926D00DACFF2 /* UIView+WhenTappedBlocks.m */,
 				4BC7E4EB1990820100DD174E /* UIScreen+DK.h */,
 				4BC7E4EC1990820100DD174E /* UIScreen+DK.m */,
+				4BD056251988F0FE00FBC824 /* Reachability.h */,
+				4BD056261988F0FE00FBC824 /* Reachability.m */,
 			);
 			path = OtherDesign;
 			sourceTree = "<group>";
