@@ -11,6 +11,6 @@
 @interface NSMutableArray (Category)
 
 
-- (void)ws_addObject_Safe:(id)obj;
+- (void)addObject_Safe:(id)obj;
 
 @end

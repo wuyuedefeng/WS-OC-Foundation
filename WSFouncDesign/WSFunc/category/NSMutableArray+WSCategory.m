@@ -14,7 +14,7 @@
  *
  *  @param obj 需要添加的对象
  */
-- (void)ws_addObject_Safe:(id)obj
+- (void)addObject_Safe:(id)obj
 {
     if (obj != nil) {
 		[self addObject:obj];

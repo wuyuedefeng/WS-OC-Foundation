@@ -16,7 +16,7 @@
  *  @param obj 需要设置的值
  *  @param key 字典的key
  */
-- (void)ws_setObject_safe:(id)obj forKey_safe:(id)key
+- (void)setObject_safe:(id)obj forKey_safe:(id)key
 {
     if (obj != nil & key != nil) {
 		[self setObject:obj forKey:key];

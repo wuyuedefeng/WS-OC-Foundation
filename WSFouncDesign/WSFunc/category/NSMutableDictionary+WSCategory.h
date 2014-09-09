@@ -10,6 +10,6 @@
 
 @interface NSMutableDictionary (Category)
 
-- (void)ws_setObject_safe:(id)obj forKey_safe:(id)key;
+- (void)setObject_safe:(id)obj forKey_safe:(id)key;
 
 @end
