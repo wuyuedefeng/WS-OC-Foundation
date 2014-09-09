@@ -84,17 +84,23 @@ kWSStrictSingletonForClass(WSKeyboardManager)
 }
 
 - (void)handleKeyboardDidChangeFrame:(NSNotification *)notification {
-	[self scrollToAppropriatePosition:notification];
+//	[self scrollToAppropriatePosition:notification];
 }
 
 - (void)handleKeyboardWillHide:(NSNotification *)notification {
-	[self scrollToAppropriatePosition:notification];
+	CGFloat animationTime = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    [UIView animateWithDuration:animationTime animations:^{
+        [self.currentScrollView setContentSize:self.originContentSize];
+        [self.currentScrollView setContentInset:self.originContentInset];
+        [self.currentScrollView setScrollIndicatorInsets:self.originScrollIndicatorInsets];
+    }];
+
 }
 
 - (void)handleKeyboardDidHide:(NSNotification *)notification {
-	[self.currentScrollView setContentSize:self.originContentSize];
-	[self.currentScrollView setContentInset:self.originContentInset];
-	[self.currentScrollView setScrollIndicatorInsets:self.originScrollIndicatorInsets];
+//	[self.currentScrollView setContentSize:self.originContentSize];
+//	[self.currentScrollView setContentInset:self.originContentInset];
+//	[self.currentScrollView setScrollIndicatorInsets:self.originScrollIndicatorInsets];
 }
 
 - (void)scrollToAppropriatePosition:(NSNotification *)notification {
@@ -116,7 +122,7 @@ kWSStrictSingletonForClass(WSKeyboardManager)
 		CGPoint p1 = [self.activeTextField convertPoint:CGPointMake(0, CGRectGetHeight(self.activeTextField.bounds)) toView:self.currentScrollView];
 		if (CGRectContainsPoint(scrollViewRect, p1) == NO) {
 			// 加上 30 是为了解决iOS 5.0以下版本键盘遮挡到中文的问题
-			CGFloat delta = 30.0f;
+			CGFloat delta = 0.0f;
 			CGPoint scrollPoint = CGPointMake(0, p1.y - CGRectGetHeight(scrollViewRect) + delta);
 			[self.currentScrollView setContentOffset:scrollPoint animated:YES];
 			[self.currentScrollView setContentSize:CGSizeMake(self.originContentSize.width, self.originContentSize.height+delta)];

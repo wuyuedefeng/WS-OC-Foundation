@@ -76,7 +76,6 @@
     
 //    NSLog(@"=============");
 //    NSDictionary *dic = dicArr[0];
-    id modal = [WSTransObj modal_from_dictionary:dicArr[0] token:@"wangsen"];
     
     
     id modal2 = [WSTransObj modalFromToken:@"wangsen"];
