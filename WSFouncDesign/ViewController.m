@@ -18,6 +18,7 @@
 #import "UIView+WSCategory.h"
 #import "Teacher.h"
 #import "WSKeyboardManager.h"
+#import "NSObject+WSCategory.h"
 @interface ViewController ()
 {
     WSAudioRecordManager *manager;
