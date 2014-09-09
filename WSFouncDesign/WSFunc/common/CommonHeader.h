@@ -67,7 +67,7 @@
  *正则匹配 判断用户名，邮箱，手机号码，是否合法
  *NSString+Category 对NSString进行分类
  **/
-#import "NSObject+Category.h"
+#import "NSObject+WSCategory.h"
 
 /////=================1==============================
 #pragma mark - ws_category
@@ -76,70 +76,70 @@
  *正则匹配 判断用户名，邮箱，手机号码，是否合法等等等等
  *NSString+Category 对NSString进行分类
  **/
-#import "NSString+Category.h"
+#import "NSString+WSCategory.h"
 
 /////==================2=============================
 #pragma mark -NSDictionary字典分类
 /**
  *NSDictionary+Category
  **/
-#import "NSDictionary+Category.h"
+#import "NSDictionary+WSCategory.h"
 
 /////=================3==============================
 #pragma mark -NSArray数组分类
 /**
  *NNSArray+Category
  **/
-#import "NSArray+Category.h"
+#import "NSArray+WSCategory.h"
 
 /////================4===============================
 #pragma mark -NSData 二进制分类
 /**
- *NSData+Category.h
+ *NSData+WSCategory.h
  **/
-#import "NSData+Category.h"
+#import "NSData+WSCategory.h"
 
 /////=================5==============================
 #pragma mark -NSDate日期分类
 /**
- *NSDate+Category.h
+ *NSDate+WSCategory.h
  **/
-#import "NSDate+Category.h"
+#import "NSDate+WSCategory.h"
 
 /////=================5==============================
 #pragma mark -UIView分类
 /**
  *UIView+Category
  **/
-#import "UIView+Category.h"
+#import "UIView+WSCategory.h"
 
 /////=================6==============================
 #pragma mark -UIButton分类
 /**
  *UIButton+Category
  **/
-#import "UIButton+Category.h"
+#import "UIButton+WSCategory.h"
 
 /////=================7==============================
 #pragma mark -UIViewController分类
 /**
  *UIView+Category
  **/
-#import "UIViewController+Category.h"
+#import "UIViewController+WSCategory.h"
 
 /////==================8=============================
 #pragma mark -UITableViewCell分类
 /**
- *UITableViewCell+Category.h
+ *UITableViewCell+WSCategory.h
  **/
-#import "UITableViewCell+Category.h"
+#import "UITableViewCell+WSCategory.h"
 
 /////==================9=============================
 #pragma mark -UIDevice分类
 /**
- *UIDevice+Category.h
+ *UIDevice+WSCategory.h
  **/
-#import "UIDevice+Category.h"
+#import "UIDevice+WSCategory.h"
 /////===============================================
 /////===============================================
 /////===============================================
