@@ -62,7 +62,6 @@
 		4BCD16801993766900DACFF2 /* NSNotificationCenter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD167F1993766900DACFF2 /* NSNotificationCenter+Category.m */; };
 		4BCD168719937A5200DACFF2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BCD168619937A5200DACFF2 /* libsqlite3.dylib */; };
 		4BCD169C1993926D00DACFF2 /* UIView+WhenTappedBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD169B1993926D00DACFF2 /* UIView+WhenTappedBlocks.m */; };
-		4BCD169F1993946F00DACFF2 /* UIView+MTUIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD169E1993946F00DACFF2 /* UIView+MTUIAdditions.m */; };
 		4BD0562419889DF600FBC824 /* NSObject+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0562319889DF600FBC824 /* NSObject+Category.m */; };
 		4BD056271988F0FE00FBC824 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD056261988F0FE00FBC824 /* Reachability.m */; };
 		4BD4F87B1986385D005C61CD /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4F87A1986385D005C61CD /* UIViewController+Category.m */; };
@@ -185,8 +184,6 @@
 		4BCD168619937A5200DACFF2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		4BCD169A1993926D00DACFF2 /* UIView+WhenTappedBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WhenTappedBlocks.h"; sourceTree = "<group>"; };
 		4BCD169B1993926D00DACFF2 /* UIView+WhenTappedBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WhenTappedBlocks.m"; sourceTree = "<group>"; };
-		4BCD169D1993946F00DACFF2 /* UIView+MTUIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MTUIAdditions.h"; path = "../WSFoundation/OtherDesign/UIView+MTUIAdditions.h"; sourceTree = "<group>"; };
-		4BCD169E1993946F00DACFF2 /* UIView+MTUIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MTUIAdditions.m"; path = "../WSFoundation/OtherDesign/UIView+MTUIAdditions.m"; sourceTree = "<group>"; };
 		4BD0562219889DF600FBC824 /* NSObject+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Category.h"; sourceTree = "<group>"; };
 		4BD0562319889DF600FBC824 /* NSObject+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Category.m"; sourceTree = "<group>"; };
 		4BD056251988F0FE00FBC824 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -394,8 +391,6 @@
 				4BC7E4E51990784D00DD174E /* UIImage+Category.m */,
 				4B248F041980998900AA10FD /* UIView+Category.h */,
 				4B248F051980998900AA10FD /* UIView+Category.m */,
-				4BCD169D1993946F00DACFF2 /* UIView+MTUIAdditions.h */,
-				4BCD169E1993946F00DACFF2 /* UIView+MTUIAdditions.m */,
 				4B248F011980974900AA10FD /* UIButton+Category.h */,
 				4B248F021980974900AA10FD /* UIButton+Category.m */,
 				4BD4F8791986385D005C61CD /* UIViewController+Category.h */,
@@ -712,7 +707,6 @@
 				4BD4F89F19863F49005C61CD /* NSDate+Category.m in Sources */,
 				4B19B675197E549E00D53E86 /* NSDictionary+Category.m in Sources */,
 				4B248F061980998900AA10FD /* UIView+Category.m in Sources */,
-				4BCD169F1993946F00DACFF2 /* UIView+MTUIAdditions.m in Sources */,
 				4B1E04231987B0B700C24425 /* WSApp.m in Sources */,
 				4B50AB6A19A1ECA5006129D2 /* WSAudioRecordManager.m in Sources */,
 				4B1E041C1987AC8B00C24425 /* UITableViewCell+Category.m in Sources */,
