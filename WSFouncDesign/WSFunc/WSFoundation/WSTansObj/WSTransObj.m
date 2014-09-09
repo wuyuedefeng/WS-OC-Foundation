@@ -7,6 +7,7 @@
 //
 
 #import "WSTransObj.h"
+static NSMutableDictionary *modalKeyGlobal;
 //用于 创建的数据模型属性的Get和Set方法 Get方法在NSPredicate中用到 set方法暂未用到 不知道以后可用到什么场景 暂留
 //get方法
 /**
@@ -70,6 +71,15 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     if (dictionaryArr.count == 0) {
         return nil;
     }
+    if (![dictionaryArr[0] isKindOfClass:[NSDictionary class]]) {
+        return nil;
+    }
+    //保存创建模型的结构数据
+    if (!modalKeyGlobal) {
+        modalKeyGlobal = [NSMutableDictionary dictionary];
+    }
+    [modalKeyGlobal setObject:dictionaryArr[0] forKey:token];
+    
     Class wsclass = [WSTransObj createWSObjectClassWithOneDic:dictionaryArr[0] token:token];
     return [WSTransObj modalArrWithDictionarys:dictionaryArr andModalClass:wsclass];
 }
@@ -107,18 +117,19 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     {
         Class superClass = [NSObject class];
         wsclass = objc_allocateClassPair(superClass, className, 0);
+        
+        NSArray *allKeys = [oneDic allKeys];
+        NSArray *allValues = [oneDic allValues];
+        
+        NSUInteger count = allKeys.count;
+        for (int i = 0; i < count; i++) {
+            NSString *classType = NSStringFromClass([allValues[i] class]);
+            wsclass = [WSTransObj setClassIvar:classType andIvarName:[@"_" stringByAppendingString:allKeys[i]] andIvarValue:allValues[i] withClass:wsclass];
+        }
+        //4注册到运行时环境
+        objc_registerClassPair(wsclass);
     }
     
-    NSArray *allKeys = [oneDic allKeys];
-    NSArray *allValues = [oneDic allValues];
-    
-    NSUInteger count = allKeys.count;
-    for (int i = 0; i < count; i++) {
-        NSString *classType = NSStringFromClass([allValues[i] class]);
-        wsclass = [WSTransObj setClassIvar:classType andIvarName:[@"_" stringByAppendingString:allKeys[i]] andIvarValue:allValues[i] withClass:wsclass];
-    }
-    //4注册到运行时环境
-    objc_registerClassPair(wsclass);
     return wsclass;
 }
 #pragma mark -对类设置属性
@@ -181,15 +192,11 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
             NSLog(@"%@",allKeys[j]);
             if ([allValues[j] isKindOfClass:[NSDictionary class]]) {
                 NSString *subToken = [NSStringFromClass(wsclass) stringByAppendingString:allKeys[j]];
-                id subModal = [WSTransObj modalFromToken:subToken];
-                const char * subclassName = [subToken UTF8String];
-                Class wssubclass = objc_getClass(subclassName);
-                if (subModal == nil) {
-                    wssubclass = [WSTransObj createWSObjectClassWithOneDic:allValues[j] token:subToken];
-                }
+                id subModal;
+                Class wssubclass = [WSTransObj createWSObjectClassWithOneDic:allValues[j] token:subToken];
                 subModal = [WSTransObj modalArrWithDictionarys:@[allValues[j]] andModalClass:wssubclass][0];
+
                 [WSTransObj valueSetterOfModal:instance withKey:allKeys[j] withValue:subModal];
-                
             }
             else
             {
@@ -319,26 +326,31 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
 
 + (id)modalFromToken:(NSString *)token;
 {
-    //获取创建字典所需要的key key获取到都是字符串类型（NSString）
-    id instance = [[objc_getClass([token UTF8String]) alloc] init];
+    NSDictionary *modalKey = [modalKeyGlobal objectForKey:token];
+    if (![modalKey isKindOfClass:[NSDictionary class]]) {
+        return nil;
+    }
     
-    unsigned int count = 0;
-    // 获得Person类中的所有成员变量
-    Ivar *ivars = class_copyIvarList([objc_getClass([token UTF8String]) class], &count);
-    // 遍历所有的成员变量
-    for (int i = 0; i < count; i++) {
-        Ivar ivar = ivars[i];
-        
-        const char *name = ivar_getName(ivar);
-        const char *type = ivar_getTypeEncoding(ivar);
-        
-        NSString *typeStr = [NSString stringWithFormat:@"%s",type];
-        if (![typeStr hasPrefix:@"__NSCF"]) {
-            NSString *subToken = [NSStringFromClass([instance class]) stringByAppendingString:[[NSString stringWithFormat:@"%s",name] substringFromIndex:1]];
-//            object_setIvar(instance, ivar, [WSTransObj modalFromToken:subToken]);
-            [instance transObj_setValue:[WSTransObj modalFromToken:subToken] forKey:[[NSString stringWithFormat:@"%s",name] substringFromIndex:1]];
+    Class wsclass = [WSTransObj createWSObjectClassWithOneDic:modalKey token:token];
+    id instance = [WSTransObj modalArrWithDictionarys:@[modalKey] andModalClass:wsclass][0];
+
+    [WSTransObj modalInitializeWithDic:modalKey WithInstance:instance];
+    
+    return instance;
+}
+
++ (void)modalInitializeWithDic:(NSDictionary *)dic WithInstance:(id)instance;
+{
+    
+    NSArray *allKeys = [dic allKeys];
+    for (NSString *key in allKeys) {
+        id subIns = dic[key];
+        if ([subIns isKindOfClass:[NSDictionary class]]) {
+            [WSTransObj modalInitializeWithDic:subIns WithInstance:[WSTransObj valueGetterOfModal:instance withKey:key]];
+        }
+        else{
+            [WSTransObj valueSetterOfModal:instance withKey:key withValue:nil];
         }
     }
-    return instance;
 }
 @end

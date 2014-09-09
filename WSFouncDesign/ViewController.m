@@ -69,8 +69,8 @@
     NSLog(@"%@",dicArr[0][@"teacherAge"]);
     
     arr = [WSTransObj modalArray_from_dictionaryArr:dicArr token:@"wangsen"];
-    id ins = [arr[0] transObj_valueForKey:@"nameModal"];
-    NSLog(@"%@",[ins transObj_valueForKey:@"nameCStr"]);
+//    id ins = [arr[0] transObj_valueForKey:@"nameModal"];
+//    NSLog(@"%@",[ins transObj_valueForKey:@"nameCStr"]);
     dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
     NSLog(@"===%@",dicArr);
     
@@ -83,7 +83,7 @@
     [modal2 transObj_setValue:@"111" forKey:@"teacherAge"];
     
     id modal3 = [modal2 transObj_valueForKey:@"nameModal"];
-    [modal3 transObj_setValue:@"abc" forKey:[modal3 transObj_valueForKey:@"nameCStr"]];
+    [modal3 transObj_setValue:@"abc" forKey:@"nameCStr"];
 //
 //    
     WSLogA(@"%@:%@",[modal2 transObj_valueForKey:@"teacherAge"],[modal3 transObj_valueForKey:@"nameCStr"]);
