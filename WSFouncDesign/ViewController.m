@@ -11,7 +11,6 @@
 #import "WSAudioRecordManager.h"
 #import "AddressbookListViewController.h"
 #import "UIViewController+WSCategory.h"
-#import "NGAudioPlayer-Prefix.h"
 #import "NGAudioPlayer.h"
 #import "UIView+WSCategory.h"
 #import "UIApplication+WSCategory.h"

@@ -139,7 +139,6 @@
 		4B3B8B3619AEDD3600FEC1E1 /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
 		4B3B8B3819AEDD7000FEC1E1 /* Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Name.h; sourceTree = "<group>"; };
 		4B3B8B3919AEDD7000FEC1E1 /* Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Name.m; sourceTree = "<group>"; };
-		4B50AB5919A1E69B006129D2 /* NGAudioPlayer-Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NGAudioPlayer-Prefix.h"; sourceTree = "<group>"; };
 		4B50AB5A19A1E69B006129D2 /* NGAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGAudioPlayer.h; sourceTree = "<group>"; };
 		4B50AB5B19A1E69B006129D2 /* NGAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGAudioPlayer.m; sourceTree = "<group>"; };
 		4B50AB5C19A1E69B006129D2 /* NGAudioPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGAudioPlayerDelegate.h; sourceTree = "<group>"; };
@@ -167,6 +166,7 @@
 		4BA1AFE4198A244E00A99CD5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4BA1AFEF198A50B000A99CD5 /* NSData+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+WSCategory.h"; sourceTree = "<group>"; };
 		4BA1AFF0198A50B000A99CD5 /* NSData+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+WSCategory.m"; sourceTree = "<group>"; };
+		4BADDB1319BEFC2D00F1A602 /* WSFouncDesignCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSFouncDesignCommon.h; sourceTree = "<group>"; };
 		4BAE34BE19AC6E6C0045991E /* NSDate+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Reporting.h"; sourceTree = "<group>"; };
 		4BAE34BF19AC6E6C0045991E /* NSDate+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Reporting.m"; sourceTree = "<group>"; };
 		4BC7E4E11990777600DD174E /* UIApplication+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+WSCategory.h"; path = "WSFouncDesign/WSFunc/category/UIApplication+WSCategory.h"; sourceTree = SOURCE_ROOT; };
@@ -353,6 +353,7 @@
 				4BD4F87C19863A71005C61CD /* ViewDesign */,
 				4B55F7681978BDB000421367 /* WSFoundation */,
 				4B16041E1976848500921B93 /* Category-分类 */,
+				4BADDB1319BEFC2D00F1A602 /* WSFouncDesignCommon.h */,
 			);
 			path = WSFunc;
 			sourceTree = "<group>";
@@ -373,12 +374,12 @@
 				4BD0562319889DF600FBC824 /* NSObject+WSCategory.m */,
 				4B16041F1976848500921B93 /* NSString+WSCategory.h */,
 				4B1604201976848500921B93 /* NSString+WSCategory.m */,
-				4B19B673197E549E00D53E86 /* NSDictionary+WSCategory.h */,
-				4B19B674197E549E00D53E86 /* NSDictionary+WSCategory.m */,
 				4B19B677197E617600D53E86 /* NSArray+WSCategory.h */,
 				4B19B678197E617600D53E86 /* NSArray+WSCategory.m */,
 				4B5512C3199373DD0045A9C0 /* NSMutableArray+WSCategory.h */,
 				4B5512C4199373DD0045A9C0 /* NSMutableArray+WSCategory.m */,
+				4B19B673197E549E00D53E86 /* NSDictionary+WSCategory.h */,
+				4B19B674197E549E00D53E86 /* NSDictionary+WSCategory.m */,
 				4BCD167B1993748400DACFF2 /* NSMutableDictionary+WSCategory.h */,
 				4BCD167C1993748400DACFF2 /* NSMutableDictionary+WSCategory.m */,
 				4BA1AFEF198A50B000A99CD5 /* NSData+WSCategory.h */,
@@ -434,7 +435,6 @@
 		4B50AB5819A1E69B006129D2 /* NGAudioPlayer-播放网络路径 */ = {
 			isa = PBXGroup;
 			children = (
-				4B50AB5919A1E69B006129D2 /* NGAudioPlayer-Prefix.h */,
 				4B50AB5A19A1E69B006129D2 /* NGAudioPlayer.h */,
 				4B50AB5B19A1E69B006129D2 /* NGAudioPlayer.m */,
 				4B50AB5C19A1E69B006129D2 /* NGAudioPlayerDelegate.h */,

@@ -84,6 +84,7 @@
  *NSDictionary+Category
  **/
 #import "NSDictionary+WSCategory.h"
+#import "NSMutableDictionary+WSCategory.h"
 
 /////=================3==============================
 #pragma mark -NSArray数组分类
@@ -91,6 +92,7 @@
  *NNSArray+Category
  **/
 #import "NSArray+WSCategory.h"
+#import "NSMutableArray+WSCategory.h"
 
 /////================4===============================
 #pragma mark -NSData 二进制分类
@@ -165,8 +167,12 @@
 #import "WSAudioRecordManager.h"
 /////===============================================
 
-
-
+#import "UIColor+WSCategory.h"
+#import "UIImage+WSCategory.h"
+#import "UITabBarController+WSCategory.h"
+#import "WSKeyboardManager.h"
+#import "UIApplication+WSCategory.h"
+#import "NSNotificationCenter+WSCategory.h"
 
 
 

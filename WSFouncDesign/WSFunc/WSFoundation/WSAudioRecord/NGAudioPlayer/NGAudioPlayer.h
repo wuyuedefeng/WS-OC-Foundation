@@ -11,11 +11,13 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <CoreMedia/CoreMedia.h>
+#import <MediaPlayer/MediaPlayer.h>
 #import "NGWeak.h"
 #import "NGAudioPlayerPlaybackState.h"
 #import "NGAudioPlayerDelegate.h"
 #import "NSURL+NGAudioPlayerNowPlayingInfo.h"
-#import <CoreMedia/CoreMedia.h>
 
 @interface NGAudioPlayer : NSObject
 
