@@ -15,6 +15,14 @@
  *  ///////////////
  */
 @interface NSString (Category)
+
+- (NSString *)stringByAppendingString_safe:(NSString *)aString;
+
+
+
+
+
+
 #pragma mark - 邮件格式是否合法
 -(BOOL) ws_isValidate_Email;
 #pragma mark -手机号码格式是否合法

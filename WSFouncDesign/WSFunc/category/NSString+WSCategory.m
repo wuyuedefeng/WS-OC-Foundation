@@ -19,6 +19,19 @@
  */
 @implementation NSString (Category)
 
+- (NSString *)stringByAppendingString_safe:(NSString *)aString
+{
+    if ([aString ws_isNotNilString]) {
+      return  [self stringByAppendingString:aString];
+    }
+    return self;
+}
+
+
+
+
+
+
 -(BOOL)ws_isValidate_Email
 {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";

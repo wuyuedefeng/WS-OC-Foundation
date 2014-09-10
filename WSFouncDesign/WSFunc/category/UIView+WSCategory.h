@@ -74,8 +74,10 @@ typedef enum {
 //===========================================================
 #pragma mark -
 #pragma mark Position Views
-//===========================================================
-
+//==//=========================================================
+//=ws=//
+- (void)positionUnderView_boundsEqual:(UIView *)view padding:(CGFloat)padding;
+- (void)positionUnderView_WidthEqual:(UIView *)view height:(CGFloat)height padding:(CGFloat)padding;
 // positions current view directly under the given view
 - (void)positionUnderView:(UIView *)view;
 // positions current view under a given view with a specified y-padding

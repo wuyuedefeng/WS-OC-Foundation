@@ -353,7 +353,17 @@ CGRect rectSetSize(CGRect rect, CGSize size) {
 - (CGFloat)frameRight {
 	return self.frame.origin.x + self.frame.size.width;
 }
-
+//=ws=//
+- (void)positionUnderView_boundsEqual:(UIView *)view padding:(CGFloat)padding
+{
+    self.bounds = view.bounds;
+    [self positionUnderView:view padding:padding];
+}
+- (void)positionUnderView_WidthEqual:(UIView *)view height:(CGFloat)height padding:(CGFloat)padding
+{
+    [self positionUnderView_boundsEqual:view padding:padding];
+    [self setHeight:height];
+}
 - (void)positionUnderView:(UIView *)view {
 	[self positionUnderView:view padding:0];
 }

@@ -32,6 +32,8 @@
 		4B1E04261987B17F00C24425 /* UIDevice+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1E04251987B17F00C24425 /* UIDevice+WSCategory.m */; };
 		4B248F031980974900AA10FD /* UIButton+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B248F021980974900AA10FD /* UIButton+WSCategory.m */; };
 		4B248F061980998900AA10FD /* UIView+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B248F051980998900AA10FD /* UIView+WSCategory.m */; };
+		4B2BCDEC19BFDF8E0099980E /* UITextField+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2BCDEB19BFDF8E0099980E /* UITextField+WSCategory.m */; };
+		4B2BCDEF19BFE05F0099980E /* UITextView+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2BCDEE19BFE05F0099980E /* UITextView+WSCategory.m */; };
 		4B37415E1982243500CA570D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B37415D1982243500CA570D /* AddressBook.framework */; };
 		4B3B8B3419AEDD1300FEC1E1 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8B3319AEDD1300FEC1E1 /* Person.m */; };
 		4B3B8B3719AEDD3600FEC1E1 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8B3619AEDD3600FEC1E1 /* Teacher.m */; };
@@ -132,6 +134,10 @@
 		4B248F021980974900AA10FD /* UIButton+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WSCategory.m"; sourceTree = "<group>"; };
 		4B248F041980998900AA10FD /* UIView+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WSCategory.h"; sourceTree = "<group>"; };
 		4B248F051980998900AA10FD /* UIView+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WSCategory.m"; sourceTree = "<group>"; };
+		4B2BCDEA19BFDF8E0099980E /* UITextField+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+WSCategory.h"; path = "WSFouncDesign/WSFunc/category/UITextField+WSCategory.h"; sourceTree = SOURCE_ROOT; };
+		4B2BCDEB19BFDF8E0099980E /* UITextField+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+WSCategory.m"; path = "WSFouncDesign/WSFunc/category/UITextField+WSCategory.m"; sourceTree = SOURCE_ROOT; };
+		4B2BCDED19BFE05F0099980E /* UITextView+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+WSCategory.h"; path = "WSFouncDesign/WSFunc/category/UITextView+WSCategory.h"; sourceTree = SOURCE_ROOT; };
+		4B2BCDEE19BFE05F0099980E /* UITextView+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+WSCategory.m"; path = "WSFouncDesign/WSFunc/category/UITextView+WSCategory.m"; sourceTree = SOURCE_ROOT; };
 		4B37415D1982243500CA570D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		4B3B8B3219AEDD1300FEC1E1 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		4B3B8B3319AEDD1300FEC1E1 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
@@ -395,6 +401,10 @@
 				4B248F051980998900AA10FD /* UIView+WSCategory.m */,
 				4B248F011980974900AA10FD /* UIButton+WSCategory.h */,
 				4B248F021980974900AA10FD /* UIButton+WSCategory.m */,
+				4B2BCDEA19BFDF8E0099980E /* UITextField+WSCategory.h */,
+				4B2BCDEB19BFDF8E0099980E /* UITextField+WSCategory.m */,
+				4B2BCDED19BFE05F0099980E /* UITextView+WSCategory.h */,
+				4B2BCDEE19BFE05F0099980E /* UITextView+WSCategory.m */,
 				4BD4F8791986385D005C61CD /* UIViewController+WSCategory.h */,
 				4BD4F87A1986385D005C61CD /* UIViewController+WSCategory.m */,
 				4B1E041A1987AC8B00C24425 /* UITableViewCell+WSCategory.h */,
@@ -706,12 +716,14 @@
 				4BA1AFE5198A244E00A99CD5 /* ViewController.m in Sources */,
 				4BD4F89F19863F49005C61CD /* NSDate+WSCategory.m in Sources */,
 				4B19B675197E549E00D53E86 /* NSDictionary+WSCategory.m in Sources */,
+				4B2BCDEC19BFDF8E0099980E /* UITextField+WSCategory.m in Sources */,
 				4B248F061980998900AA10FD /* UIView+WSCategory.m in Sources */,
 				4B1E04231987B0B700C24425 /* WSApp.m in Sources */,
 				4B50AB6A19A1ECA5006129D2 /* WSAudioRecordManager.m in Sources */,
 				4B1E041C1987AC8B00C24425 /* UITableViewCell+WSCategory.m in Sources */,
 				4B19B679197E617600D53E86 /* NSArray+WSCategory.m in Sources */,
 				4BD4F89419863A71005C61CD /* ChineseToPinyin.m in Sources */,
+				4B2BCDEF19BFE05F0099980E /* UITextView+WSCategory.m in Sources */,
 				4B50AB6219A1E69B006129D2 /* NGAudioPlayer.m in Sources */,
 				4BA1AFF1198A50B000A99CD5 /* NSData+WSCategory.m in Sources */,
 				4BCD169C1993926D00DACFF2 /* UIView+WhenTappedBlocks.m in Sources */,
