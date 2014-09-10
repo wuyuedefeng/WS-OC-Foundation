@@ -46,7 +46,7 @@
 - (CGSize)ws_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
 - (CGSize)ws_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize addSize:(CGSize)addSize;
 #pragma mark - 字符串转换成JSON数据
-- (id)ws_jsonObject;
+- (id)jsonObject_ws;
 
 #pragma mark - MD5加密
 - (NSString *) ws_md5_encrypt;

@@ -12,6 +12,6 @@
 
 #pragma mark - 将数组转换成json数据字符串
 
-- (NSString *)ws_jsonString;
+- (NSString *)jsonString_ws;
 
 @end

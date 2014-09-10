@@ -10,5 +10,5 @@
 
 @interface NSDictionary (Category)
 #pragma mark -将字典转换成json数据字符串
-- (NSString *)ws_jsonString;
+- (NSString *)jsonString_ws;
 @end

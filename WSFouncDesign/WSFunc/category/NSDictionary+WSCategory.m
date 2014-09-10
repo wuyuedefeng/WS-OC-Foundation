@@ -14,7 +14,7 @@
  *
  *  @return json字符串
  */
-- (NSString *)ws_jsonString
+- (NSString *)jsonString_ws
 {
     NSError *error = nil;
     NSData * data = [ NSJSONSerialization dataWithJSONObject :self options:NSJSONWritingPrettyPrinted error:&error];

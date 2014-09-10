@@ -145,7 +145,7 @@
  *
  *  @return 返回解析后的数据
  */
-- (id)ws_jsonObject
+- (id)jsonObject_ws
 {
     NSError *error = nil;
     id result = [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding]
