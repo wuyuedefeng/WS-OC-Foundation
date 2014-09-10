@@ -28,4 +28,12 @@
 + (id)dictionary_from_modal:(id)modol;
 
 + (id)modalFromToken:(NSString *)token;
+
+
+
+
+#pragma mark - 获取模型的值
+- (id)valueForKey_transObj:(NSString *)key;
+#pragma mark - 设置模型的值
+- (void)setValue_transObj:(id)value forKey:(NSString *)key;
 @end

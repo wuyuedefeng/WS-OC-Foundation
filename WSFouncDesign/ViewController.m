@@ -76,14 +76,14 @@
 //    NSDictionary *dic = dicArr[0];
     
     
-    id modal2 = [WSTransObj modalFromToken:@"wangsen"];
-    [modal2 transObj_setValue:@"111" forKey:@"teacherAge"];
+    WSTransObj *modal2 = [WSTransObj modalFromToken:@"wangsen"];
+    [modal2 setValue_transObj:@"111" forKey:@"teacherAge"];
     
-    id modal3 = [modal2 transObj_valueForKey:@"nameModal"];
-    [modal3 transObj_setValue:@"abc" forKey:@"nameCStr"];
+    id modal3 = [modal2 valueForKey_transObj:@"nameModal"];
+    [modal3 setValue_transObj:@"abc" forKey:@"nameCStr"];
 //
 //    
-    WSLogA(@"%@:%@",[modal2 transObj_valueForKey:@"teacherAge"],[modal3 transObj_valueForKey:@"nameCStr"]);
+    WSLogA(@"%@:%@",[modal2 valueForKey_transObj:@"teacherAge"],[modal3 valueForKey_transObj:@"nameCStr"]);
 //    [modal transObj_setValue:@"20" forKey:@"teacherAge"];
 //    NSLog(@"%@",[WSTransObj valueGetterOfModal:[WSTransObj valueGetterOfModal:modal2 withKey:@"nameModal"] withKey:@"nameCStr"]);
 //    NSLog(@"-------------");

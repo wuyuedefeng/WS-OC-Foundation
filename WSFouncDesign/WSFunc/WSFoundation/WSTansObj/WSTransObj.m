@@ -115,7 +115,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     Class wsclass = objc_getClass(className);
     if (!wsclass)
     {
-        Class superClass = [NSObject class];
+        Class superClass = [WSTransObj class];
         wsclass = objc_allocateClassPair(superClass, className, 0);
         
         NSArray *allKeys = [oneDic allKeys];
@@ -352,5 +352,31 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
             [WSTransObj valueSetterOfModal:instance withKey:key withValue:nil];
         }
     }
+}
+
+
+
+#pragma mark - 获取模型的值
+/**
+ *  WSTransObj静态方法创建的对象 获取对象属性的方法
+ *
+ *  @param key <#key description#>
+ *
+ *  @return <#return value description#>
+ */
+- (id)valueForKey_transObj:(NSString *)key
+{
+    return [WSTransObj valueGetterOfModal:self withKey:key];
+}
+#pragma mark - 设置模型的值
+/**
+ *  WSTransObj静态方法创建的对象 设置对象属性的值的方法
+ *
+ *  @param value <#value description#>
+ *  @param key   <#key description#>
+ */
+- (void)setValue_transObj:(id)value forKey:(NSString *)key
+{
+    return [WSTransObj valueSetterOfModal:self withKey:key withValue:value];
 }
 @end
