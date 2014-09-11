@@ -117,6 +117,8 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
     {
         Class superClass = [WSTransObj class];
         wsclass = objc_allocateClassPair(superClass, className, 0);
+//        objc_registerProtocol(NSProtocolFromString(@"NSCoding"));
+//        class_addProtocol(wsclass, NSProtocolFromString(@"NSCoding"));
         
         NSArray *allKeys = [oneDic allKeys];
         NSArray *allValues = [oneDic allValues];
@@ -257,6 +259,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
         //NSLog(@"＝%@",[NSString stringWithFormat:@"%s",ivar_getName(ivar)]);
         [mutableArr addObject:[NSString stringWithFormat:@"%s",ivar_getName(ivar)]];
     }
+    free(ivars);
     
     BOOL hasSuperIvar = YES;
     Class superClass = [modal class];
@@ -379,4 +382,103 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
 {
     return [WSTransObj valueSetterOfModal:self withKey:key withValue:value];
 }
+
+//-(void)encodeWithCoder:(NSCoder *)aCoder
+//{
+//    unsigned int count = 0;
+//    Ivar *ivars = class_copyIvarList([self class], &count);
+//    
+//    for (int i = 0; i<count; i++) {
+//        // 取出i位置对应的成员变量
+//        Ivar ivar = ivars[i];
+//        
+//        // 查看成员变量
+//        const char *name = ivar_getName(ivar);
+//        const char *type = ivar_getTypeEncoding(ivar);
+//        WSLogA(@"%s %s",name,type);
+//        NSString *key = [NSString stringWithUTF8String:name];
+//        if ([[NSString stringWithFormat:@"%s",type] rangeOfString:@"NSDictionary"].length > 0 || ![[NSString stringWithFormat:@"%s",type] hasPrefix:@"__NS"]) {
+//            NSString *subToken = [NSStringFromClass([self class]) stringByAppendingString:[key substringFromIndex:1]];
+//            Class subclass = objc_getClass([subToken UTF8String]);
+//            if (!subclass) {
+//                Class superClass = [WSTransObj class];
+//                subclass = objc_allocateClassPair(superClass, [subToken UTF8String], 0);
+//                objc_registerProtocol(NSProtocolFromString(@"NSCoding"));
+//                class_addProtocol(subclass, NSProtocolFromString(@"NSCoding"));
+//                //4注册到运行时环境
+//                objc_registerClassPair(subclass);
+//            }
+//            NSLog(@"%@",subToken);
+//            id subModal =  [self valueForKey_transObj:@"nameModal"];
+//            NSLog(@"%@ = %@",[self valueForKey_transObj:@"teacherAge"],[subModal valueForKey_transObj:@"nameCStr"]);
+//            subToken = NSStringFromClass([subModal class]);
+//            [subModal encodeWithCoder:aCoder];
+//            NSLog(@"%@",[subModal valueForKey_transObj:@"nameCStr"]);
+//        }
+//
+//        // 归档
+//        
+//        id value = [self valueForKey_transObj:[key substringFromIndex:1]];
+//        [aCoder encodeObject:value forKey:key];
+//    
+//        
+//      
+//        
+//        
+//        
+//    }
+//    
+//    free(ivars);
+//}
+//-(id)initWithCoder:(NSCoder *)aDecoder
+//{
+//    if (self=[super init]) {
+//        unsigned int count = 0;
+//        Ivar *ivars = class_copyIvarList([self class], &count);
+//        
+//        for (int i = 0; i<count; i++) {
+//            // 取出i位置对应的成员变量
+//            Ivar ivar = ivars[i];
+//            
+//            // 查看成员变量
+//            const char *name = ivar_getName(ivar);
+//            const char *type = ivar_getTypeEncoding(ivar);
+//            NSLog(@"%s %s",name,type);
+//            // 归档
+//            NSString *key = [NSString stringWithUTF8String:name];
+//            id value = [aDecoder decodeObjectForKey:key];
+//            if ([[NSString stringWithFormat:@"%s",type] rangeOfString:@"NSDictionary"].length > 0 || ![[NSString stringWithFormat:@"%s",type] hasPrefix:@"__NS"]) {
+//                NSString *subToken = [NSStringFromClass([self class]) stringByAppendingString:[key substringFromIndex:1]];
+//                Class subclass = objc_getClass([subToken UTF8String]);
+//                if (!subclass) {
+//                    Class superClass = [WSTransObj class];
+//                    subclass = objc_allocateClassPair(superClass, [subToken UTF8String], 0);
+//                    objc_registerProtocol(NSProtocolFromString(@"NSCoding"));
+//                    class_addProtocol(subclass, NSProtocolFromString(@"NSCoding"));
+//                    //4注册到运行时环境
+//                    objc_registerClassPair(subclass);
+//                }
+//                value = [value initWithCoder:aDecoder];
+//                NSLog(@"%@",[value valueForKey_transObj:@"nameCStr"]);
+//                [self setValue_transObj:value forKey:[key substringFromIndex:1]];
+//            }
+//            else
+//            {
+//                // 设置到成员变量身上
+//                [WSTransObj setClassIvar:NSStringFromClass([value class]) andIvarName:key andIvarValue:value withClass:[self class]];
+//
+//            }
+//
+//            
+//            
+//            
+//            
+//            
+//            
+//        }
+//        
+//        free(ivars);
+//    }
+//    return self;
+//}
 @end

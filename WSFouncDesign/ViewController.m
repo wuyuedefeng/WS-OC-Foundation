@@ -45,7 +45,7 @@
 
 }
 //模型模型数组《＝》字典模型数组
-- (IBAction)数据模型转换:(UIButton *)sender {
+- (IBAction)数据转向模型:(id)sender {
     //[self WSTransObj_test];
     Teacher *tea = [[Teacher alloc] init];
     tea.teacherAge = @"20";
@@ -67,29 +67,37 @@
     NSLog(@"%@",dicArr[0][@"teacherAge"]);
     
     arr = [WSTransObj modalArray_from_dictionaryArr:dicArr token:@"wangsen"];
-//    id ins = [arr[0] transObj_valueForKey:@"nameModal"];
-//    NSLog(@"%@",[ins transObj_valueForKey:@"nameCStr"]);
+    //    id ins = [arr[0] transObj_valueForKey:@"nameModal"];
+    //    NSLog(@"%@",[ins transObj_valueForKey:@"nameCStr"]);
     dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
     NSLog(@"===%@",dicArr);
     
-//    NSLog(@"=============");
-//    NSDictionary *dic = dicArr[0];
+    //    NSLog(@"=============");
+    //    NSDictionary *dic = dicArr[0];
     
     
     WSTransObj *modal2 = [WSTransObj modalFromToken:@"wangsen"];
     [modal2 setValue_transObj:@"111" forKey:@"teacherAge"];
     
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    path = [path stringByAppendingPathComponent:@"ws.plist"];
+    
+    
     id modal3 = [modal2 valueForKey_transObj:@"nameModal"];
     [modal3 setValue_transObj:@"abc" forKey:@"nameCStr"];
-//
-//    
-    WSLogA(@"%@:%@",[modal2 valueForKey_transObj:@"teacherAge"],[modal3 valueForKey_transObj:@"nameCStr"]);
-//    [modal transObj_setValue:@"20" forKey:@"teacherAge"];
-//    NSLog(@"%@",[WSTransObj valueGetterOfModal:[WSTransObj valueGetterOfModal:modal2 withKey:@"nameModal"] withKey:@"nameCStr"]);
-//    NSLog(@"-------------");
-//    dic = [WSTransObj dictionary_from_modal:modal];
-//    NSLog(@"%@",dic);
-    
+    //
+//    [NSKeyedArchiver archiveRootObject:modal2 toFile:path];
+//    modal2 = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    //
+    modal3 = [modal2 valueForKey_transObj:@"nameModal"];
+    NSDictionary *wsDic = [WSTransObj dictionary_from_modal:modal2];
+    NSLog(@"%@",wsDic);
+    //    [modal transObj_setValue:@"20" forKey:@"teacherAge"];
+    //    NSLog(@"%@",[WSTransObj valueGetterOfModal:[WSTransObj valueGetterOfModal:modal2 withKey:@"nameModal"] withKey:@"nameCStr"]);
+    //    NSLog(@"-------------");
+    //    dic = [WSTransObj dictionary_from_modal:modal];
+    //    NSLog(@"%@",dic);
+
 }
 
 - (IBAction)录音View:(UIButton *)sender {
