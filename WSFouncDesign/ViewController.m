@@ -52,14 +52,14 @@
     tea.teacherAge = @"18";
     Name *nam = [[Name alloc] init];
     nam.nameCStr = @"namename";
-    //tea.nameModal = nam;
+    tea.nameModal = nam;
     
     Teacher *tea2 = [[Teacher alloc] init];
     tea2.teacherAge = @"20";
     tea2.teacherAge = @"18";
     Name *nam2 = [[Name alloc] init];
     nam2.nameCStr = @"namename";
-    //tea2.nameModal = nam;
+    tea2.nameModal = nam;
     
     NSArray *arr = [NSArray arrayWithObjects:tea,tea2, nil];
     NSArray *dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];

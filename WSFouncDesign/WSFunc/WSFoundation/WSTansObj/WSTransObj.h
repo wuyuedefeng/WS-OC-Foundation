@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
-@interface WSTransObj : NSObject <NSCoding>
+@interface WSTransObj : NSObject
 
 
 #pragma mark - 获取与设置值
