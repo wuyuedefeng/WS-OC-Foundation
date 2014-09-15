@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
-@interface WSTransObj : NSObject
+@interface WSTransObj : NSObject <NSCoding>
 
 
 #pragma mark - 获取与设置值
@@ -33,7 +33,7 @@
 
 
 #pragma mark - 获取模型的值
-- (id)valueForKey_transObj:(NSString *)key;
+- (id)valueForKey:(NSString *)key;
 #pragma mark - 设置模型的值
-- (void)setValue_transObj:(id)value forKey:(NSString *)key;
+- (void)setValue:(id)value forKey:(NSString *)key;
 @end

@@ -367,7 +367,7 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
  *
  *  @return <#return value description#>
  */
-- (id)valueForKey_transObj:(NSString *)key
+- (id)valueForKey:(NSString *)key
 {
     return [WSTransObj valueGetterOfModal:self withKey:key];
 }
@@ -378,13 +378,13 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
  *  @param value <#value description#>
  *  @param key   <#key description#>
  */
-- (void)setValue_transObj:(id)value forKey:(NSString *)key
+- (void)setValue:(id)value forKey:(NSString *)key
 {
     return [WSTransObj valueSetterOfModal:self withKey:key withValue:value];
 }
 
-//-(void)encodeWithCoder:(NSCoder *)aCoder
-//{
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
 //    unsigned int count = 0;
 //    Ivar *ivars = class_copyIvarList([self class], &count);
 //    
@@ -429,9 +429,9 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
 //    }
 //    
 //    free(ivars);
-//}
-//-(id)initWithCoder:(NSCoder *)aDecoder
-//{
+}
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
 //    if (self=[super init]) {
 //        unsigned int count = 0;
 //        Ivar *ivars = class_copyIvarList([self class], &count);
@@ -479,6 +479,6 @@ void nameSetter(id self, SEL _cmd, NSString *newName) {
 //        
 //        free(ivars);
 //    }
-//    return self;
-//}
+    return self;
+}
 @end

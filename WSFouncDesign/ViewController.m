@@ -77,19 +77,19 @@
     
     
     WSTransObj *modal2 = [WSTransObj modalFromToken:@"wangsen"];
-    [modal2 setValue_transObj:@"111" forKey:@"teacherAge"];
+    [modal2 setValue:@"111" forKey:@"teacherAge"];
     
     NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     path = [path stringByAppendingPathComponent:@"ws.plist"];
     
     
-    id modal3 = [modal2 valueForKey_transObj:@"nameModal"];
-    [modal3 setValue_transObj:@"abc" forKey:@"nameCStr"];
+    id modal3 = [modal2 valueForKey:@"nameModal"];
+    [modal3 setValue:@"abc" forKey:@"nameCStr"];
     //
 //    [NSKeyedArchiver archiveRootObject:modal2 toFile:path];
 //    modal2 = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     //
-    modal3 = [modal2 valueForKey_transObj:@"nameModal"];
+    modal3 = [modal2 valueForKey:@"nameModal"];
     NSDictionary *wsDic = [WSTransObj dictionary_from_modal:modal2];
     NSLog(@"%@",wsDic);
     //    [modal transObj_setValue:@"20" forKey:@"teacherAge"];
