@@ -170,7 +170,7 @@
 #import "UIColor+WSCategory.h"
 #import "UIImage+WSCategory.h"
 #import "UITabBarController+WSCategory.h"
-#import "WSKeyboardManager.h"
+//#import "WSKeyboardManager.h"
 #import "UIApplication+WSCategory.h"
 #import "NSNotificationCenter+WSCategory.h"
 
