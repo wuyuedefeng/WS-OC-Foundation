@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WSFouncDesign/WSFunc/WSFoundation/WSTansObj/WSTransObj.m"
-            timestampString = "432040092.349553"
+            timestampString = "432462790.579885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "399"
-            endingLineNumber = "399"
-            landmarkName = "@implementation WSTransObj"
-            landmarkType = "3">
+            startingLineNumber = "410"
+            endingLineNumber = "410"
+            landmarkName = "-encodeWithCoder:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WSFouncDesign/WSFunc/WSFoundation/WSTansObj/WSTransObj.m"
-            timestampString = "432040092.349553"
+            timestampString = "432462790.579885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "391"
-            endingLineNumber = "391"
-            landmarkName = "@implementation WSTransObj"
-            landmarkType = "3">
+            startingLineNumber = "433"
+            endingLineNumber = "433"
+            landmarkName = "-encodeWithCoder:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,13 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WSFouncDesign/WSFunc/WSFoundation/WSTansObj/WSTransObj.m"
-            timestampString = "432040092.349553"
+            timestampString = "432462790.579885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "404"
-            endingLineNumber = "404"
-            landmarkName = "@implementation WSTransObj"
-            landmarkType = "3">
+            startingLineNumber = "456"
+            endingLineNumber = "456"
+            landmarkName = "-initWithCoder:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
