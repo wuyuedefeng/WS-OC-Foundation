@@ -54,8 +54,8 @@ return self;\
 #endif
 @interface WSKeyboardManager : NSObject
 
-@property (nonatomic, assign) UIScrollView *currentScrollView;
-@property (nonatomic, assign) UITextField *activeTextField;
+@property (nonatomic, weak) UIScrollView *currentScrollView;
+@property (nonatomic, weak) UIView *activeTextField;
 
 + (WSKeyboardManager *)sharedWSKeyboardManager;
 - (void)registerKeyboardNotifications;

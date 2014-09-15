@@ -13,6 +13,27 @@
 {
     return NO;
 }
+- (CGSize)ws_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize
+{
+    return CGSizeZero;
+}
+- (NSUInteger)length
+{
+    return 0;
+}
+- (BOOL)isEqualToString:(NSString *)aString
+{
+    return false;
+}
+- (id)jsonObject
+{
+    return nil;
+}
+- (int)intValue
+{
+    return 0;
+}
+
 @end
 /**
  *  /////////////////////
@@ -26,7 +47,13 @@
     }
     return self;
 }
-
+- (NSString *)subStringByTrimCharactors_safe:(NSString *)shouldTrimStr
+{
+    if ([self ws_isNotNilString]) {
+        return [self stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:shouldTrimStr]];
+    }
+    return @"";
+}
 
 
 
@@ -102,7 +129,11 @@
     }
     return YES;
 }
-
+- (BOOL)ws_isValidate_BeginWithChinese
+{
+    NSString *regex = @"^[\u4e00-\u9fa5],{0,}$";//
+    return [self isValidateFromPredicateRegex:regex];
+}
 - (BOOL)isValidateFromPredicateRegex:(NSString *)regex
 {
     return [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex] evaluateWithObject:self];

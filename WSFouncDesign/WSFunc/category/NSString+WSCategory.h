@@ -10,6 +10,11 @@
 
 @interface NSNull (Category)
 -(BOOL) ws_isNotNilString;
+- (CGSize)ws_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
+- (NSUInteger)length;
+- (BOOL)isEqualToString:(NSString *)aString;
+- (id)jsonObject;
+- (int)intValue;
 @end
 /***
  *  ///////////////
@@ -17,7 +22,7 @@
 @interface NSString (Category)
 
 - (NSString *)stringByAppendingString_safe:(NSString *)aString;
-
+- (NSString *)subStringByTrimCharactors_safe:(NSString *)shouldTrimStr;
 
 
 
@@ -37,6 +42,7 @@
 - (BOOL)ws_isValidate_EnglishWordsAndNumStr;
 #pragma mark -是否全为中文
 - (BOOL)ws_isValidate_ChineseWords;
+- (BOOL)ws_isValidate_BeginWithChinese;
 
 
 #pragma mark - 判断字符串是否不为空(' ',nil,null)
