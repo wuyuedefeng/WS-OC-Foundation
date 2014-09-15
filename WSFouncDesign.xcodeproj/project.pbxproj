@@ -58,7 +58,6 @@
 		4BAE34C019AC6E6C0045991E /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE34BF19AC6E6C0045991E /* NSDate+Reporting.m */; };
 		4BC7E4E31990777600DD174E /* UIApplication+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7E4E21990777600DD174E /* UIApplication+WSCategory.m */; };
 		4BC7E4E61990784D00DD174E /* UIImage+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7E4E51990784D00DD174E /* UIImage+WSCategory.m */; };
-		4BC7E4EA1990807F00DD174E /* WSKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7E4E91990807F00DD174E /* WSKeyboardManager.m */; };
 		4BC7E4ED1990820100DD174E /* UIScreen+DK.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7E4EC1990820100DD174E /* UIScreen+DK.m */; };
 		4BCD167D1993748400DACFF2 /* NSMutableDictionary+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD167C1993748400DACFF2 /* NSMutableDictionary+WSCategory.m */; };
 		4BCD16801993766900DACFF2 /* NSNotificationCenter+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCD167F1993766900DACFF2 /* NSNotificationCenter+WSCategory.m */; };
@@ -80,6 +79,8 @@
 		4BD4F89B19863A71005C61CD /* recordClose.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4F88D19863A71005C61CD /* recordClose.png */; };
 		4BD4F89C19863A71005C61CD /* RecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4F88F19863A71005C61CD /* RecordView.m */; };
 		4BD4F89F19863F49005C61CD /* NSDate+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4F89E19863F49005C61CD /* NSDate+WSCategory.m */; };
+		4BE70F4419C6AEF400931F0D /* WSKeyBoardAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE70F4119C6AEF400931F0D /* WSKeyBoardAccessory.m */; };
+		4BE70F4519C6AEF400931F0D /* WSKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE70F4319C6AEF400931F0D /* WSKeyboardManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,8 +180,6 @@
 		4BC7E4E21990777600DD174E /* UIApplication+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+WSCategory.m"; path = "WSFouncDesign/WSFunc/category/UIApplication+WSCategory.m"; sourceTree = SOURCE_ROOT; };
 		4BC7E4E41990784D00DD174E /* UIImage+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+WSCategory.h"; path = "WSFouncDesign/WSFunc/category/UIImage+WSCategory.h"; sourceTree = SOURCE_ROOT; };
 		4BC7E4E51990784D00DD174E /* UIImage+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+WSCategory.m"; path = "WSFouncDesign/WSFunc/category/UIImage+WSCategory.m"; sourceTree = SOURCE_ROOT; };
-		4BC7E4E81990807F00DD174E /* WSKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSKeyboardManager.h; path = ../WSFoundation/OtherDesign/WSKeyboardManager.h; sourceTree = "<group>"; };
-		4BC7E4E91990807F00DD174E /* WSKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSKeyboardManager.m; path = ../WSFoundation/OtherDesign/WSKeyboardManager.m; sourceTree = "<group>"; };
 		4BC7E4EB1990820100DD174E /* UIScreen+DK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+DK.h"; sourceTree = "<group>"; };
 		4BC7E4EC1990820100DD174E /* UIScreen+DK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+DK.m"; sourceTree = "<group>"; };
 		4BCD167B1993748400DACFF2 /* NSMutableDictionary+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+WSCategory.h"; path = "WSFouncDesign/WSFunc/category/NSMutableDictionary+WSCategory.h"; sourceTree = SOURCE_ROOT; };
@@ -216,6 +215,10 @@
 		4BD4F89019863A71005C61CD /* CommonViewHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewHead.h; sourceTree = "<group>"; };
 		4BD4F89D19863F49005C61CD /* NSDate+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WSCategory.h"; sourceTree = "<group>"; };
 		4BD4F89E19863F49005C61CD /* NSDate+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WSCategory.m"; sourceTree = "<group>"; };
+		4BE70F4019C6AEF400931F0D /* WSKeyBoardAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSKeyBoardAccessory.h; sourceTree = "<group>"; };
+		4BE70F4119C6AEF400931F0D /* WSKeyBoardAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSKeyBoardAccessory.m; sourceTree = "<group>"; };
+		4BE70F4219C6AEF400931F0D /* WSKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSKeyboardManager.h; sourceTree = "<group>"; };
+		4BE70F4319C6AEF400931F0D /* WSKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSKeyboardManager.m; sourceTree = "<group>"; };
 		8A64BDC381A04E94BD24A51B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2A4019FC214BFDA4A8E0AA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -411,8 +414,6 @@
 				4B1E041B1987AC8B00C24425 /* UITableViewCell+WSCategory.m */,
 				4B0C705E19A5DAA700A2A5E6 /* UITabBarController+WSCategory.h */,
 				4B0C705F19A5DAA700A2A5E6 /* UITabBarController+WSCategory.m */,
-				4BC7E4E81990807F00DD174E /* WSKeyboardManager.h */,
-				4BC7E4E91990807F00DD174E /* WSKeyboardManager.m */,
 				4B1E04241987B17F00C24425 /* UIDevice+WSCategory.h */,
 				4B1E04251987B17F00C24425 /* UIDevice+WSCategory.m */,
 				4BC7E4E11990777600DD174E /* UIApplication+WSCategory.h */,
@@ -469,6 +470,7 @@
 		4B55F7681978BDB000421367 /* WSFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				4BE70F3F19C6AEF400931F0D /* WSKeyBoard */,
 				4BC7E4E71990807600DD174E /* OtherDesign */,
 				4B1E04201987B0B700C24425 /* Application */,
 				4B55F76D1978BF7000421367 /* WSAudioRecord */,
@@ -557,6 +559,17 @@
 				4BD4F88F19863A71005C61CD /* RecordView.m */,
 			);
 			path = AudioRecordAndPlayer;
+			sourceTree = "<group>";
+		};
+		4BE70F3F19C6AEF400931F0D /* WSKeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				4BE70F4019C6AEF400931F0D /* WSKeyBoardAccessory.h */,
+				4BE70F4119C6AEF400931F0D /* WSKeyBoardAccessory.m */,
+				4BE70F4219C6AEF400931F0D /* WSKeyboardManager.h */,
+				4BE70F4319C6AEF400931F0D /* WSKeyboardManager.m */,
+			);
+			path = WSKeyBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -701,11 +714,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BD4F89319863A71005C61CD /* AddressbookListViewController.m in Sources */,
+				4BE70F4419C6AEF400931F0D /* WSKeyBoardAccessory.m in Sources */,
 				4B0D4C1419890AEF0022ADD4 /* WSNavigationController.m in Sources */,
 				4B50AB6319A1E69B006129D2 /* NGAudioPlayerPlaybackState.m in Sources */,
 				4B5512C5199373DD0045A9C0 /* NSMutableArray+WSCategory.m in Sources */,
 				4B1E04261987B17F00C24425 /* UIDevice+WSCategory.m in Sources */,
-				4BC7E4EA1990807F00DD174E /* WSKeyboardManager.m in Sources */,
 				4BD0562419889DF600FBC824 /* NSObject+WSCategory.m in Sources */,
 				4BD4F89C19863A71005C61CD /* RecordView.m in Sources */,
 				4B3B8B3719AEDD3600FEC1E1 /* Teacher.m in Sources */,
@@ -731,6 +744,7 @@
 				4BD056271988F0FE00FBC824 /* Reachability.m in Sources */,
 				4B1603D91976587000921B93 /* AppDelegate.m in Sources */,
 				4B55F76C1978BDB000421367 /* WSTransObj.m in Sources */,
+				4BE70F4519C6AEF400931F0D /* WSKeyboardManager.m in Sources */,
 				4BD4F89219863A71005C61CD /* AddressbookListManager.m in Sources */,
 				4B1604211976848500921B93 /* NSString+WSCategory.m in Sources */,
 				4BC7E4ED1990820100DD174E /* UIScreen+DK.m in Sources */,
