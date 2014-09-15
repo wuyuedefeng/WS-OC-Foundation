@@ -171,6 +171,7 @@
 #import "UIImage+WSCategory.h"
 #import "UITabBarController+WSCategory.h"
 #import "WSKeyboardManager.h"
+#import "WSKeyBoardAccessory.h"
 #import "UIApplication+WSCategory.h"
 #import "NSNotificationCenter+WSCategory.h"
 
