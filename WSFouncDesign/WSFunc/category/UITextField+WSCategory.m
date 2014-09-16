@@ -15,4 +15,21 @@
         [self setText:text];
     }
 }
+
+static NSString *kLimitTextLengthKey = @"kLimitTextLengthKey";
+- (void)ws_limitTextLength:(int)length
+{
+    objc_setAssociatedObject(self, (__bridge const void *)(kLimitTextLengthKey), [NSNumber numberWithInt:length], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self addTarget:self action:@selector(textFieldTextLengthLimit:) forControlEvents:UIControlEventEditingChanged];
+}
+- (void)textFieldTextLengthLimit:(id)sender
+{
+    NSNumber *lengthNumber = objc_getAssociatedObject(self, (__bridge const void *)(kLimitTextLengthKey));
+    int length = [lengthNumber intValue];
+    if(self.text.length > length){
+        self.text = [self.text substringToIndex:length];
+    }
+}
+
+
 @end

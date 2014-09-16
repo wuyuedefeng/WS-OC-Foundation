@@ -41,9 +41,16 @@
 /*手机号码验证 MODIFIED BY HELENSONG*/
 -(BOOL) ws_isValidate_Mobile
 {
+    NSString *phoneNum = self;
+    if ([self hasPrefix:@"+86"]) {
+       phoneNum = [self substringFromIndex:3];
+    }
+    if ([self hasPrefix:@"86"]) {
+       phoneNum = [self substringFromIndex:2];
+    }
     //手机号以13， 15，18开头，八个 \d 数字字符
     NSString *phoneRegex = @"^((13[0-9])|(15[^4,\\D])|(18[0,0-9]))\\d{8}$";
-    return [self isValidateFromPredicateRegex:phoneRegex];
+    return [phoneNum isValidateFromPredicateRegex:phoneRegex];
 }
 //判断用户名是否有效
 -(BOOL) ws_isValidate_User
@@ -64,6 +71,13 @@
         }
     }
     return YES;
+}
+//字母数字下划线，6－16位
++ (BOOL)ws_isValidatePassword:(NSString *)string
+{
+    NSString *regex = @"^[\\w\\d_]{6,16}$";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [predicate evaluateWithObject:string];
 }
 #pragma mark -是否为数字
 -(BOOL) ws_isValidate_NumberStr
@@ -91,7 +105,7 @@
  */
 - (BOOL)ws_isValidate_ChineseWords
 {
-//    NSString *regex = @"^[\u4e00-\u9fa5],{0,}$";//测试只能获得首字母是否为汉字 所以该regex貌似不能用
+//    NSString *regex = @"^[\u4e00-\u9fa5],{0,}$";//测试只能获得单个汉字的结果是否为中文
 //    return [self isValidateFromPredicateRegex:regex];
     for (int i = 0; i < self.length; i++) {
         NSRange range = NSMakeRange(i, 1);
@@ -102,7 +116,18 @@
     }
     return YES;
 }
-
+- (BOOL)ws_isValidate_InternetUrl
+{
+    NSString *regex = @"^http://([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&=]*)?$ ；^[a-zA-z]+://(w+(-w+)*)(.(w+(-w+)*))*(?S*)?$";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [predicate evaluateWithObject:self];
+}
+- (BOOL)ws_isValidate_IdentifyCardNumber
+{
+    NSString *regex = @"^\\d{15}|\\d{}18$";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [predicate evaluateWithObject:self];
+}
 - (BOOL)isValidateFromPredicateRegex:(NSString *)regex
 {
     return [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex] evaluateWithObject:self];

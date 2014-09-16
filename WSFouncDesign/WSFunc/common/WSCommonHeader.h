@@ -33,13 +33,16 @@
 #define WS_USER_DEFAULT [NSUserDefaults standardUserDefaults]
 
 
+//G－C－D
+#define kGCDBackground(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define kGCDMain(block)       dispatch_async(dispatch_get_main_queue(),block)
 
-
-
-
-
-
-
+//简单的以AlertView显示提示信息
+#define wsAlertView(title, msg) \
+UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil \
+cancelButtonTitle:@"确定" \
+otherButtonTitles:nil]; \
+[alert show];
 
 
 
@@ -114,7 +117,7 @@
  *UIView+Category
  **/
 #import "UIView+WSCategory.h"
-
+#import "UIView+Animation.h"
 /////=================6==============================
 #pragma mark -UIButton分类
 /**
@@ -143,7 +146,15 @@
  **/
 #import "UIDevice+WSCategory.h"
 /////===============================================
+#import "NSFileManager+WSCategory.h"
+#import "UIColor+WSCategory.h"
+#import "UIImage+WSCategory.h"
+#import "UITabBarController+WSCategory.h"
+#import "UIApplication+WSCategory.h"
+#import "NSNotificationCenter+WSCategory.h"
 /////===============================================
+#import "WSKeyboardManager.h"
+#import "WSKeyBoardAccessory.h"
 /////===============================================
 /////===============================================
 /////===============================================
@@ -167,13 +178,9 @@
 #import "WSAudioRecordManager.h"
 /////===============================================
 
-#import "UIColor+WSCategory.h"
-#import "UIImage+WSCategory.h"
-#import "UITabBarController+WSCategory.h"
-#import "WSKeyboardManager.h"
-#import "WSKeyBoardAccessory.h"
-#import "UIApplication+WSCategory.h"
-#import "NSNotificationCenter+WSCategory.h"
+
+
+
 
 
 

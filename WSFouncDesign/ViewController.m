@@ -16,6 +16,8 @@
 //#import "UIApplication+WSCategory.h"
 #import "UIView+WSCategory.h"
 #import "Teacher.h"
+#import "UIView+Animation.h"
+#import "NSString+WSCategory.h"
 //#import "WSKeyboardManager.h"
 //#import "NSObject+WSCategory.h"
 @interface ViewController ()
@@ -41,6 +43,8 @@
 //        WSLogA(@"%@",@"abc");
 //    }];
 //    
+    UIView *view =[UIView reflectImage:self.imgBtn.currentImage withFrame:self.imgBtn.bounds opacity:0.5 atView:self.imgBtn];
+    [view startRotationAnimatingWithDuration:10];
     
 
 }

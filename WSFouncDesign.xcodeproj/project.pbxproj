@@ -35,6 +35,11 @@
 		4B2BCDEC19BFDF8E0099980E /* UITextField+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2BCDEB19BFDF8E0099980E /* UITextField+WSCategory.m */; };
 		4B2BCDEF19BFE05F0099980E /* UITextView+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2BCDEE19BFE05F0099980E /* UITextView+WSCategory.m */; };
 		4B37415E1982243500CA570D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B37415D1982243500CA570D /* AddressBook.framework */; };
+		4B37F79C19C7FAC7006E888D /* NSFileManager+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B37F79B19C7FAC7006E888D /* NSFileManager+WSCategory.m */; };
+		4B37F7A319C828EE006E888D /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B37F7A219C828EE006E888D /* UIView+Animation.m */; };
+		4B37F7D819C852C4006E888D /* CheckUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B37F7D719C852C4006E888D /* CheckUpdate.m */; };
+		4B37F7DC19C852D9006E888D /* StoreProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B37F7DB19C852D9006E888D /* StoreProductController.m */; };
+		4B37F7E119C852EB006E888D /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B37F7DF19C852EB006E888D /* GTMBase64.m */; };
 		4B3B8B3419AEDD1300FEC1E1 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8B3319AEDD1300FEC1E1 /* Person.m */; };
 		4B3B8B3719AEDD3600FEC1E1 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8B3619AEDD3600FEC1E1 /* Teacher.m */; };
 		4B3B8B3A19AEDD7000FEC1E1 /* Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B8B3919AEDD7000FEC1E1 /* Name.m */; };
@@ -140,6 +145,17 @@
 		4B2BCDED19BFE05F0099980E /* UITextView+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+WSCategory.h"; path = "WSFouncDesign/WSFunc/category/UITextView+WSCategory.h"; sourceTree = SOURCE_ROOT; };
 		4B2BCDEE19BFE05F0099980E /* UITextView+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+WSCategory.m"; path = "WSFouncDesign/WSFunc/category/UITextView+WSCategory.m"; sourceTree = SOURCE_ROOT; };
 		4B37415D1982243500CA570D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		4B37F79A19C7FAC7006E888D /* NSFileManager+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+WSCategory.h"; path = "WSFouncDesign/WSFunc/category/NSFileManager+WSCategory.h"; sourceTree = SOURCE_ROOT; };
+		4B37F79B19C7FAC7006E888D /* NSFileManager+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+WSCategory.m"; path = "WSFouncDesign/WSFunc/category/NSFileManager+WSCategory.m"; sourceTree = SOURCE_ROOT; };
+		4B37F7A119C828EE006E888D /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		4B37F7A219C828EE006E888D /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
+		4B37F7D619C852C4006E888D /* CheckUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckUpdate.h; sourceTree = "<group>"; };
+		4B37F7D719C852C4006E888D /* CheckUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckUpdate.m; sourceTree = "<group>"; };
+		4B37F7DA19C852D9006E888D /* StoreProductController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreProductController.h; sourceTree = "<group>"; };
+		4B37F7DB19C852D9006E888D /* StoreProductController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreProductController.m; sourceTree = "<group>"; };
+		4B37F7DE19C852EB006E888D /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		4B37F7DF19C852EB006E888D /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		4B37F7E019C852EB006E888D /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		4B3B8B3219AEDD1300FEC1E1 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		4B3B8B3319AEDD1300FEC1E1 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		4B3B8B3519AEDD3600FEC1E1 /* Teacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
@@ -357,7 +373,7 @@
 		4B16040D1976803B00921B93 /* WSFunc */ = {
 			isa = PBXGroup;
 			children = (
-				4BCD1681199379D800DACFF2 /* WSPackage */,
+				4B37F7D419C852BF006E888D /* WSPackage */,
 				4B1604161976807D00921B93 /* Common－通用定义 */,
 				4BD4F87C19863A71005C61CD /* ViewDesign */,
 				4B55F7681978BDB000421367 /* WSFoundation */,
@@ -400,6 +416,8 @@
 				4BA1AFDF198A22F500A99CD5 /* UIColor+WSCategory.m */,
 				4BC7E4E41990784D00DD174E /* UIImage+WSCategory.h */,
 				4BC7E4E51990784D00DD174E /* UIImage+WSCategory.m */,
+				4B37F7A119C828EE006E888D /* UIView+Animation.h */,
+				4B37F7A219C828EE006E888D /* UIView+Animation.m */,
 				4B248F041980998900AA10FD /* UIView+WSCategory.h */,
 				4B248F051980998900AA10FD /* UIView+WSCategory.m */,
 				4B248F011980974900AA10FD /* UIButton+WSCategory.h */,
@@ -416,6 +434,8 @@
 				4B0C705F19A5DAA700A2A5E6 /* UITabBarController+WSCategory.m */,
 				4B1E04241987B17F00C24425 /* UIDevice+WSCategory.h */,
 				4B1E04251987B17F00C24425 /* UIDevice+WSCategory.m */,
+				4B37F79A19C7FAC7006E888D /* NSFileManager+WSCategory.h */,
+				4B37F79B19C7FAC7006E888D /* NSFileManager+WSCategory.m */,
 				4BC7E4E11990777600DD174E /* UIApplication+WSCategory.h */,
 				4BC7E4E21990777600DD174E /* UIApplication+WSCategory.m */,
 				4BCD167E1993766900DACFF2 /* NSNotificationCenter+WSCategory.h */,
@@ -440,6 +460,44 @@
 				4B1E04221987B0B700C24425 /* WSApp.m */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		4B37F7D419C852BF006E888D /* WSPackage */ = {
+			isa = PBXGroup;
+			children = (
+				4B37F7DD19C852EB006E888D /* CTMBase64 */,
+				4B37F7D919C852D9006E888D /* StoreProductController */,
+				4B37F7D519C852C4006E888D /* CheckUpdate */,
+			);
+			path = WSPackage;
+			sourceTree = "<group>";
+		};
+		4B37F7D519C852C4006E888D /* CheckUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				4B37F7D619C852C4006E888D /* CheckUpdate.h */,
+				4B37F7D719C852C4006E888D /* CheckUpdate.m */,
+			);
+			path = CheckUpdate;
+			sourceTree = "<group>";
+		};
+		4B37F7D919C852D9006E888D /* StoreProductController */ = {
+			isa = PBXGroup;
+			children = (
+				4B37F7DA19C852D9006E888D /* StoreProductController.h */,
+				4B37F7DB19C852D9006E888D /* StoreProductController.m */,
+			);
+			path = StoreProductController;
+			sourceTree = "<group>";
+		};
+		4B37F7DD19C852EB006E888D /* CTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				4B37F7DE19C852EB006E888D /* GTMBase64.h */,
+				4B37F7DF19C852EB006E888D /* GTMBase64.m */,
+				4B37F7E019C852EB006E888D /* GTMDefines.h */,
+			);
+			path = CTMBase64;
 			sourceTree = "<group>";
 		};
 		4B50AB5819A1E69B006129D2 /* NGAudioPlayer-播放网络路径 */ = {
@@ -511,13 +569,6 @@
 				4BD056261988F0FE00FBC824 /* Reachability.m */,
 			);
 			path = OtherDesign;
-			sourceTree = "<group>";
-		};
-		4BCD1681199379D800DACFF2 /* WSPackage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = WSPackage;
 			sourceTree = "<group>";
 		};
 		4BD4F87C19863A71005C61CD /* ViewDesign */ = {
@@ -724,6 +775,7 @@
 				4B3B8B3719AEDD3600FEC1E1 /* Teacher.m in Sources */,
 				4BA1AFE0198A22F500A99CD5 /* UIColor+WSCategory.m in Sources */,
 				4B3B8B3419AEDD1300FEC1E1 /* Person.m in Sources */,
+				4B37F7DC19C852D9006E888D /* StoreProductController.m in Sources */,
 				4BC7E4E31990777600DD174E /* UIApplication+WSCategory.m in Sources */,
 				4BC7E4E61990784D00DD174E /* UIImage+WSCategory.m in Sources */,
 				4BA1AFE5198A244E00A99CD5 /* ViewController.m in Sources */,
@@ -731,6 +783,7 @@
 				4B19B675197E549E00D53E86 /* NSDictionary+WSCategory.m in Sources */,
 				4B2BCDEC19BFDF8E0099980E /* UITextField+WSCategory.m in Sources */,
 				4B248F061980998900AA10FD /* UIView+WSCategory.m in Sources */,
+				4B37F7E119C852EB006E888D /* GTMBase64.m in Sources */,
 				4B1E04231987B0B700C24425 /* WSApp.m in Sources */,
 				4B50AB6A19A1ECA5006129D2 /* WSAudioRecordManager.m in Sources */,
 				4B1E041C1987AC8B00C24425 /* UITableViewCell+WSCategory.m in Sources */,
@@ -740,8 +793,11 @@
 				4B50AB6219A1E69B006129D2 /* NGAudioPlayer.m in Sources */,
 				4BA1AFF1198A50B000A99CD5 /* NSData+WSCategory.m in Sources */,
 				4BCD169C1993926D00DACFF2 /* UIView+WhenTappedBlocks.m in Sources */,
+				4B37F7D819C852C4006E888D /* CheckUpdate.m in Sources */,
 				4BD4F89119863A71005C61CD /* AddressbookListCell.m in Sources */,
+				4B37F79C19C7FAC7006E888D /* NSFileManager+WSCategory.m in Sources */,
 				4BD056271988F0FE00FBC824 /* Reachability.m in Sources */,
+				4B37F7A319C828EE006E888D /* UIView+Animation.m in Sources */,
 				4B1603D91976587000921B93 /* AppDelegate.m in Sources */,
 				4B55F76C1978BDB000421367 /* WSTransObj.m in Sources */,
 				4BE70F4519C6AEF400931F0D /* WSKeyboardManager.m in Sources */,

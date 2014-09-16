@@ -19,13 +19,7 @@
 {
     //用[NSDate date]可以获取系统当前时间
     NSDate *date = [NSDate date];
-    //实例化一个NSDateFormatter对象
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    //设定时间格式,这里可以设置成自己需要的格式
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    //输出格式为：2010-10-27 10:22:13
-    NSString *currentDateStr = [dateFormatter stringFromDate:date];
-    return currentDateStr;
+    return [date ws_convertDateToStringWithFormat:@"yyyy-MM-dd HH:mm:ss"];
 }
 /**
  *  返回中国时间 格式：yyyy-MM-dd
@@ -36,12 +30,23 @@
 {
     //用[NSDate date]可以获取系统当前时间
     NSDate *date = [NSDate date];
-    //实例化一个NSDateFormatter对象
+    return [date ws_convertDateToStringWithFormat:@"yyyy-MM-dd"];
+}
+
+- (NSString *)ws_convertDateToStringWithFormat:(NSString *)format
+{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    //设定时间格式,这里可以设置成自己需要的格式
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    //输出格式为：2010-10-27 10:22:13
-    NSString *currentDateStr = [dateFormatter stringFromDate:date];
-    return currentDateStr;
+    [dateFormatter setDateFormat:format];
+    NSString *dateStr = [dateFormatter stringFromDate:self];
+    return dateStr;
+}
+
+- (NSDate *)ws_convertStringToDate:(NSString *)string format:(NSString *)format
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+    [dateFormatter setDateFormat:format];
+    NSDate *date = [dateFormatter dateFromString:string];
+    return date;
 }
 @end

@@ -29,6 +29,8 @@
 -(BOOL) ws_isValidate_Mobile;
 #pragma mark -用户名格式是否合法
 -(BOOL) ws_isValidate_User;
+#pragma mark -验证密码：6—16位，只能包含字符、数字和 下划线。
++ (BOOL)ws_isValidatePassword:(NSString *)string;//验证密码：6—16位，只能包含字符、数字和 下划线。
 #pragma mark -是否全为数字
 -(BOOL) ws_isValidate_NumberStr;
 #pragma mark -是否全为英文
@@ -37,6 +39,10 @@
 - (BOOL)ws_isValidate_EnglishWordsAndNumStr;
 #pragma mark -是否全为中文
 - (BOOL)ws_isValidate_ChineseWords;
+#pragma mark -验证是否为网址
+- (BOOL)ws_isValidate_InternetUrl;//验证是否为网络链接。
+#pragma mark -验证15或18位身份证
+- (BOOL)ws_isValidate_IdentifyCardNumber;//验证15或18位身份证。
 
 
 #pragma mark - 判断字符串是否不为空(' ',nil,null)

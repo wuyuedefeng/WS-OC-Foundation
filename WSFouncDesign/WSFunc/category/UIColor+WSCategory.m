@@ -10,25 +10,12 @@
 
 @implementation UIColor (Category)
 #pragma mark - hexString eg. #ff0000
-/**
- *  传入eg. #ff0000 转化成颜色
- *
- *  @param hexString eg. #ff0000
- *
- *  @return color类型的数据
- */
+
 + (UIColor *)ws_colorWithHexString:(NSString *)hexString
 {
     return [self ws_colorWithHexString:hexString alpha:1.0];
 }
-/**
- *  传入eg. #ff0000 转化成颜色
- *
- *  @param hexString eg. #ff0000
- *  @param alpha     透明度
- *
- *  @return color类型的数据
- */
+
 + (UIColor *)ws_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha
 {
 	if ([hexString hasPrefix:@"0x"] || [hexString hasPrefix:@"0X"]) {
@@ -50,5 +37,13 @@
     r = value;
     
     return [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a];
+}
+
++ (UIColor *)ws_convertHexColorToUIColor:(NSInteger)hexColor
+{
+    return [UIColor colorWithRed:((float) ((hexColor & 0xFF0000) >> 16)) / 0xFF
+                           green:((float) ((hexColor & 0xFF00)   >> 8))  / 0xFF
+                            blue:((float)  (hexColor & 0xFF))            / 0xFF
+                           alpha:1.0];
 }
 @end

@@ -11,5 +11,5 @@
 @interface UITextField (WSCategory)
 
 - (void)setText_Safe:(NSString *)text;
-
+- (void)ws_limitTextLength:(int)length;
 @end
