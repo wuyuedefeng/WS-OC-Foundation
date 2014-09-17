@@ -20,6 +20,7 @@
 #import "NSString+WSCategory.h"
 //#import "WSKeyboardManager.h"
 //#import "NSObject+WSCategory.h"
+#import "UIAlertView+WSCategory.h"
 @interface ViewController ()
 {
     WSAudioRecordManager *manager;
@@ -46,6 +47,14 @@
     UIView *view =[UIView reflectImage:self.imgBtn.currentImage withFrame:self.imgBtn.bounds opacity:0.5 atView:self.imgBtn];
     [view startRotationAnimatingWithDuration:10];
     
+    UIButton *wsBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
+    [wsBtn setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:wsBtn];
+    [wsBtn ws_clickEvent:UIControlEventTouchUpInside withClickBlick:^{
+        [wsBtn setTitle:@"abc" forState:UIControlStateNormal];
+        NSLog(@"abc");
+    }];
+
 
 }
 //模型模型数组《＝》字典模型数组

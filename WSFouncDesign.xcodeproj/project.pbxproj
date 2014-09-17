@@ -90,8 +90,11 @@
 		4BD4F89B19863A71005C61CD /* recordClose.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4F88D19863A71005C61CD /* recordClose.png */; };
 		4BD4F89C19863A71005C61CD /* RecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4F88F19863A71005C61CD /* RecordView.m */; };
 		4BD4F89F19863F49005C61CD /* NSDate+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4F89E19863F49005C61CD /* NSDate+WSCategory.m */; };
+		4BE599E019C93605004674D1 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE599DF19C93605004674D1 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		4BE70F4419C6AEF400931F0D /* WSKeyBoardAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE70F4119C6AEF400931F0D /* WSKeyBoardAccessory.m */; };
 		4BE70F4519C6AEF400931F0D /* WSKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE70F4319C6AEF400931F0D /* WSKeyboardManager.m */; };
+		4BEF35A219C971A2005D15FA /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEF35A119C971A2005D15FA /* CMPopTipView.m */; };
+		4BEF35A519C990E3005D15FA /* UIAlertView+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEF35A419C990E3005D15FA /* UIAlertView+WSCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -249,10 +252,16 @@
 		4BD4F89019863A71005C61CD /* CommonViewHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewHead.h; sourceTree = "<group>"; };
 		4BD4F89D19863F49005C61CD /* NSDate+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WSCategory.h"; sourceTree = "<group>"; };
 		4BD4F89E19863F49005C61CD /* NSDate+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WSCategory.m"; sourceTree = "<group>"; };
+		4BE599DE19C93605004674D1 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
+		4BE599DF19C93605004674D1 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
 		4BE70F4019C6AEF400931F0D /* WSKeyBoardAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSKeyBoardAccessory.h; sourceTree = "<group>"; };
 		4BE70F4119C6AEF400931F0D /* WSKeyBoardAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSKeyBoardAccessory.m; sourceTree = "<group>"; };
 		4BE70F4219C6AEF400931F0D /* WSKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSKeyboardManager.h; sourceTree = "<group>"; };
 		4BE70F4319C6AEF400931F0D /* WSKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSKeyboardManager.m; sourceTree = "<group>"; };
+		4BEF35A019C971A2005D15FA /* CMPopTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPopTipView.h; sourceTree = "<group>"; };
+		4BEF35A119C971A2005D15FA /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPopTipView.m; sourceTree = "<group>"; };
+		4BEF35A319C990E3005D15FA /* UIAlertView+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+WSCategory.h"; path = "WSFouncDesign/WSFunc/category/UIAlertView+WSCategory.h"; sourceTree = SOURCE_ROOT; };
+		4BEF35A419C990E3005D15FA /* UIAlertView+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+WSCategory.m"; path = "WSFouncDesign/WSFunc/category/UIAlertView+WSCategory.m"; sourceTree = SOURCE_ROOT; };
 		8A64BDC381A04E94BD24A51B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2A4019FC214BFDA4A8E0AA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -445,6 +454,8 @@
 				4B2BCDEB19BFDF8E0099980E /* UITextField+WSCategory.m */,
 				4B2BCDED19BFE05F0099980E /* UITextView+WSCategory.h */,
 				4B2BCDEE19BFE05F0099980E /* UITextView+WSCategory.m */,
+				4BEF35A319C990E3005D15FA /* UIAlertView+WSCategory.h */,
+				4BEF35A419C990E3005D15FA /* UIAlertView+WSCategory.m */,
 				4BD4F8791986385D005C61CD /* UIViewController+WSCategory.h */,
 				4BD4F87A1986385D005C61CD /* UIViewController+WSCategory.m */,
 				4B1E041A1987AC8B00C24425 /* UITableViewCell+WSCategory.h */,
@@ -484,6 +495,7 @@
 		4B37F7D419C852BF006E888D /* WSPackage */ = {
 			isa = PBXGroup;
 			children = (
+				4BE599DD19C93605004674D1 /* ZXALAssetsLibrary */,
 				4B99866019C92A9D001E05B5 /* WSBase64 */,
 				4B99865219C92995001E05B5 /* WS-AES */,
 				4B99865719C92995001E05B5 /* WS-DES */,
@@ -628,6 +640,7 @@
 		4BD4F87C19863A71005C61CD /* ViewDesign */ = {
 			isa = PBXGroup;
 			children = (
+				4BEF359F19C971A2005D15FA /* CMPopTipView */,
 				4BD4F87D19863A71005C61CD /* AddressbookList */,
 				4BD4F88719863A71005C61CD /* AudioRecordAndPlayer */,
 				4BD4F89019863A71005C61CD /* CommonViewHead.h */,
@@ -666,6 +679,15 @@
 			path = AudioRecordAndPlayer;
 			sourceTree = "<group>";
 		};
+		4BE599DD19C93605004674D1 /* ZXALAssetsLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				4BE599DE19C93605004674D1 /* ALAssetsLibrary+CustomPhotoAlbum.h */,
+				4BE599DF19C93605004674D1 /* ALAssetsLibrary+CustomPhotoAlbum.m */,
+			);
+			path = ZXALAssetsLibrary;
+			sourceTree = "<group>";
+		};
 		4BE70F3F19C6AEF400931F0D /* WSKeyBoard */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +697,15 @@
 				4BE70F4319C6AEF400931F0D /* WSKeyboardManager.m */,
 			);
 			path = WSKeyBoard;
+			sourceTree = "<group>";
+		};
+		4BEF359F19C971A2005D15FA /* CMPopTipView */ = {
+			isa = PBXGroup;
+			children = (
+				4BEF35A019C971A2005D15FA /* CMPopTipView.h */,
+				4BEF35A119C971A2005D15FA /* CMPopTipView.m */,
+			);
+			path = CMPopTipView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -840,6 +871,7 @@
 				4B2BCDEC19BFDF8E0099980E /* UITextField+WSCategory.m in Sources */,
 				4B248F061980998900AA10FD /* UIView+WSCategory.m in Sources */,
 				4B37F7E119C852EB006E888D /* GTMBase64.m in Sources */,
+				4BEF35A519C990E3005D15FA /* UIAlertView+WSCategory.m in Sources */,
 				4B1E04231987B0B700C24425 /* WSApp.m in Sources */,
 				4B50AB6A19A1ECA5006129D2 /* WSAudioRecordManager.m in Sources */,
 				4B99865A19C92995001E05B5 /* NSData+ZXAES.m in Sources */,
@@ -853,6 +885,7 @@
 				4BCD169C1993926D00DACFF2 /* UIView+WhenTappedBlocks.m in Sources */,
 				4B37F7D819C852C4006E888D /* CheckUpdate.m in Sources */,
 				4BD4F89119863A71005C61CD /* AddressbookListCell.m in Sources */,
+				4BE599E019C93605004674D1 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				4B37F79C19C7FAC7006E888D /* NSFileManager+WSCategory.m in Sources */,
 				4BD056271988F0FE00FBC824 /* Reachability.m in Sources */,
 				4B37F7A319C828EE006E888D /* UIView+Animation.m in Sources */,
@@ -865,6 +898,7 @@
 				4BAE34C019AC6E6C0045991E /* NSDate+Reporting.m in Sources */,
 				4BCD167D1993748400DACFF2 /* NSMutableDictionary+WSCategory.m in Sources */,
 				4B99865F19C92A4E001E05B5 /* NSURL+WSCategory.m in Sources */,
+				4BEF35A219C971A2005D15FA /* CMPopTipView.m in Sources */,
 				4BCD16801993766900DACFF2 /* NSNotificationCenter+WSCategory.m in Sources */,
 				4B99865C19C92995001E05B5 /* NSString+ZXDES.m in Sources */,
 				4BD4F87B1986385D005C61CD /* UIViewController+WSCategory.m in Sources */,

@@ -176,6 +176,8 @@ typedef id  (^IDBlock_id)  (id);
 #import "UIButton+WSCategory.h"
 
 /////=================7==============================
+#import "UITextField+WSCategory.h"
+/////=================7==============================
 #pragma mark -UIViewController分类
 /**
  *UIView+Category
