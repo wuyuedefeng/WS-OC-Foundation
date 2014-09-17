@@ -7,9 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface UIApplication (Category)
-
 // 状态栏的矩形框，iOS 8及之后的与iOS 8之前的不一样
 #define kWSStatusBarFrame ([UIApplication sharedApplication].statusBarFrame)
 // 项目发布版本字符串
@@ -19,6 +16,7 @@
 #define kWSMainWindow ((UIWindow *)[[[UIApplication sharedApplication] windows] objectAtIndex:0])
 #define kWSFirstWindow kWSMainWindow
 #define kWSKeyWindow kWSMainWindow
+@interface UIApplication (Category)
 /*!
  * 打开iOS原生应用程序
  *

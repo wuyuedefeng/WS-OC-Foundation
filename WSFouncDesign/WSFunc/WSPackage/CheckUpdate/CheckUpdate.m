@@ -2,8 +2,8 @@
 ////  CheckUpdate.m
 ////  NUAA 
 ////
-////  Created by 何 振东 on 12-9-19.
-////  Copyright (c) 2012年 何 振东. All rights reserved.
+////  Created by wangsen on 12-9-19.
+////  Copyright (c) 2013年 wangsen. All rights reserved.
 ////
 //
 //#import "CheckUpdate.h"

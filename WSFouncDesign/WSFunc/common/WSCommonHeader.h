@@ -44,6 +44,53 @@ cancelButtonTitle:@"确定" \
 otherButtonTitles:nil]; \
 [alert show];
 
+//Block
+typedef void(^VoidBlock)();
+typedef BOOL(^BoolBlock)();
+typedef int (^IntBlock) ();
+typedef id  (^IDBlock)  ();
+
+typedef void(^VoidBlock_int)(int);
+typedef BOOL(^BoolBlock_int)(int);
+typedef int (^IntBlock_int) (int);
+typedef id  (^IDBlock_int)  (int);
+
+typedef void(^VoidBlock_string)(NSString*);
+typedef BOOL(^BoolBlock_string)(NSString*);
+typedef int (^IntBlock_string) (NSString*);
+typedef id  (^IDBlock_string)  (NSString*);
+
+typedef void(^VoidBlock_id)(id);
+typedef BOOL(^BoolBlock_id)(id);
+typedef int (^IntBlock_id) (id);
+typedef id  (^IDBlock_id)  (id);
+//应用尺寸(不包括状态栏,通话时状态栏高度不是20，所以需要知道具体尺寸)
+#define kContent_Height   ([UIScreen mainScreen].applicationFrame.size.height)
+#define kContent_Width    ([UIScreen mainScreen].applicationFrame.size.width)
+#define kContent_Frame    (CGRectMake(0, 0 ,kContent_Width,kContent_Height))
+#define kContent_CenterX  kContent_Width/2
+#define kContent_CenterY  kContent_Height/2
+/*
+ 类似九宫格的九个点
+ 
+ p1 --- p2 --- p3
+ |      |      |
+ p4 --- p5 --- p6
+ |      |      |
+ p7 --- p8 --- p9
+ 
+ */
+#define kWSP1 CGPointMake(0                 ,0)
+#define kWSP2 CGPointMake(kContent_Width/2  ,0)
+#define kWSP3 CGPointMake(kContent_Width    ,0)
+#define kWSP4 CGPointMake(0                 ,kContent_Height/2)
+#define kWSP5 CGPointMake(kContent_Width/2  ,kContent_Height/2)
+#define kWSP6 CGPointMake(kContent_Width    ,kContent_Height/2)
+#define kWSP7 CGPointMake(0                 ,kContent_Height)
+#define kWSP8 CGPointMake(kContent_Width/2  ,kContent_Height)
+#define kWSP9 CGPointMake(kContent_Width    ,kContent_Height)
+
+//*********************************************
 
 
 
@@ -112,6 +159,9 @@ otherButtonTitles:nil]; \
 #import "NSDate+WSCategory.h"
 
 /////=================5==============================
+#import "NSURL+WSCategory.h"
+/////=================5==============================
+
 #pragma mark -UIView分类
 /**
  *UIView+Category
