@@ -184,6 +184,9 @@ typedef id  (^IDBlock_id)  (id);
  **/
 #import "UIViewController+WSCategory.h"
 
+#import "UINavigationController+WSCategory.h"
+#import "UINavigationItem+WSCategory.h"
+
 /////==================8=============================
 #pragma mark -UITableViewCell分类
 /**
