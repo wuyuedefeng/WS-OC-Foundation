@@ -25,4 +25,21 @@
     return jsonString;
 }
 
+- (NSString *)paramString
+{
+    NSMutableArray *paramPairs = [NSMutableArray array];
+    
+	for (NSString *key in [self keyEnumerator]) {
+        id value = [self valueForKey:key];
+		if ([value isKindOfClass:[NSString class]]) {
+			[paramPairs addObject:[NSString stringWithFormat:@"%@=%@",
+                                   key, [(NSString *)value ws_URLEncodedString]]];
+		} else if ([value isKindOfClass:[NSNumber class]]) {
+            [paramPairs addObject:[NSString stringWithFormat:@"%@=%@",
+                                   key, [(NSNumber *)value stringValue]]];
+        }
+	}
+	
+	return [paramPairs componentsJoinedByString:@"&"];
+}
 @end

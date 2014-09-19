@@ -133,6 +133,49 @@
 {
     return [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex] evaluateWithObject:self];
 }
+
+
+/**
+ *  @brief URL编码
+ */
+- (NSString *)ws_URLEncodedString
+{
+    NSString *result = (NSString *)CFBridgingRelease
+    (CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                             (CFStringRef)self,
+                                             NULL,
+                                             CFSTR("!*'();:@&=+$,/?%#[]"),
+                                             kCFStringEncodingUTF8));
+    return result;
+}
+
+/**
+ *  @brief URL解码
+ */
+- (NSString *)ws_URLDecodedString
+{
+    NSString *result = (NSString *)CFBridgingRelease
+    (CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
+                                                             (CFStringRef)self,
+                                                             CFSTR(""),
+                                                             kCFStringEncodingUTF8));
+    return result;
+}
+/**
+ *  @brief URL
+ */
+- (NSURL *)ws_URL
+{
+    return [NSURL URLWithString:self];
+}
+
+/**
+ *  @brief 文件URL
+ */
+- (NSURL *)ws_fileURL
+{
+    return [NSURL fileURLWithPath:self];
+}
 #pragma mark - 判断字符串是否不为空(' ',nil,null)
 /**
  *  判断字符串是否不为空 包括(' ',nil,null)

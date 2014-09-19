@@ -11,4 +11,10 @@
 @interface NSDictionary (Category)
 #pragma mark -将字典转换成json数据字符串
 - (NSString *)jsonString_ws;
+/**
+ *  将字典转换成url的get请求参数的字符串
+ *
+ *  @return 字符串
+ */
+- (NSString *)paramString;
 @end

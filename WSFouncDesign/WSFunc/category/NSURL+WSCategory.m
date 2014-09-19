@@ -1,5 +1,5 @@
 #import "NSURL+WSCategory.h"
-
+#import "NSString+WSCategory.h"
 @implementation NSURL (ZXURL)
 
 
@@ -28,5 +28,14 @@
         [parameters setObject:param[1] forKey:param[0]];
     }
     return parameters;
+}
+- (NSURL *)ws_serializeParams:(NSDictionary *)params
+{
+    NSString *baseURLString = [self absoluteString];
+	NSString *queryPrefix = [[self query] ws_isNotNilString] ? @"&" : @"?";
+	NSString *query = [params paramString];
+	NSString *URLString = [NSString stringWithFormat:@"%@%@%@",
+                           baseURLString, queryPrefix, query];
+	return [NSURL URLWithString:URLString];
 }
 @end

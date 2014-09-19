@@ -44,6 +44,11 @@
 #pragma mark -验证15或18位身份证
 - (BOOL)ws_isValidate_IdentifyCardNumber;//验证15或18位身份证。
 
+- (NSString *)ws_URLEncodedString;
+- (NSString *)ws_URLDecodedString;
+
+- (NSURL *)ws_URL;
+- (NSURL *)ws_fileURL;
 
 #pragma mark - 判断字符串是否不为空(' ',nil,null)
 -(BOOL) ws_isNotNilString;
