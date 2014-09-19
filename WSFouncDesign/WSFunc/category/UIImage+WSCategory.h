@@ -110,6 +110,32 @@ typedef NS_ENUM(NSInteger, UIImageDKCompressMode) {
  */
 +(UIImage *)colorizeImage:(UIImage *)image withColor:(UIColor *)color;
 
+/**
+ *  等比压缩图片到指定的height
+ *
+ *  @param height 指定的height
+ *
+ *  @return 压缩后的图片
+ */
+- (UIImage *)imageScaledToHeight:(CGFloat)height;
+
+/**
+ *  等比压缩图片到指定的width
+ *
+ *  @param width 指定的width
+ *
+ *  @return 压缩后的图片
+ */
+- (UIImage *)imageScaledToWidth:(CGFloat)width;
+
+/**
+ *  居中裁剪图片
+ *
+ *  @param size size
+ *
+ *  @return 裁剪后的图片
+ */
+- (UIImage *)cutImageFromCenter:(CGSize)size;
 //按frame裁减图片
 + (UIImage *)captureView:(UIView *)view frame:(CGRect)frame;
 

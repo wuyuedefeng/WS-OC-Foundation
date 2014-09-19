@@ -11,6 +11,7 @@
 		4B0D4C111989096E0022ADD4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0D4C0F1989096E0022ADD4 /* Main_iPhone.storyboard */; };
 		4B0D4C1419890AEF0022ADD4 /* WSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D4C1319890AEF0022ADD4 /* WSNavigationController.m */; };
 		4B0F4E2519CBF32600064F14 /* NSObject+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F4E2419CBF32600064F14 /* NSObject+HUD.m */; };
+		4B0F4EB119CC165800064F14 /* NSAttributedString+WSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F4EB019CC165800064F14 /* NSAttributedString+WSCategory.m */; };
 		4B1603C91976587000921B93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1603C81976587000921B93 /* Foundation.framework */; };
 		4B1603CB1976587000921B93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1603CA1976587000921B93 /* CoreGraphics.framework */; };
 		4B1603CD1976587000921B93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1603CC1976587000921B93 /* UIKit.framework */; };
@@ -116,6 +117,8 @@
 		4B0D4C1319890AEF0022ADD4 /* WSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNavigationController.m; sourceTree = "<group>"; };
 		4B0F4E2319CBF32600064F14 /* NSObject+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HUD.h"; sourceTree = "<group>"; };
 		4B0F4E2419CBF32600064F14 /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
+		4B0F4EAF19CC165800064F14 /* NSAttributedString+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+WSCategory.h"; path = "WSFouncDesign/WSFunc/category/NSAttributedString+WSCategory.h"; sourceTree = SOURCE_ROOT; };
+		4B0F4EB019CC165800064F14 /* NSAttributedString+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+WSCategory.m"; path = "WSFouncDesign/WSFunc/category/NSAttributedString+WSCategory.m"; sourceTree = SOURCE_ROOT; };
 		4B1603C51976587000921B93 /* WSFouncDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSFouncDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1603C81976587000921B93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4B1603CA1976587000921B93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -429,6 +432,8 @@
 				4BD0562319889DF600FBC824 /* NSObject+WSCategory.m */,
 				4B16041F1976848500921B93 /* NSString+WSCategory.h */,
 				4B1604201976848500921B93 /* NSString+WSCategory.m */,
+				4B0F4EAF19CC165800064F14 /* NSAttributedString+WSCategory.h */,
+				4B0F4EB019CC165800064F14 /* NSAttributedString+WSCategory.m */,
 				4B19B677197E617600D53E86 /* NSArray+WSCategory.h */,
 				4B19B678197E617600D53E86 /* NSArray+WSCategory.m */,
 				4B5512C3199373DD0045A9C0 /* NSMutableArray+WSCategory.h */,
@@ -890,6 +895,7 @@
 				4BA1AFF1198A50B000A99CD5 /* NSData+WSCategory.m in Sources */,
 				4BCD169C1993926D00DACFF2 /* UIView+WhenTappedBlocks.m in Sources */,
 				4B37F7D819C852C4006E888D /* CheckUpdate.m in Sources */,
+				4B0F4EB119CC165800064F14 /* NSAttributedString+WSCategory.m in Sources */,
 				4BD4F89119863A71005C61CD /* AddressbookListCell.m in Sources */,
 				4BE599E019C93605004674D1 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				4B37F79C19C7FAC7006E888D /* NSFileManager+WSCategory.m in Sources */,
