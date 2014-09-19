@@ -27,5 +27,6 @@
 - (void)ws_SetBackButtonWithWithImage:(UIImage *)image target:(id)target action:(SEL)action;
 - (void)ws_SetBackButtonWithWithImage:(UIImage *)image highImage:(UIImage *)highImage  target:(id)target action:(SEL)action;
 
-
+- (void)ws_loadAnimation_MBProgressHUD:(Block)block;
+- (void)ws_loadAnimation_MBProgressHUD:(Block)block finishDid:(Block)finishBlock;
 @end
