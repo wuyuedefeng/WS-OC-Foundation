@@ -73,11 +73,11 @@
     return YES;
 }
 //字母数字下划线，6－16位
-+ (BOOL)ws_isValidatePassword:(NSString *)string
+- (BOOL)ws_isValidate_Password
 {
     NSString *regex = @"^[\\w\\d_]{6,16}$";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-    return [predicate evaluateWithObject:string];
+    return [predicate evaluateWithObject:self];
 }
 #pragma mark -是否为数字
 -(BOOL) ws_isValidate_NumberStr
@@ -122,6 +122,7 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [predicate evaluateWithObject:self];
 }
+//15或者18位身份证
 - (BOOL)ws_isValidate_IdentifyCardNumber
 {
     NSString *regex = @"^\\d{15}|\\d{}18$";

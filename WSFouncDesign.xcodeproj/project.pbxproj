@@ -10,6 +10,7 @@
 		3C43F0F5E9D247A1BC341A91 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A64BDC381A04E94BD24A51B /* libPods.a */; };
 		4B0D4C111989096E0022ADD4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0D4C0F1989096E0022ADD4 /* Main_iPhone.storyboard */; };
 		4B0D4C1419890AEF0022ADD4 /* WSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D4C1319890AEF0022ADD4 /* WSNavigationController.m */; };
+		4B0F4E2519CBF32600064F14 /* NSObject+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F4E2419CBF32600064F14 /* NSObject+HUD.m */; };
 		4B1603C91976587000921B93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1603C81976587000921B93 /* Foundation.framework */; };
 		4B1603CB1976587000921B93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1603CA1976587000921B93 /* CoreGraphics.framework */; };
 		4B1603CD1976587000921B93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1603CC1976587000921B93 /* UIKit.framework */; };
@@ -113,6 +114,8 @@
 		4B0D4C101989096E0022ADD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		4B0D4C1219890AEF0022ADD4 /* WSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNavigationController.h; sourceTree = "<group>"; };
 		4B0D4C1319890AEF0022ADD4 /* WSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNavigationController.m; sourceTree = "<group>"; };
+		4B0F4E2319CBF32600064F14 /* NSObject+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HUD.h"; sourceTree = "<group>"; };
+		4B0F4E2419CBF32600064F14 /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
 		4B1603C51976587000921B93 /* WSFouncDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSFouncDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1603C81976587000921B93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4B1603CA1976587000921B93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -627,6 +630,8 @@
 			children = (
 				4BAE34BE19AC6E6C0045991E /* NSDate+Reporting.h */,
 				4BAE34BF19AC6E6C0045991E /* NSDate+Reporting.m */,
+				4B0F4E2319CBF32600064F14 /* NSObject+HUD.h */,
+				4B0F4E2419CBF32600064F14 /* NSObject+HUD.m */,
 				4BCD169A1993926D00DACFF2 /* UIView+WhenTappedBlocks.h */,
 				4BCD169B1993926D00DACFF2 /* UIView+WhenTappedBlocks.m */,
 				4BC7E4EB1990820100DD174E /* UIScreen+DK.h */,
@@ -852,6 +857,7 @@
 				4BD4F89319863A71005C61CD /* AddressbookListViewController.m in Sources */,
 				4BE70F4419C6AEF400931F0D /* WSKeyBoardAccessory.m in Sources */,
 				4B99866519C92A9D001E05B5 /* NSData+Base64.m in Sources */,
+				4B0F4E2519CBF32600064F14 /* NSObject+HUD.m in Sources */,
 				4B0D4C1419890AEF0022ADD4 /* WSNavigationController.m in Sources */,
 				4B50AB6319A1E69B006129D2 /* NGAudioPlayerPlaybackState.m in Sources */,
 				4B5512C5199373DD0045A9C0 /* NSMutableArray+WSCategory.m in Sources */,

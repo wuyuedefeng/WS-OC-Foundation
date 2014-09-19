@@ -30,7 +30,7 @@
 #pragma mark -用户名格式是否合法
 -(BOOL) ws_isValidate_User;
 #pragma mark -验证密码：6—16位，只能包含字符、数字和 下划线。
-+ (BOOL)ws_isValidatePassword:(NSString *)string;//验证密码：6—16位，只能包含字符、数字和 下划线。
+- (BOOL)ws_isValidate_Password;//验证密码：6—16位，只能包含字符、数字和 下划线。
 #pragma mark -是否全为数字
 -(BOOL) ws_isValidate_NumberStr;
 #pragma mark -是否全为英文
