@@ -21,6 +21,8 @@
 //#import "WSKeyboardManager.h"
 //#import "NSObject+WSCategory.h"
 #import "UIAlertView+WSCategory.h"
+
+#import "WSTextView.h"
 @interface ViewController ()
 {
     WSAudioRecordManager *manager;
@@ -58,7 +60,14 @@
     [UIAlertView ws_alertViewWithTitle:@"tishi" message:@"message" cancelButtonTitle:@"quxiao" otherButtonTitle:@"确定" tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
         NSLog(@"queding click");
     }];
-
+    
+    
+    WSTextView *textView = [[WSTextView alloc] initWithFrame:CGRectMake(100, 250, 50, 50)];
+    textView.placeholder = @"abc";
+    textView.placeholderColor = [UIColor redColor];
+    [textView setContentMode:UIViewContentModeScaleToFill];
+    textView.endEditingWhenSlide = YES;
+    [self.view addSubview:textView];
 
 }
 //模型模型数组《＝》字典模型数组
