@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
-@interface WSTransObj : NSObject
+@class WSObject;
+@interface WSTransObj : WSObject
 
 
 #pragma mark - 获取与设置值
@@ -28,8 +29,8 @@
 + (id)dictionary_from_modal:(id)modol;
 
 + (id)modalFromToken:(NSString *)token;
-
-
++ (void)removeToken:(NSString *)token;
++ (void)removeAllToken;
 
 
 #pragma mark - 获取模型的值

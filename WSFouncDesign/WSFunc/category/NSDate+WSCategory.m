@@ -642,4 +642,17 @@
     NSString *dateFormatStr = [NSString stringWithFormat:@"%04d-%02d-%02d %02d:%02d:%02d", (int)year, (int)month, (int)day, (int)hour, (int)minute, (int)second];
     return dateFormatStr;
 }
+/**
+ *  @brief 日期相隔多少天
+ */
+- (NSInteger)daysSinceDate:(NSDate *)anotherDate
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    unsigned int unitFlags = NSDayCalendarUnit;
+    NSDateComponents *dateComponents = [calendar components:unitFlags
+                                                   fromDate:self
+                                                     toDate:anotherDate
+                                                    options:0];
+    return [dateComponents day];
+}
 @end

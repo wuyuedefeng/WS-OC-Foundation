@@ -111,4 +111,7 @@
 + (NSUInteger)daysInMonthByDate:(NSDate *)date;
 
 + (NSString *)convertToyyyMMddHHmmssString:(NSDate *)date;
+
+/// 日期相隔多少天
+- (NSInteger)daysSinceDate:(NSDate *)anotherDate;
 @end

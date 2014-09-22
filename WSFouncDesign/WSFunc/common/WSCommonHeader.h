@@ -221,7 +221,9 @@ typedef id  (^IDBlock_id)  (id);
  *WSTransObj
  *
  **/
+#import "WSObject.h"
 #import "WSTransObj.h"//模型转数组  数组转模型
+
 /////===============================================
 
 #pragma mark -录音功能

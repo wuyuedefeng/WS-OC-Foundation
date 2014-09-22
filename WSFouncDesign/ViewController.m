@@ -21,7 +21,7 @@
 //#import "WSKeyboardManager.h"
 //#import "NSObject+WSCategory.h"
 #import "UIAlertView+WSCategory.h"
-
+#import "WSObject.h"
 #import "WSTextView.h"
 @interface ViewController ()
 {
@@ -80,50 +80,68 @@
     nam.nameCStr = @"namename";
     tea.nameModal = nam;
     
-    Teacher *tea2 = [[Teacher alloc] init];
-    tea2.teacherAge = @"20";
-    tea2.teacherAge = @"18";
-    Name *nam2 = [[Name alloc] init];
-    nam2.nameCStr = @"namename";
-    tea2.nameModal = nam;
+    NSDictionary *dic = [tea ws_dictionaryRepresentation];
+    NSLog(@"%@",dic);
     
-    NSArray *arr = [NSArray arrayWithObjects:tea,tea2, nil];
-    NSArray *dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
-    NSLog(@"%@",dicArr);
-    NSLog(@"%@",dicArr[0][@"teacherAge"]);
-    
-    arr = [WSTransObj modalArray_from_dictionaryArr:dicArr token:@"wangsen"];
-    //    id ins = [arr[0] transObj_valueForKey:@"nameModal"];
-    //    NSLog(@"%@",[ins transObj_valueForKey:@"nameCStr"]);
-    dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
-    NSLog(@"===%@",dicArr);
-    
-    //    NSLog(@"=============");
-    //    NSDictionary *dic = dicArr[0];
-    
-    
-    WSTransObj *modal2 = [WSTransObj modalFromToken:@"wangsen"];
-    [modal2 setValue:@"111" forKey:@"teacherAge"];
-    
+    WSObject *modal = [WSTransObj modal_from_dictionary:dic];
     NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     path = [path stringByAppendingPathComponent:@"ws.plist"];
+    BOOL result = [modal ws_writeToFile:path atomically:YES];
+    if(result)
+    {
+        NSLog(@"chenggong ");
+    }
+    modal = [WSObject ws_objectWithContentsOfFile:path];
+    
+    dic = [WSTransObj dictionary_from_modal:modal];
+    NSLog(@"%@",dic);
+
     
     
-    id modal3 = [modal2 valueForKey:@"nameModal"];
-    [modal3 setValue:@"abc" forKey:@"nameCStr"];
-    //
-//    [NSKeyedArchiver archiveRootObject:modal2 toFile:path];
-//    NSLog(@"==============================================%@",path);
-//    modal2 = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
-    //
-    modal3 = [modal2 valueForKey:@"nameModal"];
-    NSDictionary *wsDic = [WSTransObj dictionary_from_modal:modal2];
-    NSLog(@"%@",wsDic);
-    //    [modal transObj_setValue:@"20" forKey:@"teacherAge"];
-    //    NSLog(@"%@",[WSTransObj valueGetterOfModal:[WSTransObj valueGetterOfModal:modal2 withKey:@"nameModal"] withKey:@"nameCStr"]);
-    //    NSLog(@"-------------");
-    //    dic = [WSTransObj dictionary_from_modal:modal];
-    //    NSLog(@"%@",dic);
+//    Teacher *tea2 = [[Teacher alloc] init];
+//    tea2.teacherAge = @"20";
+//    tea2.teacherAge = @"18";
+//    Name *nam2 = [[Name alloc] init];
+//    nam2.nameCStr = @"namename";
+//    tea2.nameModal = nam;
+//    
+//    NSArray *arr = [NSArray arrayWithObjects:tea,tea2, nil];
+//    NSArray *dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
+//    NSLog(@"%@",dicArr);
+//    NSLog(@"%@",dicArr[0][@"teacherAge"]);
+//    
+//    arr = [WSTransObj modalArray_from_dictionaryArr:dicArr token:@"wangsen"];
+//    //    id ins = [arr[0] transObj_valueForKey:@"nameModal"];
+//    //    NSLog(@"%@",[ins transObj_valueForKey:@"nameCStr"]);
+//    dicArr = [WSTransObj dictionaryArray_from_modalArray:arr];
+//    NSLog(@"===%@",dicArr);
+//    
+//    //    NSLog(@"=============");
+//    //    NSDictionary *dic = dicArr[0];
+//    
+//    
+//    WSTransObj *modal2 = [WSTransObj modalFromToken:@"wangsen"];
+//    [modal2 setValue:@"111" forKey:@"teacherAge"];
+//    
+//    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+//    path = [path stringByAppendingPathComponent:@"ws.plist"];
+//
+//    
+//    id modal3 = [modal2 valueForKey:@"nameModal"];
+//    [modal3 setValue:@"abc" forKey:@"nameCStr"];
+//    //
+////    [NSKeyedArchiver archiveRootObject:modal2 toFile:path];
+////    NSLog(@"==============================================%@",path);
+////    modal2 = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+//    //
+//    modal3 = [modal2 valueForKey:@"nameModal"];
+//    NSDictionary *wsDic = [WSTransObj dictionary_from_modal:modal2];
+//    NSLog(@"%@",wsDic);
+//    //    [modal transObj_setValue:@"20" forKey:@"teacherAge"];
+//    //    NSLog(@"%@",[WSTransObj valueGetterOfModal:[WSTransObj valueGetterOfModal:modal2 withKey:@"nameModal"] withKey:@"nameCStr"]);
+//    //    NSLog(@"-------------");
+//    //    dic = [WSTransObj dictionary_from_modal:modal];
+//    //    NSLog(@"%@",dic);
 
 }
 
