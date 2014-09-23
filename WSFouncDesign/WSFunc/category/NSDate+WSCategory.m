@@ -40,7 +40,25 @@
     NSString *dateStr = [dateFormatter stringFromDate:self];
     return dateStr;
 }
-
+/**
+ *  @brief 时间转字符串
+ *
+ *  @param format 时间格式
+ *
+ *  @return 时间字符串
+ */
+- (NSString *)ws_stringWithFormat:(NSString *)format
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:[NSLocale currentLocale]];
+    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+    [dateFormatter setDateFormat:format];
+    NSString *dateString = [dateFormatter stringFromDate:self];
+#if ! __has_feature(objc_arc)
+    [dateFormatter release];
+#endif
+    return dateString;
+}
 - (NSDate *)ws_convertStringToDate:(NSString *)string format:(NSString *)format
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

@@ -23,13 +23,14 @@
 + (NSString *)ws_current_Date;
 
 
+
 /**
  *  将日期转化为字符串。
  *  @param  format:转化格式，形如@"yyyy年MM月dd日hh时mm分ss秒"。
  *  return  返回转化后的字符串。
  */
 - (NSString *)ws_convertDateToStringWithFormat:(NSString *)format;
-
+- (NSString *)ws_stringWithFormat:(NSString *)format;
 /**
  *  将字符串转化为日期。
  *  @param  string:给定的字符串日期。

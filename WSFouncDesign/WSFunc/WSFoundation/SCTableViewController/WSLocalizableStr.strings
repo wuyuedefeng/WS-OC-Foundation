@@ -1,0 +1,19 @@
+/* 
+  WSLocalizableStr.strings
+  pullTableview
+
+  Created by TX-009 on 14-9-23.
+  Copyright (c) 2014年 TX-009. All rights reserved.
+*/
+"WSFM_LS_Release to refresh" = "Release to refresh";
+"WSFM_LS_Pull down to refresh" = "Pull down to refresh";
+"WSFM_LS_Refreshing" = "Refreshing...";
+
+"WSFM_LS_Release to load" = "Release to load";
+"WSFM_LS_Pull up to load" = "Pull up to load";
+"WSFM_LS_Loading" = "Loading...";
+
+"WSFM_LS_Last updated time" = "Last updated";
+"WSFM_LS_Last updated today" = "Today";
+"WSFM_LS_Last updated yesterday" = "Yesterday";
+"WSFM_LS_Last updated before yesterday" = "Before yesterday";

@@ -103,17 +103,17 @@ static NSString * const kSCLastUpdatedDateKey = @"SCLastUpdatedDateKey";
         NSString *statusText = nil;
         switch (state) {
             case SCPullDownStatePulling:
-                statusText = NSLocalizedStringFromTable(@"SCFW_LS_Release to refresh", @"SCFWLocalizable", nil);
+                statusText = NSLocalizedStringFromTable(@"WSFM_LS_Release to refresh", @"WSLocalizableStr", nil);
                 _circleView.progress = 1.0;
                 break;
             case SCPullDownStateNormal:
-                statusText = NSLocalizedStringFromTable(@"SCFW_LS_Pull down to refresh", @"SCFWLocalizable", nil);
+                statusText = NSLocalizedStringFromTable(@"WSFM_LS_Pull down to refresh", @"WSLocalizableStr", nil);
                 //[_activityView stopAnimating];
                 //_circleView.hidden = NO;
                 [_circleView stopRotating];
                 break;
             case SCPullDownStateRefreshing:
-                statusText = NSLocalizedStringFromTable(@"SCFW_LS_Refreshing", @"SCFWLocalizable", nil);
+                statusText = NSLocalizedStringFromTable(@"WSFM_LS_Refreshing", @"WSLocalizableStr", nil);
                 //[_activityView startAnimating];
                 //_circleView.hidden = YES;
                 //_circleView.progress = 0.0;
@@ -147,20 +147,20 @@ static NSString * const kSCLastUpdatedDateKey = @"SCLastUpdatedDateKey";
     NSInteger days = [lastUpdatedDate daysSinceDate:[NSDate date]];
     NSString *dateFormat = nil;
     if (days == 0) {
-        NSString *today = NSLocalizedStringFromTable(@"SCFW_LS_Last updated today", @"SCFWLocalizable", nil);
+        NSString *today = NSLocalizedStringFromTable(@"WSFM_LS_Last updated today", @"WSLocalizableStr", nil);
         dateFormat = [NSString stringWithFormat:@"%@ %@", today, kSCUpdatedDateFormatterHHmm];
     } else if (days == 1) {
-        NSString *yesterday = NSLocalizedStringFromTable(@"SCFW_LS_Last updated yesterday", @"SCFWLocalizable", nil);
+        NSString *yesterday = NSLocalizedStringFromTable(@"WSFM_LS_Last updated yesterday", @"WSLocalizableStr", nil);
         dateFormat = [NSString stringWithFormat:@"%@ %@", yesterday, kSCUpdatedDateFormatterHHmm];
     } else if (days == 2) {
-        NSString *before = NSLocalizedStringFromTable(@"SCFW_LS_Last updated before yesterday", @"SCFWLocalizable", nil);
+        NSString *before = NSLocalizedStringFromTable(@"WSFM_LS_Last updated before yesterday", @"WSLocalizableStr", nil);
         dateFormat = [NSString stringWithFormat:@"%@ %@", before, kSCUpdatedDateFormatterHHmm];
     } else {
         dateFormat = kSCUpdatedDateFormatterMMddHHmm;
     }
     NSString *dateString = [lastUpdatedDate ws_convertDateToStringWithFormat:dateFormat];
     
-    NSString *updated = NSLocalizedStringFromTable(@"SCFW_LS_Last updated time", @"SCFWLocalizable", nil);
+    NSString *updated = NSLocalizedStringFromTable(@"WSFM_LS_Last updated time", @"WSLocalizableStr", nil);
     _dateLabel.text = [NSString stringWithFormat:@"%@ : %@", updated, dateString];
     
     [[SCUserDefaultManager sharedInstance] setObject:lastUpdatedDate

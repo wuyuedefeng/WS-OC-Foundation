@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C43F0F5E9D247A1BC341A91 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A64BDC381A04E94BD24A51B /* libPods.a */; };
+		4B018B8C19D1156500A2C356 /* WSLocalizableStr.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B018B8B19D1156500A2C356 /* WSLocalizableStr.strings */; };
 		4B0D4C111989096E0022ADD4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0D4C0F1989096E0022ADD4 /* Main_iPhone.storyboard */; };
 		4B0D4C1419890AEF0022ADD4 /* WSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D4C1319890AEF0022ADD4 /* WSNavigationController.m */; };
 		4B0DC8F319CFFCD300F26474 /* WSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DC8F219CFFCD300F26474 /* WSTextField.m */; };
@@ -130,6 +131,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B018B8B19D1156500A2C356 /* WSLocalizableStr.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = WSLocalizableStr.strings; sourceTree = "<group>"; };
 		4B0C705E19A5DAA700A2A5E6 /* UITabBarController+WSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITabBarController+WSCategory.h"; path = "WSFouncDesign/WSFunc/category/UITabBarController+WSCategory.h"; sourceTree = SOURCE_ROOT; };
 		4B0C705F19A5DAA700A2A5E6 /* UITabBarController+WSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITabBarController+WSCategory.m"; path = "WSFouncDesign/WSFunc/category/UITabBarController+WSCategory.m"; sourceTree = SOURCE_ROOT; };
 		4B0D4C101989096E0022ADD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 		4B0DC8F919D01ED100F26474 /* SCTableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4B018B8B19D1156500A2C356 /* WSLocalizableStr.strings */,
 				4B0DC9AA19D028B400F26474 /* SCDemoListViewController.h */,
 				4B0DC9AB19D028B400F26474 /* SCDemoListViewController.m */,
 				4B0DC92319D021F100F26474 /* NSTimer+SCAddition.h */,
@@ -950,6 +953,7 @@
 				4B1603DF1976587000921B93 /* Main_iPad.storyboard in Resources */,
 				4BD4F89B19863A71005C61CD /* recordClose.png in Resources */,
 				4B0D4C111989096E0022ADD4 /* Main_iPhone.storyboard in Resources */,
+				4B018B8C19D1156500A2C356 /* WSLocalizableStr.strings in Resources */,
 				4BD4F89619863A71005C61CD /* beginRecord.png in Resources */,
 				4B1603E41976587000921B93 /* Images.xcassets in Resources */,
 				4BD4F89919863A71005C61CD /* pauseRecord.png in Resources */,

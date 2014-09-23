@@ -61,14 +61,14 @@ const CGFloat kSCPullUpDistance = 0.f;
         NSString *statusText = nil;
         switch (state) {
             case SCPullUpStatePulling:
-                statusText = NSLocalizedStringFromTable(@"SCFW_LS_Release to load", @"SCFWLocalizable", nil);
+                statusText = NSLocalizedStringFromTable(@"WSFM_LS_Release to load", @"WSLocalizableStr", nil);
                 break;
             case SCPullUpStateNormal:
-                statusText = NSLocalizedStringFromTable(@"SCFW_LS_Pull up to load", @"SCFWLocalizable", nil);
+                statusText = NSLocalizedStringFromTable(@"WSFM_LS_Pull up to load", @"WSLocalizableStr", nil);
                 [_activityView stopAnimating];
                 break;
             case SCPullUpStateLoading:
-                statusText = NSLocalizedStringFromTable(@"SCFW_LS_Loading", @"SCFWLocalizable", nil);
+                statusText = NSLocalizedStringFromTable(@"WSFM_LS_Loading", @"WSLocalizableStr", nil);
                 [_activityView startAnimating];
                 break;
             default:
