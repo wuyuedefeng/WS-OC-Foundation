@@ -44,4 +44,53 @@
 		}
 	}
 }
+
+/**
+ *  @brief 检查是否iOS7+
+ */
+BOOL WSiOS7OrLater(void)
+{
+    static BOOL iOS7OrLater;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
+        CGFloat systemVersion = [[[UIDevice currentDevice] systemVersion]
+                                 doubleValue];
+        if (systemVersion >= 7.f) {
+            iOS7OrLater = YES;
+        } else {
+            iOS7OrLater = NO;
+        }
+#else
+        iOS7OrLater = NO;
+#endif
+    });
+    WSLog(@"%@%@", @"iOS 7 Or Later : ", iOS7OrLater ? @"YES" : @"NO");
+    return iOS7OrLater;
+}
+
+/**
+ *  @brief 检查是否iOS8+
+ */
+extern BOOL WSiOS8OrLater(void)
+{
+    static BOOL iOS8OrLater;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+        CGFloat systemVersion = [[[UIDevice currentDevice] systemVersion]
+                                 doubleValue];
+        if (systemVersion >= 8.f) {
+            iOS8OrLater = YES;
+        } else {
+            iOS8OrLater = NO;
+        }
+#else
+        iOS8OrLater = NO;
+#endif
+    });
+    WSLog(@"%@%@", @"iOS 8 Or Later : ", iOS8OrLater ? @"YES" : @"NO");
+    return iOS8OrLater;
+}
+
 @end

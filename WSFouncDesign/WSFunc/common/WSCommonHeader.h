@@ -235,7 +235,7 @@ typedef id  (^IDBlock_id)  (id);
 #import "WSAudioRecordManager.h"
 /////===============================================
 
-
+#import "WSTextView.h"
 
 
 

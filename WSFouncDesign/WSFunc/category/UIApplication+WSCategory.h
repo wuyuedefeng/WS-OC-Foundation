@@ -70,4 +70,14 @@
  *  @param vc  如果不能打开指定的url，将使用vc呈现UIAlertController进行提示
  */
 + (void)openNativeAppWithURL:(id)url withVC:(UIViewController *)vc;
+
+/**
+ *  @brief 检查是否iOS7+
+ */
+extern BOOL WSiOS7OrLater(void);
+
+/**
+ *  @brief 检查是否iOS8+
+ */
+extern BOOL WSiOS8OrLater(void);
 @end
