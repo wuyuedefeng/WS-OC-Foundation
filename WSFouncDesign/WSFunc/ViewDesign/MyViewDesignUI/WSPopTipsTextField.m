@@ -34,6 +34,7 @@
             [_tipsTable setBackgroundColor:[UIColor colorWithRed:229.0f/255.0f green:229.0f/255.0f blue:229.0f/255.0f alpha:1.0f]];
             
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(valueChange) name:UITextFieldTextDidChangeNotification object:nil];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addTips) name:UITextFieldTextDidEndEditingNotification object:nil];
 
     }
     return self;
@@ -61,11 +62,16 @@
         [_tipsTable setBackgroundColor:[UIColor colorWithRed:229.0f/255.0f green:229.0f/255.0f blue:229.0f/255.0f alpha:1.0f]];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(valueChange) name:UITextFieldTextDidChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addTips) name:UITextFieldTextDidEndEditingNotification object:nil];
         
     }
     return self;
 }
-
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidEndEditingNotification object:nil];
+}
 
 - (void)valueChange
 {
@@ -104,8 +110,8 @@
     {
         [originTipsArray insertObject:strTips atIndex:0];
         NSLog(@"%@",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]);
-        if (originTipsArray.count > 20) {
-            originTipsArray = [[originTipsArray subarrayWithRange:NSMakeRange(0, 20)] mutableCopy];
+        if (originTipsArray.count > TIPS_STORE_NUMBER) {
+            originTipsArray = [[originTipsArray subarrayWithRange:NSMakeRange(0, TIPS_STORE_NUMBER)] mutableCopy];
         }
         if(![originTipsArray writeToFile:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"TipsFile"] atomically:YES])
         {
