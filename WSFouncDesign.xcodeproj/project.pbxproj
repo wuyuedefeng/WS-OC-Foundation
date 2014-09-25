@@ -76,6 +76,8 @@
 		4B55F7671978BD3700421367 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B55F7661978BD3700421367 /* AVFoundation.framework */; };
 		4B55F76C1978BDB000421367 /* WSTransObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B55F76B1978BDB000421367 /* WSTransObj.m */; };
 		4B55F7721978C40E00421367 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B55F7711978C40E00421367 /* CoreAudio.framework */; };
+		4B93CF8619D3D6D10031D218 /* POPDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93CF8519D3D6D10031D218 /* POPDViewController.m */; };
+		4B93CF8919D41C430031D218 /* WSPopTipsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93CF8819D41C430031D218 /* WSPopTipsTextField.m */; };
 		4B99865A19C92995001E05B5 /* NSData+ZXAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B99865419C92995001E05B5 /* NSData+ZXAES.m */; };
 		4B99865B19C92995001E05B5 /* NSString+ZXAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B99865619C92995001E05B5 /* NSString+ZXAES.m */; };
 		4B99865C19C92995001E05B5 /* NSString+ZXDES.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B99865919C92995001E05B5 /* NSString+ZXDES.m */; };
@@ -258,6 +260,10 @@
 		4B55F76A1978BDB000421367 /* WSTransObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTransObj.h; sourceTree = "<group>"; };
 		4B55F76B1978BDB000421367 /* WSTransObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTransObj.m; sourceTree = "<group>"; };
 		4B55F7711978C40E00421367 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		4B93CF8419D3D6D10031D218 /* POPDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDViewController.h; sourceTree = "<group>"; };
+		4B93CF8519D3D6D10031D218 /* POPDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDViewController.m; sourceTree = "<group>"; };
+		4B93CF8719D41C430031D218 /* WSPopTipsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPopTipsTextField.h; sourceTree = "<group>"; };
+		4B93CF8819D41C430031D218 /* WSPopTipsTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSPopTipsTextField.m; sourceTree = "<group>"; };
 		4B99865319C92995001E05B5 /* NSData+ZXAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ZXAES.h"; sourceTree = "<group>"; };
 		4B99865419C92995001E05B5 /* NSData+ZXAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ZXAES.m"; sourceTree = "<group>"; };
 		4B99865519C92995001E05B5 /* NSString+ZXAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZXAES.h"; sourceTree = "<group>"; };
@@ -641,6 +647,8 @@
 			children = (
 				4B2D72AD19CD4F5600F5CDA6 /* WSTextView.h */,
 				4B2D72AE19CD4F5600F5CDA6 /* WSTextView.m */,
+				4B93CF8719D41C430031D218 /* WSPopTipsTextField.h */,
+				4B93CF8819D41C430031D218 /* WSPopTipsTextField.m */,
 				4B0DC8F119CFFCD300F26474 /* WSTextField.h */,
 				4B0DC8F219CFFCD300F26474 /* WSTextField.m */,
 			);
@@ -749,6 +757,15 @@
 			path = WSAudioRecord;
 			sourceTree = "<group>";
 		};
+		4B93CF8319D3D6BE0031D218 /* OtherViewTwoFile */ = {
+			isa = PBXGroup;
+			children = (
+				4B93CF8419D3D6D10031D218 /* POPDViewController.h */,
+				4B93CF8519D3D6D10031D218 /* POPDViewController.m */,
+			);
+			path = OtherViewTwoFile;
+			sourceTree = "<group>";
+		};
 		4B99865219C92995001E05B5 /* WS-AES */ = {
 			isa = PBXGroup;
 			children = (
@@ -802,6 +819,7 @@
 		4BD4F87C19863A71005C61CD /* ViewDesign */ = {
 			isa = PBXGroup;
 			children = (
+				4B93CF8319D3D6BE0031D218 /* OtherViewTwoFile */,
 				4B2D72AC19CD4F5600F5CDA6 /* MyViewDesignUI */,
 				4BEF359F19C971A2005D15FA /* CMPopTipView */,
 				4BD4F87D19863A71005C61CD /* AddressbookList */,
@@ -1078,6 +1096,7 @@
 				4B1604211976848500921B93 /* NSString+WSCategory.m in Sources */,
 				4BC7E4ED1990820100DD174E /* UIScreen+DK.m in Sources */,
 				4BAE34C019AC6E6C0045991E /* NSDate+Reporting.m in Sources */,
+				4B93CF8619D3D6D10031D218 /* POPDViewController.m in Sources */,
 				4BCD167D1993748400DACFF2 /* NSMutableDictionary+WSCategory.m in Sources */,
 				4B0DC8FC19D01EDE00F26474 /* SCTableViewController.m in Sources */,
 				4B99865F19C92A4E001E05B5 /* NSURL+WSCategory.m in Sources */,
@@ -1086,6 +1105,7 @@
 				4B99865C19C92995001E05B5 /* NSString+ZXDES.m in Sources */,
 				4BD4F87B1986385D005C61CD /* UIViewController+WSCategory.m in Sources */,
 				4B1603D51976587000921B93 /* main.m in Sources */,
+				4B93CF8919D41C430031D218 /* WSPopTipsTextField.m in Sources */,
 				4B248F031980974900AA10FD /* UIButton+WSCategory.m in Sources */,
 				4B0DC91C19D01F1800F26474 /* SCBrowseViewPage.m in Sources */,
 				4B2D72AF19CD4F5600F5CDA6 /* WSTextView.m in Sources */,
