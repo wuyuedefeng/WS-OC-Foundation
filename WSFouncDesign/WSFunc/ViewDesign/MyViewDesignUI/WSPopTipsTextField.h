@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WSTipsListTextField : UITextField<UITableViewDataSource,UITableViewDelegate>
-
+@interface WSPopTipsTextField : UITextField<UITableViewDataSource,UITableViewDelegate>
+{
+    NSMutableArray * originTipsArray;
+    NSMutableArray * currentTipsArray;
+}
 @property(nonatomic,strong)UITableView * tipsTable;
-@property(nonatomic,copy)NSString *token;
-
 - (void)addTips;
-- (id)initWithFrame:(CGRect)frame token:(NSString *)token;
 
 @end
