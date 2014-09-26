@@ -888,8 +888,4 @@ CGRect rectSetSize(CGRect rect, CGSize size) {
 
 }
 
-- (void)test1
-{
-    
-}
 @end
