@@ -7,7 +7,7 @@
 //
 
 #import "UIApplication+WSCategory.h"
-
+#import "UIDevice+WSCategory.h"
 @implementation UIApplication (Category)
 
 + (void)openNativeAppWithURL:(id)url withVC:(UIViewController *)vc {
@@ -23,7 +23,7 @@
 		} else {
 			NSString *msg = [NSString stringWithFormat:@"不能打开url: %@", [url_ absoluteString]];
 #ifdef __IPHONE_8_0
-			if (kDKIsSysVersionGreaterThanOrEqualTo(@"8.0")) {
+			if (kWSSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
 				UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:msg preferredStyle:UIAlertControllerStyleAlert];
 				[alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
 					
