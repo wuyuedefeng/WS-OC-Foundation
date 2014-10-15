@@ -10,24 +10,45 @@
 	<string>WSFouncDesign</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>2358BC0954E8637A43E08F8BEE8D5AF549E91223</key>
+		<string>https://git.oschina.net/wuyuedefeng/WSFouncDesign.git</string>
+		<key>2f6dd3ac-734c-db11-98db-00123f83b708++7003</key>
+		<string>https://svn.intra.sina.com.cn/wap/trunk/client/onsite/SinaWeiBoSDK2/trunk/src/SinaWeiBoSDK/SinaWeiBoSDK/SinaWeiBoSDK/CTMBase64</string>
 		<key>C1F52CCB-6287-4361-8EFB-33C2D8C9AD6D</key>
 		<string>https://git.oschina.net/wuyuedefeng/WSFouncDesign.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>WSFouncDesign.xcodeproj/project.xcworkspace</string>
+	<string>WSFouncDesign.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C1F52CCB-6287-4361-8EFB-33C2D8C9AD6D</key>
+		<key>2358BC0954E8637A43E08F8BEE8D5AF549E91223</key>
 		<string>../..</string>
+		<key>2f6dd3ac-734c-db11-98db-00123f83b708++7003</key>
+		<string>../..WSFouncDesign/WSFunc/WSPackage/CTMBase64/</string>
+		<key>C1F52CCB-6287-4361-8EFB-33C2D8C9AD6D</key>
+		<string>../../../siyouWS</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>2f6dd3ac-734c-db11-98db-00123f83b708++7003</key>
+		<string>https://svn.intra.sina.com.cn/wap</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://git.oschina.net/wuyuedefeng/WSFouncDesign.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C1F52CCB-6287-4361-8EFB-33C2D8C9AD6D</string>
+	<string>2358BC0954E8637A43E08F8BEE8D5AF549E91223</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2f6dd3ac-734c-db11-98db-00123f83b708++7003</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CTMBase64</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
@@ -35,6 +56,14 @@
 			<string>C1F52CCB-6287-4361-8EFB-33C2D8C9AD6D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>siyouWS</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2358BC0954E8637A43E08F8BEE8D5AF549E91223</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WSFouncDesign</string>
 		</dict>
 	</array>
 </dict>
