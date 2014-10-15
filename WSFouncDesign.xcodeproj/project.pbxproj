@@ -1284,6 +1284,7 @@
 		};
 		4B1603FE1976587000921B93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB2A4019FC214BFDA4A8E0AA /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WSFouncDesign.app/WSFouncDesign";
 				FRAMEWORK_SEARCH_PATHS = (
