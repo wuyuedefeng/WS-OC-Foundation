@@ -10,6 +10,13 @@
 
 @interface NSNull (Category)
 -(BOOL) ws_isNotNilString;
+- (CGSize)ws_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
+- (NSUInteger)length;
+- (BOOL)isEqualToString:(NSString *)aString;
+- (NSString *)stringByReplacingOccurrencesOfString:(NSString *)target withString:(NSString *)replacement;
+- (id)jsonObject;
+- (int)intValue;
+- (NSRange)rangeOfCharacterFromSet:(NSCharacterSet *)aSet;
 @end
 /***
  *  ///////////////

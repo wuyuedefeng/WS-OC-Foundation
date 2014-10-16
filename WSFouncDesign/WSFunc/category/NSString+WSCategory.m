@@ -13,6 +13,34 @@
 {
     return NO;
 }
+- (CGSize)ws_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize
+{
+    return CGSizeZero;
+}
+- (NSUInteger)length
+{
+    return 0;
+}
+- (BOOL)isEqualToString:(NSString *)aString
+{
+    return false;
+}
+- (NSString *)stringByReplacingOccurrencesOfString:(NSString *)target withString:(NSString *)replacement
+{
+    return @"";
+}
+- (id)jsonObject
+{
+    return nil;
+}
+- (int)intValue
+{
+    return 0;
+}
+- (NSRange)rangeOfCharacterFromSet:(NSCharacterSet *)aSet
+{
+    return NSMakeRange(0,0);
+}
 @end
 /**
  *  /////////////////////
