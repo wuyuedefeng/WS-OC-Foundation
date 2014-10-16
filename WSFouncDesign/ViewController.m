@@ -58,7 +58,9 @@
     }];
     
     [UIAlertView ws_alertViewWithTitle:@"tishi" message:@"message" cancelButtonTitle:@"quxiao" otherButtonTitle:@"确定" tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
-        NSLog(@"queding click");
+        if (buttonIndex == 1) {
+            NSLog(@"queding click");
+        }
     }];
     
     
