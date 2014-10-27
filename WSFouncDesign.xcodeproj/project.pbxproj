@@ -76,6 +76,7 @@
 		4B55F7671978BD3700421367 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B55F7661978BD3700421367 /* AVFoundation.framework */; };
 		4B55F76C1978BDB000421367 /* WSTransObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B55F76B1978BDB000421367 /* WSTransObj.m */; };
 		4B55F7721978C40E00421367 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B55F7711978C40E00421367 /* CoreAudio.framework */; };
+		4B5B14B719FE58BA00D27473 /* UITabBarController+WSHideable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B14B619FE58BA00D27473 /* UITabBarController+WSHideable.m */; };
 		4B93CF8619D3D6D10031D218 /* POPDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93CF8519D3D6D10031D218 /* POPDViewController.m */; };
 		4B93CF8919D41C430031D218 /* WSPopTipsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93CF8819D41C430031D218 /* WSPopTipsTextField.m */; };
 		4B99865A19C92995001E05B5 /* NSData+ZXAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B99865419C92995001E05B5 /* NSData+ZXAES.m */; };
@@ -260,6 +261,8 @@
 		4B55F76A1978BDB000421367 /* WSTransObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTransObj.h; sourceTree = "<group>"; };
 		4B55F76B1978BDB000421367 /* WSTransObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTransObj.m; sourceTree = "<group>"; };
 		4B55F7711978C40E00421367 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		4B5B14B519FE58BA00D27473 /* UITabBarController+WSHideable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+WSHideable.h"; sourceTree = "<group>"; };
+		4B5B14B619FE58BA00D27473 /* UITabBarController+WSHideable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+WSHideable.m"; sourceTree = "<group>"; };
 		4B93CF8419D3D6D10031D218 /* POPDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDViewController.h; sourceTree = "<group>"; };
 		4B93CF8519D3D6D10031D218 /* POPDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDViewController.m; sourceTree = "<group>"; };
 		4B93CF8719D41C430031D218 /* WSPopTipsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPopTipsTextField.h; sourceTree = "<group>"; };
@@ -608,6 +611,8 @@
 				4B1E041B1987AC8B00C24425 /* UITableViewCell+WSCategory.m */,
 				4B0C705E19A5DAA700A2A5E6 /* UITabBarController+WSCategory.h */,
 				4B0C705F19A5DAA700A2A5E6 /* UITabBarController+WSCategory.m */,
+				4B5B14B519FE58BA00D27473 /* UITabBarController+WSHideable.h */,
+				4B5B14B619FE58BA00D27473 /* UITabBarController+WSHideable.m */,
 				4B0F4EBF19CC35A600064F14 /* UINavigationItem+WSCategory.h */,
 				4B0F4EC019CC35A600064F14 /* UINavigationItem+WSCategory.m */,
 				4B0F4EBC19CC340500064F14 /* UINavigationController+WSCategory.h */,
@@ -1107,6 +1112,7 @@
 				4BCD16801993766900DACFF2 /* NSNotificationCenter+WSCategory.m in Sources */,
 				4B99865C19C92995001E05B5 /* NSString+ZXDES.m in Sources */,
 				4BD4F87B1986385D005C61CD /* UIViewController+WSCategory.m in Sources */,
+				4B5B14B719FE58BA00D27473 /* UITabBarController+WSHideable.m in Sources */,
 				4B1603D51976587000921B93 /* main.m in Sources */,
 				4B93CF8919D41C430031D218 /* WSPopTipsTextField.m in Sources */,
 				4B248F031980974900AA10FD /* UIButton+WSCategory.m in Sources */,
