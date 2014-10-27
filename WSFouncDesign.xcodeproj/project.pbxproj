@@ -77,6 +77,7 @@
 		4B55F76C1978BDB000421367 /* WSTransObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B55F76B1978BDB000421367 /* WSTransObj.m */; };
 		4B55F7721978C40E00421367 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B55F7711978C40E00421367 /* CoreAudio.framework */; };
 		4B5B14B719FE58BA00D27473 /* UITabBarController+WSHideable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B14B619FE58BA00D27473 /* UITabBarController+WSHideable.m */; };
+		4B5B14BA19FE658200D27473 /* WSCustomTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B14B919FE658200D27473 /* WSCustomTabbar.m */; };
 		4B93CF8619D3D6D10031D218 /* POPDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93CF8519D3D6D10031D218 /* POPDViewController.m */; };
 		4B93CF8919D41C430031D218 /* WSPopTipsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93CF8819D41C430031D218 /* WSPopTipsTextField.m */; };
 		4B99865A19C92995001E05B5 /* NSData+ZXAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B99865419C92995001E05B5 /* NSData+ZXAES.m */; };
@@ -263,6 +264,8 @@
 		4B55F7711978C40E00421367 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		4B5B14B519FE58BA00D27473 /* UITabBarController+WSHideable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+WSHideable.h"; sourceTree = "<group>"; };
 		4B5B14B619FE58BA00D27473 /* UITabBarController+WSHideable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+WSHideable.m"; sourceTree = "<group>"; };
+		4B5B14B819FE658200D27473 /* WSCustomTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCustomTabbar.h; sourceTree = "<group>"; };
+		4B5B14B919FE658200D27473 /* WSCustomTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSCustomTabbar.m; sourceTree = "<group>"; };
 		4B93CF8419D3D6D10031D218 /* POPDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDViewController.h; sourceTree = "<group>"; };
 		4B93CF8519D3D6D10031D218 /* POPDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDViewController.m; sourceTree = "<group>"; };
 		4B93CF8719D41C430031D218 /* WSPopTipsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPopTipsTextField.h; sourceTree = "<group>"; };
@@ -656,6 +659,8 @@
 				4B93CF8819D41C430031D218 /* WSPopTipsTextField.m */,
 				4B0DC8F119CFFCD300F26474 /* WSTextField.h */,
 				4B0DC8F219CFFCD300F26474 /* WSTextField.m */,
+				4B5B14B819FE658200D27473 /* WSCustomTabbar.h */,
+				4B5B14B919FE658200D27473 /* WSCustomTabbar.m */,
 			);
 			path = MyViewDesignUI;
 			sourceTree = "<group>";
@@ -1057,6 +1062,7 @@
 				4BA1AFE0198A22F500A99CD5 /* UIColor+WSCategory.m in Sources */,
 				4B3B8B3419AEDD1300FEC1E1 /* Person.m in Sources */,
 				4B37F7DC19C852D9006E888D /* StoreProductController.m in Sources */,
+				4B5B14BA19FE658200D27473 /* WSCustomTabbar.m in Sources */,
 				4BC7E4E31990777600DD174E /* UIApplication+WSCategory.m in Sources */,
 				4B0F4EBE19CC340500064F14 /* UINavigationController+WSCategory.m in Sources */,
 				4BC7E4E61990784D00DD174E /* UIImage+WSCategory.m in Sources */,
