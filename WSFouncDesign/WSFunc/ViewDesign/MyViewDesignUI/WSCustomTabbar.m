@@ -83,7 +83,7 @@
     [self.view addSubview:slideBg];
     
     //创建按钮
-    int viewCount = self.viewControllers.count > 5 ? 5 : self.viewControllers.count;
+    int viewCount = self.viewControllers.count > 5 ? 5 : (int)self.viewControllers.count;
     self.buttons = [NSMutableArray arrayWithCapacity:viewCount];
     double _width = 320 / viewCount;
     double _height = self.tabBar.frame.size.height;
@@ -111,7 +111,7 @@
 	
         return;
     }
-    self.currentSelectedIndex = button.tag;
+    self.currentSelectedIndex = (int)button.tag;
     self.selectedIndex = self.currentSelectedIndex;
     [self performSelector:@selector(slideTabBg:) withObject:button];
 }

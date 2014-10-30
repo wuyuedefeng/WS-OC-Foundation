@@ -268,7 +268,8 @@
 {
     if (! [[self.objects allKeys] containsObject:key]) {
         NSString *filePath = [self.path stringByAppendingPathComponent:key];
-        if ([self.fileManager fileExistsAtPath:filePath isDirectory:NO]) {
+        BOOL isDir = NO;
+        if ([self.fileManager fileExistsAtPath:filePath isDirectory:&isDir]) {
             // 超过阈值直接返回，不装入内存
             if ((! self.archiving) && 0 < ARCHIVING_THRESHOLD && ARCHIVING_THRESHOLD < self.size) {
                 return [[KObject alloc] initWithData:[NSData dataWithContentsOfFile:filePath]];

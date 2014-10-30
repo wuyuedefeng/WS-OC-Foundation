@@ -42,6 +42,28 @@
     return NSMakeRange(0,0);
 }
 @end
+/***
+ *  ///////////////添加ContainsString分类 该方法在ios8才被系统提供 该方法为了向下兼容
+ */
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
+@implementation NSString (ContainsString)
++ (void)load {
+    @autoreleasepool {
+        [self pspdf_modernizeSelector:NSSelectorFromString(@"containsString:") withSelector:@selector(containsString:)];
+    }
+}
++ (void)pspdf_modernizeSelector:(SEL)originalSelector withSelector:(SEL)newSelector {
+    if (![NSString instancesRespondToSelector:originalSelector]) {
+        Method newMethod = class_getInstanceMethod(self, newSelector);
+        class_addMethod(self, originalSelector, method_getImplementation(newMethod), method_getTypeEncoding(newMethod));
+    }
+}
+// containsString: has been added in iOS 8. We dynamically add this if we run on iOS 7.
+- (BOOL)containsString:(NSString *)aString {
+    return [self rangeOfString:aString].location != NSNotFound;
+}
+@end
+#endif
 /**
  *  /////////////////////
  */

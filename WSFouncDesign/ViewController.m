@@ -70,6 +70,12 @@
     [textView setContentMode:UIViewContentModeScaleToFill];
     textView.endEditingWhenSlide = YES;
     [self.view addSubview:textView];
+    
+    
+    NSString *abc = @"   wangsen lfdsa";
+    if ([abc containsString:@"wangsen"]) {
+        NSLog(@"%@",@"wangsen");
+    }
 
 }
 //模型模型数组《＝》字典模型数组
