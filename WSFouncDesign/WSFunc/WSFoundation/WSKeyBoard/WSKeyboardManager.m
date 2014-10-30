@@ -123,8 +123,6 @@ kWSStrictSingletonForClass(WSKeyboardManager)
     
 	CGPoint leftBottomPoint = [self.currentScrollView convertPoint:CGPointMake(0, CGRectGetMaxY(self.currentScrollView.bounds)) toView:[UIApplication sharedApplication].keyWindow];
 	UIEdgeInsets contentInsets = UIEdgeInsetsMake(0, 0, CGRectGetHeight(keyboardFrame)-(CGRectGetMaxY([[UIApplication sharedApplication] keyWindow].bounds)-leftBottomPoint.y), 0);
-	[self.currentScrollView setContentInset:contentInsets];
-	[self.currentScrollView setScrollIndicatorInsets:contentInsets];
 	CGRect scrollViewRect = CGRectZero;
 	if (self.currentScrollView.superview) {
 		scrollViewRect = [self.currentScrollView convertRect:self.currentScrollView.bounds toView:self.currentScrollView.superview];
@@ -135,6 +133,8 @@ kWSStrictSingletonForClass(WSKeyboardManager)
 	if (self.activeTextField) {
 		CGPoint p1 = [self.activeTextField convertPoint:CGPointMake(0, CGRectGetHeight(self.activeTextField.bounds)) toView:self.currentScrollView];
 		if (CGRectContainsPoint(scrollViewRect, p1) == NO) {
+            [self.currentScrollView setContentInset:contentInsets];
+            [self.currentScrollView setScrollIndicatorInsets:contentInsets];
 			// 加上 30 是为了解决iOS 5.0以下版本键盘遮挡到中文的问题
             CGFloat delta = 0.0f;
 			CGPoint scrollPoint = CGPointMake(0, p1.y - CGRectGetHeight(scrollViewRect) + delta);

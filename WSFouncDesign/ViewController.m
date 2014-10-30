@@ -76,6 +76,8 @@
     if ([abc containsString:@"wangsen"]) {
         NSLog(@"%@",@"wangsen");
     }
+    
+    NSLog(@"%@===%@",self,textView.viewController); 
 
 }
 //模型模型数组《＝》字典模型数组
