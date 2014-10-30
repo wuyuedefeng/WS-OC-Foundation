@@ -8,6 +8,7 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "NSString+WSCategory.h"
 #import "NSData+WSCategory.h"
+#import <objc/runtime.h>
 @implementation NSNull (Category)
 -(BOOL) ws_isNotNilString
 {
