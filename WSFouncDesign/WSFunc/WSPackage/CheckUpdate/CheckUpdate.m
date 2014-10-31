@@ -5,110 +5,69 @@
 ////  Created by wangsen on 12-9-19.
 ////  Copyright (c) 2013年 wangsen. All rights reserved.
 ////
-//
-//#import "CheckUpdate.h"
-//
+
+#import "CheckUpdate.h"
+#import "AFHTTPRequestOperationManager.h"
 ////此APP id为程序申请时得到。更改相应的id查询App的信息
-//#define kAPPID      @"593499239"
-//
-////应用名字，若需要更改，可自行设置。
-//#define kAPPName    [infoDict objectForKey:@"CFBundleDisplayName"]
-//
-////此链接为苹果官方查询App的接口。
-//#define kAPPURL     @"http://itunes.apple.com/lookup?id="
-//
-//
-//@interface CheckUpdate ()
-//{
-//    NSString *_updateURL;
-//}
-//
-//@end
-//
-//
-//@implementation CheckUpdate
-//
-//+ (CheckUpdate *)shareInstance
-//{
-//    static CheckUpdate *update = nil;
-//    if (!update)
-//    {
-//        update = [[CheckUpdate alloc] init];
-//    }
-//
-//    return update;
-//}
-//
-//- (void)checkUpdate
-//{
-//    NSString *urlStr = [NSString stringWithFormat:@"%@%@",kAPPURL, kAPPID];
-//    NSURL *url = [NSURL URLWithString:urlStr];
-//    
-//    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url ];
-//    [request setDidFinishSelector:@selector(checkUpdateFinished:)];
-//    [request setDidFailSelector:@selector(checkUpdateFailed:)];
-//    [request setDelegate:self];
-//    [request startAsynchronous];
-//}
-//
-//- (void)checkUpdateFinished:(ASIHTTPRequest *)request
-//{
-//    if (request.responseStatusCode == 200)
-//    {
-//        NSDictionary *infoDict   = [[NSBundle mainBundle]infoDictionary];
-//        NSString *currentVersion = [infoDict objectForKey:@"CFBundleVersion"];
-//        NSDictionary *jsonData   = request.responseString.JSONValue;
-//        NSArray      *infoArray  = [jsonData objectForKey:@"results"];
-//        
-//        if (infoArray.count >= 1)
-//        {
-//            NSDictionary *releaseInfo   = [infoArray objectAtIndex:0];
-//            NSString     *latestVersion = [releaseInfo objectForKey:@"version"];
-//            NSString     *releaseNotes  = [releaseInfo objectForKey:@"releaseNotes"];
-//            NSString     *title         = [NSString stringWithFormat:@"%@%@版本", kAPPName, latestVersion];
-//            _updateURL = [releaseInfo objectForKey:@"trackViewUrl"];
-//
-//            if ([latestVersion compare:currentVersion] == NSOrderedDescending)
-//            {
-//                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:releaseNotes delegate:self cancelButtonTitle:@"忽略" otherButtonTitles:@"去App Store下载", nil];
-//                [alertView show];
-//                [alertView release];
-//            }
-//            else
-//            {
-//                if ([self.delegate respondsToSelector:@selector(currentVersionHasNewest)])
-//                {
-//                    [self.delegate currentVersionHasNewest];
-//                }
-//            }
-//        }
-//        else
-//        {
-//            if ([self.delegate respondsToSelector:@selector(currentVersionHasNewest)])
-//            {
-//                [self.delegate currentVersionHasNewest];
-//            }
-//        }
-//    }
-//    else
-//        if ([self.delegate respondsToSelector:@selector(currentVersionHasNewest)])
-//        {
-//            [self.delegate currentVersionHasNewest];
-//        }
-//}
-//
-//- (void)checkUpdateFailed:(ASIHTTPRequest *)request
-//{
-////    NSLog(@"data:%@", request.responseString.JSONValue);
-//}
-//
-//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-//{
-//    if (buttonIndex == 1)
-//    {
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_updateURL]];
-//    }
-//}
-//
-//
-//@end
+////#define kAPPID      @"907331580"
+#define kAppTipUpdate @"appTipUpdate"
+@implementation CheckUpdate
++ (CheckUpdate *)shareInstance
+{
+    static CheckUpdate *update = nil;
+    if (!update)
+    {
+        update = [[CheckUpdate alloc] init];
+    }
+
+    return update;
+}
+
+- (void)checkUpdate
+{
+    static int index = 0;
+    if (!index) {
+        NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+        NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+        NSString *storeVersion = [[NSUserDefaults standardUserDefaults] objectForKey:kAppTipUpdate];
+        if ([storeVersion isEqualToString:version]) {
+            return ;
+        }
+    }
+    index++;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:[NSString stringWithFormat:@"http://itunes.apple.com/lookup?id=%@",kAPPID] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //        NSLog(@"JSON: %@", responseObject);
+        
+        NSArray *app=[responseObject objectForKey:@"results"];
+        NSDictionary *dic=[app lastObject];
+        NSString *appStoreVersion=[dic objectForKey:@"version"];
+        NSLog(@"%@",appStoreVersion);
+        
+        NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+        NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:version forKey:kAppTipUpdate];
+        
+        if ([appStoreVersion compare:version] == NSOrderedDescending) {
+            NSLog(@"升级");
+            UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"请升级软件" delegate:self cancelButtonTitle:@"取消"otherButtonTitles:@"确认", nil];
+            [alert show];
+        }
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+    
+    
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex==1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://itunes.apple.com/app/id%@",kAPPID]]];
+    }
+
+}
+@end

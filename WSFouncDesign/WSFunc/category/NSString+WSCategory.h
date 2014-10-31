@@ -80,5 +80,4 @@
 #pragma mark -base64解密
 - (NSString *)ws_base64_decodeUTF8;
 - (NSData *) ws_base64DataWithBase64String;
-
 @end
