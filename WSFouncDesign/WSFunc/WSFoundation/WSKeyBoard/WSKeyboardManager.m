@@ -89,7 +89,7 @@ kWSStrictSingletonForClass(WSKeyboardManager)
 }
 
 - (void)handleKeyboardDidShow:(NSNotification *)notification {
-	[self scrollToAppropriatePosition:notification];
+//	[self scrollToAppropriatePosition:notification];
 }
 
 - (void)handleKeyboardWillChangeFrame:(NSNotification *)notification {
@@ -111,9 +111,9 @@ kWSStrictSingletonForClass(WSKeyboardManager)
 }
 
 - (void)handleKeyboardDidHide:(NSNotification *)notification {
-	[self.currentScrollView setContentSize:self.originContentSize];
-	[self.currentScrollView setContentInset:self.originContentInset];
-	[self.currentScrollView setScrollIndicatorInsets:self.originScrollIndicatorInsets];
+//	[self.currentScrollView setContentSize:self.originContentSize];
+//	[self.currentScrollView setContentInset:self.originContentInset];
+//	[self.currentScrollView setScrollIndicatorInsets:self.originScrollIndicatorInsets];
 }
 
 - (void)scrollToAppropriatePosition:(NSNotification *)notification {
@@ -140,7 +140,6 @@ kWSStrictSingletonForClass(WSKeyboardManager)
 			CGPoint scrollPoint = CGPointMake(0, p1.y - CGRectGetHeight(scrollViewRect) + delta);
 			[self.currentScrollView setContentOffset:scrollPoint animated:YES];
 			[self.currentScrollView setContentSize:CGSizeMake(self.originContentSize.width, self.originContentSize.height+ delta)];
-            NSLog(@"%@ %@",NSStringFromCGPoint(scrollPoint),NSStringFromCGSize(CGSizeMake(self.originContentSize.width, self.originContentSize.height+ delta)));
 		}
 	}
 }
