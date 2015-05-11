@@ -78,6 +78,7 @@
 		4B55F7721978C40E00421367 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B55F7711978C40E00421367 /* CoreAudio.framework */; };
 		4B5B14B719FE58BA00D27473 /* UITabBarController+WSHideable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B14B619FE58BA00D27473 /* UITabBarController+WSHideable.m */; };
 		4B5B14BA19FE658200D27473 /* WSCustomTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B14B919FE658200D27473 /* WSCustomTabbar.m */; };
+		4B8911921B003AF600B2C2CC /* UITextField+LimitLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8911911B003AF600B2C2CC /* UITextField+LimitLength.m */; };
 		4B93CF8619D3D6D10031D218 /* POPDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93CF8519D3D6D10031D218 /* POPDViewController.m */; };
 		4B93CF8919D41C430031D218 /* WSPopTipsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93CF8819D41C430031D218 /* WSPopTipsTextField.m */; };
 		4B99865A19C92995001E05B5 /* NSData+ZXAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B99865419C92995001E05B5 /* NSData+ZXAES.m */; };
@@ -266,6 +267,8 @@
 		4B5B14B619FE58BA00D27473 /* UITabBarController+WSHideable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+WSHideable.m"; sourceTree = "<group>"; };
 		4B5B14B819FE658200D27473 /* WSCustomTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCustomTabbar.h; sourceTree = "<group>"; };
 		4B5B14B919FE658200D27473 /* WSCustomTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSCustomTabbar.m; sourceTree = "<group>"; };
+		4B8911901B003AF600B2C2CC /* UITextField+LimitLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LimitLength.h"; sourceTree = "<group>"; };
+		4B8911911B003AF600B2C2CC /* UITextField+LimitLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LimitLength.m"; sourceTree = "<group>"; };
 		4B93CF8419D3D6D10031D218 /* POPDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDViewController.h; sourceTree = "<group>"; };
 		4B93CF8519D3D6D10031D218 /* POPDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDViewController.m; sourceTree = "<group>"; };
 		4B93CF8719D41C430031D218 /* WSPopTipsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPopTipsTextField.h; sourceTree = "<group>"; };
@@ -604,6 +607,8 @@
 				4B248F021980974900AA10FD /* UIButton+WSCategory.m */,
 				4B2BCDEA19BFDF8E0099980E /* UITextField+WSCategory.h */,
 				4B2BCDEB19BFDF8E0099980E /* UITextField+WSCategory.m */,
+				4B8911901B003AF600B2C2CC /* UITextField+LimitLength.h */,
+				4B8911911B003AF600B2C2CC /* UITextField+LimitLength.m */,
 				4B2BCDED19BFE05F0099980E /* UITextView+WSCategory.h */,
 				4B2BCDEE19BFE05F0099980E /* UITextView+WSCategory.m */,
 				4BEF35A319C990E3005D15FA /* UIAlertView+WSCategory.h */,
@@ -1087,6 +1092,7 @@
 				4B0F4EB919CC2F6D00064F14 /* NSDictionary+SCAddition.m in Sources */,
 				4B19B679197E617600D53E86 /* NSArray+WSCategory.m in Sources */,
 				4BD4F89419863A71005C61CD /* ChineseToPinyin.m in Sources */,
+				4B8911921B003AF600B2C2CC /* UITextField+LimitLength.m in Sources */,
 				4B2BCDEF19BFE05F0099980E /* UITextView+WSCategory.m in Sources */,
 				4B99865B19C92995001E05B5 /* NSString+ZXAES.m in Sources */,
 				4B50AB6219A1E69B006129D2 /* NGAudioPlayer.m in Sources */,
